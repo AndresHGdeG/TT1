@@ -1,0 +1,3 @@
+all:	
+	
+	pdflatex ClasificadorDeNoticias.tex

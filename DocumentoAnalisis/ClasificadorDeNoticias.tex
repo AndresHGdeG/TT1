@@ -1,0 +1,130 @@
+\documentclass{book}
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,activeacute]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{mathtools}
+\usepackage{graphicx}
+
+
+\begin{document}
+
+  \begin{titlepage}
+
+  \thispagestyle{empty}
+  \frontmatter
+
+  \begin{minipage}{.2\textwidth}
+    \flushleft
+%----------------imagenLineasGuia---------------------------%
+    \center{\includegraphics[scale=.19]{ipn.pdf}}
+    
+    \vspace{20pt}
+
+    \center{
+      \rule{.5pt}{.6\textheight}
+      \hspace{7pt}
+      \rule{2pt}{.6\textheight}
+      \hspace{7pt}
+      \rule{.5pt}{.6\textheight}
+    } 
+  \end{minipage}
+  \begin{minipage}{.8\textwidth}
+  %---------------InfoTesis-------------------------%
+    \flushright
+
+    \center{
+
+      \center{
+        \LARGE{I}\large{NSTITUTO} \LARGE{P}\large{OLITÉCNICO} 
+        \LARGE{N}\large{ACIONAL}
+      } \\
+
+      \rule{\textwidth}{1pt}\\
+      \hrulefill\\[1cm]
+
+      \LARGE{E}\large{SCUELA} \LARGE{S}\large{UPERIOR} \large{DE} \LARGE{C}\large{OMPUTO}\\[1cm]
+
+      \textbf{ \LARGE{R}\large{ECOLECTOR} \large{Y} \LARGE{C}\large{LASIFICADOR} \large{DE}  
+      \LARGE{N}\large{OTICIAS}}\\[1cm]
+      \large{\textbf{2018-B013}}\\[1cm]
+
+      \huge{T \hspace{1cm} E \hspace{1cm} S \hspace{1cm} I \hspace{1cm} S  }\\[1cm]
+
+      \large{\textbf{QUE PARA OBTENER EL GRADO DE:}}\\[1cm]
+      \large{LIC. EN INGENIERÍA EN SISTEMAS COMPUTACIONALES  }\\[1cm]
+
+      \large{\textbf{PRESENTAN:}}\\[1cm]
+      \large{CARLOS ANDRES HERNANDEZ GOMEZ}\\
+      \large{LUIS DANIEL MEZA MARTINEZ}\\[1cm]
+
+
+      \large{\textbf{DIRECTORES:  }}\\[.5cm]
+      \large{\textbf{M. EN C.} JOEL OMAR JUÁRES GAMBINO }\\
+      \large{\textbf{DRA.} CONSULO VARINIA GARCIA MENDOZA }\\[0.5cm]
+
+    }
+
+  \end{minipage}
+  \end{titlepage}
+
+%-------------Indice---------%
+  \tableofcontents
+%----------------------------%
+
+
+
+\chapter{Introducción}\label{chp:introduccion}
+
+La presente investigación se refiere al tema 
+
+
+
+
+
+
+La noticia es la información de un hecho de interés ocurrido durante un periodo de tiempo determinado. Constituye el elemento primordial de la información periodística y el género básico del periodismo. Conocer los acontecimientos del mundo independientemente del tema, día, lugar en que se suscitan, tiene una gran importancia en la sociedad, estos se comparten por distintos medios de comunicación, tales como la televisión, redes sociales, diarios, blogs y la radio. Las noticias nos permiten conocer la situación económica del país, logros de la ciencia, desastres naturales, la situación en cuestión de inseguridad y otros acontecimientos. En el ámbito de las inversiones, las noticias crean expectativas y eso a su vez puede modificar los planes de inversión en cualquier sector, siendo así de suma importancia compartirlas de una forma eficaz [1].\\
+
+Mucha de la información que se consulta hoy en día se hace a través de páginas web. Estas páginas son accesibles gracias a una herramienta llamada crawler que las reúne para indexarlas y hacer más sencillo que los motores de búsqueda puedan recuperarlas [3]. En la actualidad las páginas web van incrementando día con día, por lo cual se pueden consultar noticias de distintos sitios, alguno de estos son los periódicos electrónicos, los cuales dividen sus artículos en secciones para facilitar la búsqueda del usuario, sin embargo, el nombre de las secciones no coincide en todos los periódicos a pesar de que el tipo de contenido sea el mismo. Existen un sinfín de sitios independientes en la red, que proveen una gran variedad de artículos, dichos sitios no cuentan con una clasificación particular, por lo que resulta difícil para el usuario realizar una búsqueda específica dentro de dichos sitios.
+Dada la gran cantidad de sitios web que publican noticias, se han creado algunas aplicaciones similares a la propuesta en este trabajo que permiten la recolección de noticias de interés para el usuario como Flipboard [4], Huffpost [5] y Google News [6]. En la Tabla 1 se muestran dichas aplicaciones con sus características más relevantes.
+
+\section{Problemática}
+
+Hoy en día existen distintas maneras de informarse acerca de los acontecimientos más recientes, por ejemplo, en la televisión, blogs, redes sociales, foros, diarios, etc. Esto ha provocado que la información se encuentre más dispersa y se tenga que acceder a muchos recursos para recopilarla. Esta situación implica un gran esfuerzo y tiempo. Para ayudar en este problema existen herramientas que hacen la búsqueda de noticias de interés para el usuario en forma automática. Sin embargo, dichas herramientas dependen de que los sitios a consultar cuenten con una etiquetación correcta y homogénea de la información.\\
+
+Según El Economista [8] el sitio web “Animal Político” ocupa el lugar número cuatro en el ranking de medios nativos digitales y clasifica sus noticias de una manera poco habitual para los lectores, como la sección “El sabueso”, “El plumaje”, “Hablemos de … “, entre otras, lo que hace complicado obtener los artículos para los métodos tradicionales de recopilación que se basan sólo en las etiquetas que identifican cada sección y no el contenido de las noticias.
+Debido a lo anterior se propone crear un recolector de noticias el cual permita recopilar noticias de distintas fuentes de información, y mediante el análisis automático de su contendido determine si este guarda relación con las secciones de interés del usuario y el periodo establecido. Finalmente, las noticias que satisfagan ambos filtros serán las que se le mostrarán al usuario.
+
+\section{Solución Propuesta}
+
+
+
+
+\section{Objetivo}
+
+  Crear un recolector de noticias, el cual permita recopilar información de diferentes fuentes como diarios, sitios de noticias, blogs, foros y mediante el análisis automático de su contenido muestre aquellas noticias que satisfagan los filtros de período y secciones establecidos por el usuario.
+  
+
+\section{Objetivos Específicos}
+\begin{itemize}
+  \item Desarrollar un recolector de noticias, el cual permita recopilar información de diferentes fuentes como diarios, sitios de noticias, blogs y foros
+  \item Analizar de forma automática el contenido de las noticias para satisfacer los filtros establecidos por el usuario
+  \item Mostrar el enlace (URL) de las noticias que cumplieron con los filtros establecidos
+  \item Afinar el clasificador de noticias realizado en el trabajo terminal 2017-A02 para utilizarlo en el contexto de esta propuesta (filtro de sección) 
+
+\end{itemize}
+\section{Estructura del Documento}
+
+
+
+%---------------------Referencias-------------------%
+
+\chapter{Bibliografía}\label{chp:introduccion}
+\section{Referencias}
+\[1\] Manning, C., Raghavan, P. and Schütze, H. (2009). Introduction to information retrieval. New York: Cambridge University Press, pp.443-459.
+
+
+
+
+\end{document}
