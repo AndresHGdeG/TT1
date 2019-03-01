@@ -6,19 +6,23 @@
 \usepackage[utf8]{inputenc}
 \usepackage{mathtools}
 \usepackage{graphicx}
+\usepackage{fancyhdr}
+
 
 
 \begin{document}
 
+  \frontmatter% Define el tipo de numeración
+
   \begin{titlepage}
 
   \thispagestyle{empty}
-  \frontmatter
+
 
   \begin{minipage}{.2\textwidth}
     \flushleft
 %----------------imagenLineasGuia---------------------------%
-    \center{\includegraphics[scale=.19]{ipn.pdf}}
+    \center{\includegraphics[scale=.19]{imagenes/ipn.pdf}}
     
     \vspace{20pt}
 
@@ -44,16 +48,16 @@
       \rule{\textwidth}{1pt}\\
       \hrulefill\\[1cm]
 
+
+
       \LARGE{E}\large{SCUELA} \LARGE{S}\large{UPERIOR} \large{DE} \LARGE{C}\large{OMPUTO}\\[1cm]
+
+      \large{ \textit{TRABAJO TERMINAL}} \\[1cm]
 
       \textbf{ \LARGE{R}\large{ECOLECTOR} \large{Y} \LARGE{C}\large{LASIFICADOR} \large{DE}  
       \LARGE{N}\large{OTICIAS}}\\[1cm]
       \large{\textbf{2018-B013}}\\[1cm]
 
-      \huge{T \hspace{1cm} E \hspace{1cm} S \hspace{1cm} I \hspace{1cm} S  }\\[1cm]
-
-      \large{\textbf{QUE PARA OBTENER EL GRADO DE:}}\\[1cm]
-      \large{LIC. EN INGENIERÍA EN SISTEMAS COMPUTACIONALES  }\\[1cm]
 
       \large{\textbf{PRESENTAN:}}\\[1cm]
       \large{CARLOS ANDRES HERNANDEZ GOMEZ}\\
@@ -61,13 +65,33 @@
 
 
       \large{\textbf{DIRECTORES:  }}\\[.5cm]
-      \large{\textbf{M. EN C.} JOEL OMAR JUÁRES GAMBINO }\\
-      \large{\textbf{DRA.} CONSULO VARINIA GARCIA MENDOZA }\\[0.5cm]
+      \large{\textbf{M. en C.} JOEL OMAR JUÁRES GAMBINO }\\
+      \large{\textbf{Dra.} CONSULO VARINIA GARCIA MENDOZA }\\[0.5cm]
+
+     \large{\textbf{CIUDAD DE MÉXICO}} 
 
     }
 
   \end{minipage}
   \end{titlepage}
+
+
+
+%--------------Definimos el estilo del piede página-----%
+
+\fancypagestyle{plain}{
+  
+ % \fancyfoot[LE]{\begin{picture}(0,0) \put(-165,-95){ \includegraphics[scale=1]{imagenes/foot.png}}\end{picture}}
+  %\fancyfoot[LO]{\begin{picture}(0,0) \put(-110,-95){ \includegraphics[scale=1]{imagenes/foot.png}}\end{picture}}
+  \renewcommand{\headrulewidth}{0.5pt}
+  \renewcommand{\footrulewidth}{0.5pt}
+
+
+}
+
+\pagestyle{plain}
+%----------------------------------------------------%
+
 
 %-------------Indice---------%
   \tableofcontents
@@ -75,19 +99,18 @@
 
 
 
+%-------------------------------------------------------%
+
+\mainmatter
+
+
 \chapter{Introducción}\label{chp:introduccion}
 
-La presente investigación se refiere al tema 
+El objetivo de estudio de este trabajo es la clasificación de noticias implementando 
+procesamiento de lenguaje natural y algoritmos de machine learning. El artículo periodistico es la información de un hecho ocurrido durante un lapso de tiempo determinado, permite conocer el estado económico de un país, logros de la ciencia, desastres naturales, grado inseguridad, dichos acontecimientos independientemente del tema, día y lugar en el cual ocurrieron tienen un impacto en la sociedad. Las caracteristicas principales de este tipo de artículo es depender de un medio de comunicación como la televisión, redes sociales, diarios, blogs, radio, entre otros, crean expectativas en los sectores económicos (Educación, industria, turismo, etc) esto a su vez modifica los planes de inversión de cual quier empresa o nación, siendo así de suma importancia su distribución de una forma eficaz [1].\\
 
+En el siglo XXI la técnologia juega un papel importante en transmitir las noticias meidante páginas web, son accesibles gracias a una herramienta llamada crawler que las reúne para indexarlas y hacer más sencillo que los motores de búsqueda puedan recuperarlas [2]. En la actualidad las páginas web van incrementando día con día, por lo cual se pueden consultar noticias de distintos sitios, alguno de estos son los periódicos electrónicos, los cuales dividen sus artículos en secciones para facilitar la búsqueda del usuario, sin embargo, el nombre de las secciones no coincide en todos los periódicos a pesar de que el tipo de contenido sea el mismo. Existen un sinfín de sitios independientes en la red, que proveen una gran variedad de artículos, dichos sitios no cuentan con una clasificación particular, por lo que resulta difícil para el usuario realizar una búsqueda específica dentro de dichos sitios.
 
-
-
-
-
-La noticia es la información de un hecho de interés ocurrido durante un periodo de tiempo determinado. Constituye el elemento primordial de la información periodística y el género básico del periodismo. Conocer los acontecimientos del mundo independientemente del tema, día, lugar en que se suscitan, tiene una gran importancia en la sociedad, estos se comparten por distintos medios de comunicación, tales como la televisión, redes sociales, diarios, blogs y la radio. Las noticias nos permiten conocer la situación económica del país, logros de la ciencia, desastres naturales, la situación en cuestión de inseguridad y otros acontecimientos. En el ámbito de las inversiones, las noticias crean expectativas y eso a su vez puede modificar los planes de inversión en cualquier sector, siendo así de suma importancia compartirlas de una forma eficaz [1].\\
-
-Mucha de la información que se consulta hoy en día se hace a través de páginas web. Estas páginas son accesibles gracias a una herramienta llamada crawler que las reúne para indexarlas y hacer más sencillo que los motores de búsqueda puedan recuperarlas [3]. En la actualidad las páginas web van incrementando día con día, por lo cual se pueden consultar noticias de distintos sitios, alguno de estos son los periódicos electrónicos, los cuales dividen sus artículos en secciones para facilitar la búsqueda del usuario, sin embargo, el nombre de las secciones no coincide en todos los periódicos a pesar de que el tipo de contenido sea el mismo. Existen un sinfín de sitios independientes en la red, que proveen una gran variedad de artículos, dichos sitios no cuentan con una clasificación particular, por lo que resulta difícil para el usuario realizar una búsqueda específica dentro de dichos sitios.
-Dada la gran cantidad de sitios web que publican noticias, se han creado algunas aplicaciones similares a la propuesta en este trabajo que permiten la recolección de noticias de interés para el usuario como Flipboard [4], Huffpost [5] y Google News [6]. En la Tabla 1 se muestran dichas aplicaciones con sus características más relevantes.
 
 \section{Problemática}
 
@@ -97,9 +120,6 @@ Según El Economista [8] el sitio web “Animal Político” ocupa el lugar núm
 Debido a lo anterior se propone crear un recolector de noticias el cual permita recopilar noticias de distintas fuentes de información, y mediante el análisis automático de su contendido determine si este guarda relación con las secciones de interés del usuario y el periodo establecido. Finalmente, las noticias que satisfagan ambos filtros serán las que se le mostrarán al usuario.
 
 \section{Solución Propuesta}
-
-
-
 
 \section{Objetivo}
 
@@ -122,9 +142,15 @@ Debido a lo anterior se propone crear un recolector de noticias el cual permita 
 
 \chapter{Bibliografía}\label{chp:introduccion}
 \section{Referencias}
-\[1\] Manning, C., Raghavan, P. and Schütze, H. (2009). Introduction to information retrieval. New York: Cambridge University Press, pp.443-459.
+(1) Manning, C., Raghavan, P. and Schutze, H. (2009). Introduction to information retrieval. New York: Cambridge University Press, pp.443-459.\\
+
+(2) Bernabeu Morón, N. (2013). La noticia y el reportaje. Espania, Ministerio de Educación de Espania, p.9.
 
 
 
+\chapter{Conclusiones}
+
+
+Vestibulum faucibus nibh ac felis dapibus, ac efficitur ipsum fermentum. Nullam sapien ligula, varius sed neque nec, dictum scelerisque ipsum. Praesent pellentesque tristique lorem non cursus. In et urna lectus. Cras porttitor ipsum sed ullamcorper faucibus. Curabitur sapien turpis, vulputate sed enim a, feugiat aliquet eros. Donec ut dui a libero dapibus dictum ac eget justo. Duis tristique luctus diam, faucibus eleifend neque tincidunt at. Sed eget risus dolor. Quisque auctor tellus eget ipsum maximus, at sodales nisi maximus. Fusce nisi lectus, ornare sit amet mi et, fermentum vestibulum turpis. Nulla et rhoncus nulla. Suspendisse arcu ligula, mollis sed diam a, consequat sollicitudin ipsum. Donec eget aliquet nisi.
 
 \end{document}
