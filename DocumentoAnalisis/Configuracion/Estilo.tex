@@ -1,0 +1,27 @@
+%---------Definimos el modelo de los links del indice
+\hypersetup{
+    colorlinks=true,
+    linkcolor=red,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Sharelatex Example},
+    bookmarks=true,
+    pdfpagemode=Bookmarks,
+}
+%-------------------------------------------
+
+\frontmatter% Define el tipo de numeración
+
+%--------------Definimos el estilo del piede página-----%
+
+\fancypagestyle{plain}{
+  
+ % \fancyfoot[LE]{\begin{picture}(0,0) \put(-165,-95){ \includegraphics[scale=1]{imagenes/foot.png}}\end{picture}}
+  %\fancyfoot[LO]{\begin{picture}(0,0) \put(-110,-95){ \includegraphics[scale=1]{imagenes/foot.png}}\end{picture}}
+  \renewcommand{\headrulewidth}{0.5pt}
+  \renewcommand{\footrulewidth}{0.5pt}
+
+
+}
+
+\pagestyle{plain}% aplicamos el estilo para todas las páginas
