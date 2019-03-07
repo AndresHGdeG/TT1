@@ -1,10 +1,12 @@
 
 \chapter{Introducción}\label{chp:introduccion}
 
-El objetivo de estudio de este trabajo es la clasificación de noticias implementando 
-procesamiento de lenguaje natural y algoritmos de aprendizaje automático. El artículo periodistico es la información de un hecho ocurrido durante un lapso de tiempo determinado, permite conocer el estado económico de un país, logros de la ciencia, desastres naturales, grado dd inseguridad, dichos acontecimientos independientemente del tema, día y lugar en el cual ocurrieron tienen un impacto en la sociedad. Las caracteristicas principales de este tipo de artículo es depender de un medio de comunicación como la televisión, redes sociales, diarios, blogs, radio, entre otros, crean expectativas en los sectores económicos (Educación, industria, turismo, etc) esto a su vez modifica los planes de inversión de cual quier empresa o nación, siendo así de suma importancia su distribución de una forma eficaz [1].\\
+El objetivo de estudio de este trabajo es clasificar noticias implementando procesamiento de lenguaje natural, algoritmos de aprendizaje automático y el manejo tecnologías web (Crawler). El artículo periodístico es la información de un hecho ocurrido durante un lapso determinado, permite conocer el estado económico de un país, avances en la ciencia, desastres naturales, nivel de inseguridad, dichos acontecimientos independientemente del tema, día y lugar en el cual ocurrieron, tienen un impacto en la sociedad. Las características principales de este tipo de información es depender de un medio de comunicación como la televisión, redes sociales, diarios, blogs, los cuales crean expectativas en los sectores económicos (Educación, industria, turismo, etc.), modifica los planes de inversión de las empresas o naciones, siendo así de suma importancia su distribución de una forma eficaz. Cabe mencionar que el medio más utilizado es la internet.\\
 
-En el siglo XXI la técnologia juega un papel importante en transmitir las noticias meidante páginas web, son accesibles gracias a una herramienta llamada crawler que las reúne para indexarlas y hacer más sencillo que los motores de búsqueda puedan recuperarlas [2]. En la actualidad las páginas web van incrementando día con día, por lo cual se pueden consultar noticias de distintos sitios, alguno de estos son los periódicos electrónicos, los cuales dividen sus artículos en secciones para facilitar la búsqueda del usuario, sin embargo, el nombre de las secciones no coincide en todos los periódicos a pesar de que el tipo de contenido sea el mismo. Existen un sinfín de sitios independientes en la red, que proveen una gran variedad de artículos, dichos sitios no cuentan con una clasificación particular, por lo que resulta difícil para el usuario realizar una búsqueda específica dentro de dichos sitios.
+El uso de las páginas web está en incremento, permitiendo consultar noticias de distintos sitios como los periódicos electrónicos; su información al igual que un diario tradicional se encuentra dividida en secciones para facilitar la consulta, sin embargo, la clasificación suele variar en cada compañía de prensa, incluso con el mismo contenido, un problema mayor se encuentra en los sitios independientes, los cuales no cuentan con una segmentación particular, haciendo difícil realizar una búsqueda eficaz.\\
+
+Se han seleccionado los diarios más utilizados en México [1], con una buena segmentación en su contenido y se ha homogenizado las secciones en común, para obtener los datos necesarios (Noticias clasificadas) y realizar el entrenamiento del algoritmo de clasificación.
+
 
 
 \section{Problemática}
@@ -18,7 +20,7 @@ Debido a lo anterior se propone crear un recolector de noticias el cual permita 
 
 \section{Objetivo}
 
-  Crear un recolector de noticias, el cual permita recopilar información de diferentes fuentes como diarios, sitios de noticias, blogs, foros y mediante el análisis automático de su contenido muestre aquellas noticias que satisfagan los filtros de período y secciones establecidos por el usuario.
+  Crear un recolector de noticias, el cual permita recopilar información de diferentes fuentes como diarios, sitios de noticias, foros y mediante el análisis automático de su contenido muestre aquellas noticias que satisfagan los filtros de período y secciones establecidos por el usuario.
   
 
 \section{Objetivos Específicos}
