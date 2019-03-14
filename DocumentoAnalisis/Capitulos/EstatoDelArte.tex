@@ -1,0 +1,52 @@
+
+\chapter{Estado del arte}\label{chp:EstadoArte}
+
+\section{Introducción}
+
+	A continuación, se mostrarán distintos trabajos nacionales e internacionales, así como herramientas las cuales desempeñan una labor similar al propuesto en este trabajo.\\
+
+\section{Trabajos nacionales}%[pdf]
+
+	El trabajo \textit{Clasificación Automática de Textos de Desastres Naturales en México}
+	propone clasificar noticias del ámbito en Desastres Naturales, utilizando estrategias de reducción de dimensionalidad conocidas como umbral en la frecuencia y ganancia en la información, los métodos de clasificación utilizados fueron el clasificador simple de Bayes y vecinos más cercanos.\\
+
+	Se utilizaron 375 noticias del periódico \"Reforma\" como conjunto de entrenamiento, para posteriormente clasificarlas (relevantes e irrelevantes), de los cuales el 11.5\% de noticias eran relevantes y el 88.5\% restante eran irrelevantes.\\
+
+	Una vez obtenido el conjunto de noticias se procedió con un pre\-procesamiento, el cual reducía el tamaño de los documentos, eliminando las partes de los textos que no se consideraban relevantes; posteriormente se realizó el indexado, el cual los documentos son representdos por vectores de palabras en un espacio de dimensionalidad \textit{n} en el cual se logró una reducción de dimensionalidad en donde finalemente se utilizaron técnicas de clasificación como el algoritmo simple de Bayes en el cual se obtuvo un resultado del 97\% de efectividad al clasifciar noticias de desastres naturales.\\
+
+
+
+\section{Trabajos internacionales}
+	%https://scielo.conicyt.cl/scielo.php?script=sci_arttext&pid=S0718-09342014000300001
+	La obra \textit{Clasificación Automática de Textos Usando Redes de Palabras} propone un algoritmo para la clasificación automática de textos basado en una representación y clasificación distinta utilizada en los algoritmos de clasificación supervisada, utilizando redes de palabras.\\
+
+	Se utilizaron 1000 mensajes de texto de la plataforma Twitter, en el idioma español y correspondiente a distintos contextos, para posteriormente clasificar el tipo de contenido de los mensajes (positivos, negativos y neutrales), se definió un grafo como aquella red de palabras co\-cocurrentes construida a partir de un conjunto de textos clasificados; para su realización el primer proceso es llevar distintas variantes de una misma palabra a su raíz, esto para reducir la variabilidad del lenguaje posteriormente se considera las palabras plurales (terminadas con ‘s’ o ‘es’). A estas se les elimina el sufijo para compararlas con su equivalente singular, realizando el cambio de manera automática.
+	Los resultados mostraron que el clasificador presenta un 80\% cercanía respecto a la clasificación realizada por una persona; su nivel de desempeño fue mayor al obtenido con el algoritmo Naive Bayes.\\
+
+
+	El trabajo \textit{Document Classification for Newspaper Articles} se ha enfocado en clasificar articulos del MIT (Massachusetts Institute of Technology) de las siguientes categorías:
+
+	\begin{itemize}
+		\item Arts
+		\item Features
+		\item News
+		\item Opinion
+		\item Sports
+		\item World
+	\end{itemize}
+
+	Para los cuales utilizarón el algoritmos de clasificación como el \textit{Naive Bayes} ya que era uno de los clasificadores más simples y eficaces que otras técnicas de clasificación, de igual manera utilizarón la clasificación máxima de entropia el cual provee segmentación de texto, modelado de lenguaje.
+	Se utilizó un corpus de 3000 artículos en total, siendo 500 artículos de cada sección mencionada. Para el entrenamiento se utilizaron 120 artículos siendo 20 de cada sección y teniendo como resultado un 77\% de exactitud.\\
+
+\section{Herramientas disponibles}
+
+	Entre las herramientas utilizadas para el procesamiento de lenguaje natural y aprendizaje automático se encuentran:
+
+	%https://cloud.google.com/natural-language/?hl=Es-419
+	\begin{itemize}
+		\item \textit{Google Cloud Natural Language}; Ha revelado la estructura y el significado del texto con modelos potentes de aprendizaje automático previamente entrenados en una API de REST fácil de usar y con modelos personalizados se puede utilizar para extraer información sobre personas, lugares, eventos y muchos otros datos, que se mencionan en documentos de texto, artículos periodísticos o entradas de blog. También se puede utilizar para comprender las opiniones sobre sus productos expresadas en los medios sociales o analizar la intención en las conversaciones de los clientes que se den en un centro de atención telefónica o una aplicación de mensajería[]
+		\item Algoritmo Naive Bayes
+		\item Procesamiento de lenguaje natural
+		\item Árbol de decisión
+		\item Clasificación máxima de entropía
+	\end{itemize}
