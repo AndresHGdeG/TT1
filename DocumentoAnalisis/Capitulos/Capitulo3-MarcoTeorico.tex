@@ -3,11 +3,7 @@
 En esta sección se expondrán de manera detallada conceptos los cuales son esenciales para la elaboración de este trabajo.
 
 
-\section{Lenguaje}
-
-%--------------
-
-\section{Base de datos}
+%\section{Base de datos}
 
 %------------------------
 \section{Crawler}
@@ -18,7 +14,7 @@ Un crawler es una herramienta la cual analiza sitios web, permitiendo recolectar
 
 \section{Sitios web}
 
-Un sitio web es un conjunto de páginas web
+Sitio es un lugar que sirve para algo o un espacio ocupado (o que puede llegar a serlo). La noción de Web, por su parte, hace referencia a Internet, una red de redes que permite la interconexión de computadoras mediante un conjunto de protocolos denominado TCP\/IP.
 
 \section{Página web}
 
@@ -44,9 +40,59 @@ La Real Academía Española define al lenguaje como la facultad del ser humano d
 
 \section{Procesamiento de lenguaje natural}
 
-El procesamiento de lenguaje natural es una disciplina de la Inteligencia Artificial que se ocupa de la formulación e investigación de mecanismos computacionales para la comunicación entre persoonas y maquinas mediante el uso de Lenguajes Naturales[\'].
+El procesamiento de lenguaje natural es una disciplina de la Inteligencia Artificial que se ocupa de la formulación e investigación de mecanismos computacionales para la comunicación entre persoonas y maquinas mediante el uso de Lenguajes Naturales[].
 %' http://www.cs.us.es/cursos/ia2/temas/tema-06.pdf
+
+\section{Tokenización}
+	Es la acción de separar el texto en sus unidades míninas(Palabras), se les asigna un código como 
+	el asiic o hexadecimal para ser reconocidas de fórma única, son almacenas para su postrior reconocimiento.
+	Cabe mencionar que los signos de puntuación son eliminados.
+
+\section{Lematización}
+	Es el proceso lingüstico que, dada una palabra flexionada 
+	se encuentra su lema.Una palabra flexionada es cuando esta en el plural, en femenino conjugada, diminutivo o en superlativo.El lema es la una palabra que esta en singular para sustantivo,singular masculino para adjetivo e infinitivo para un verbo.
+	Ejemplo:
+	
+	\begin{itemize}
+		\item amigos, amiga, amiguitos-> Amigo
+		\item soy, son, es->Ser
+	\end{itemize}
+
+	Cabe mencionar que existen diversos grados de lemataizaicón 
+
+	\begin{itemize}
+		\item Mórfólogica: Es la anterior mente explicada
+		\item Sintáctica: Toma encuenta el contexto donde se encuentra la palabra
+	\end{itemize}
+
+	Una opción para lematizar es Freeling, este es un lematizador
+	hecho por la universidad de catalunia.
+
+
+\section{Naive bayes}
+	Es una aproximación probabilistica, las cuales hacen especualiciones sobre como deben ser 
+	generados los datos. Generalmente utiliza aprendizaje superbisado sobre el conjuto
+	de entrenamiento para estimar sus parámetros. Con el conjunto de entrada 
+	se aplica el teorema de bayes.
+
+\section{Maquina de soporte vectorial}
+	Las maquinas de soporte vectorial sons sistemas de aprendizaje los cuales se basan en el 
+	uso de un espacio de funciones lineales, el cual se encuentra con mas dimenciones inducido 
+	por un kernel, en el que las hipotesis son las entradas para el algoritmo.
+
+	El algoritmo induce separadores lineales ya sea en el espacio original de los ejemplos 
+	de entrada, si los datos no son separabales se busca un hiperplano en el si lo sean, se hace de 
+	forna implicita con las funciones kernel.
+
+\section{Representación del texto}
+	Los métodos de aprendizaje automático, requieren que la información este representado 
+	en un formato que facilite su procesamiento. Un método utilzado es representar los datos
+	en un vector de valores numéricos.
+
 
 \section{Corpus}
 
 Se le llama corpues a la recopilación de un conjunto de textos, de materiales escritos y/o hablados, agrupados bajo un conjunto de criterios mínimos, para realizar ciertos análisis lingüísticos.
+Se le llama corpues a la recopilación de un conjunto de textos, de materiales escritos y/o hablados, agrupados bajo un conjunto de criterios mínimos, para realizar ciertos análisis lingüísticos.
+
+
