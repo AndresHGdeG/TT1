@@ -1,33 +1,47 @@
 
 \chapter{Introducción}
 
-El objetivo de estudio de este trabajo es clasificar noticias implementando procesamiento de lenguaje natural, algoritmos de aprendizaje automático y el manejo tecnologías web (Crawler). El artículo periodístico es la información de un hecho ocurrido durante un lapso determinado, permite conocer el estado económico de un país, avances en la ciencia, desastres naturales, nivel de inseguridad, dichos acontecimientos independientemente del tema, día y lugar en el cual ocurrieron, tienen un impacto en la sociedad. Las características principales de este tipo de información es depender de un medio de comunicación como la televisión, redes sociales, diarios, blogs, los cuales crean expectativas en los sectores económicos (Educación, industria, turismo, etc.), modifica los planes de inversión de las empresas o naciones, siendo así de suma importancia su distribución de una forma eficaz. Cabe mencionar que el medio más utilizado es la internet.\\
 
-El uso de las páginas web está en incremento, permitiendo consultar noticias de distintos sitios como los periódicos electrónicos; su información al igual que un diario tradicional se encuentra dividida en secciones para facilitar la consulta, sin embargo, la clasificación suele variar en cada compañía de prensa, incluso con el mismo contenido, un problema mayor se encuentra en los sitios independientes, los cuales no cuentan con una segmentación particular, haciendo difícil realizar una búsqueda eficaz.\\
+El objetivo de estudio de este trabajo es clasificar noticias utilizando un recolector (Crawler), en el cual se implementará procesamiento de lenguaje natural, así como algoritmos de aprendizaje automático. La noticia es la información de un hecho de interés ocurrido durante un periodo de tiempo determinado. Constituye el elemento primordial de la información periodística y el género básico del periodismo [1]. Conocer los acontecimientos del mundo independientemente del tema, día, lugar en que se suscitan, tiene una gran importancia en la sociedad, estos se comparten por distintos medios de comunicación, tales como la televisión, redes sociales, diarios, blogs y la radio; Nos permiten conocer la situación económica del país, logros de la ciencia, desastres naturales, la situación en cuestión de inseguridad y otros acontecimientos. En el ámbito de las inversiones, crean expectativas y eso a su vez puede modificar los planes de inversión en cualquier sector, siendo así de suma importancia compartirlas de una forma eficaz [2].\\
 
-Se han seleccionado los diarios más utilizados en México [1], con una buena segmentación en su contenido y se ha homogenizado las secciones en común, para obtener los datos necesarios (Noticias clasificadas) y realizar el entrenamiento del algoritmo de clasificación.
+El uso de páginas web como medio de comunicación está en incremento, permitiendo consultar noticias de distintos sitios como los periódicos electrónicos; su información al igual que un diario tradicional se encuentra dividida en secciones para facilitar la consulta, sin embargo, la clasificación suele variar en cada portal, incluso teniendo el mismo contenido. Un problema mayor se encuentra en los sitios independientes, los cuales no cuentan con una segmentación particular, haciendo difícil realizar una búsqueda eficaz.\\
+
+Se han seleccionado los diarios más consultados en México, con una buena
+segmentación en su contenido y se han homogeneizado las secciones en común, para poder extraer la información necesaria de cada noticia y así poder llevar a cabo el entrenamiento del algoritmo de clasificación.
 
 
 \section{Problemática}
 
-Hoy en día existen distintas maneras de informarse acerca de los acontecimientos más recientes, por ejemplo la televisión, redes sociales, foros, diarios, etc. Esto ha provocado que la información se encuentre más dispersa y se tenga que acceder a muchos recursos para recopilarla. Esta situación implica un gran esfuerzo y tiempo. Para ayudar en este problema existen herramientas que hacen la búsqueda de noticias de interés para el usuario en forma automática. Sin embargo, dichas herramientas dependen de que los sitios a consultar cuenten con una etiquetación correcta y homogénea de la información.\\
+La clasificación de textos es una tarea que se lleva a cabo de forma manual, lo cual representa un costo en términos del tiempo ocupado y el dinero invertido en la contratación del personal.\\
 
-Según El Economista [8] el sitio web “Animal Político” ocupa el lugar número cuatro en el ranking de medios nativos digitales y clasifica sus noticias de una manera poco habitual para los lectores, como la sección “El sabueso”, “El plumaje”, “Hablemos de … “, entre otras, lo que hace complicado obtener los artículos para los métodos tradicionales de recopilación que se basan sólo en las etiquetas que identifican cada sección y no el contenido de las noticias.
-Debido a lo anterior se propone crear un recolector de noticias el cual permita recopilar noticias de distintas fuentes de información, y mediante el análisis automático de su contendido determine si este guarda relación con las secciones de interés del usuario y el periodo establecido. Finalmente, las noticias que satisfagan ambos filtros serán las que se le mostrarán al usuario.
+Los métodos tradicionales para la recopilación de información de los recolectores web (Crawler), están basados en las etiquetas o marcadores que los sitos añaden a su código fuente, por ejemplo, algunos artículos periodísticos son etiquitados a la sección que pertenecen (Política, ciencia, tecnología, etc). Sin embargo, existen muchas fuentes de información que no etiquetan sus publicaciones, incluso si la tarea es realizada, dicha segmentación no indica claramente el tipo de contenido; Al consultar los portales mas visitados en México (En el giro del periodismo) [3] se encuentra definida la sección deportes con varios sinónimos como \textit{Universal deportes} (Diario \textbf(El universal)), \textit{La afición} (Portal de \textit{Milenio}), \textit{Adrenalina} (\textbf{Excelsior}), etc. Como este ejemplo se encuentran mas; Las noticias son segmentadas de forma tan diversa que ha complicado su búsqueda en la internet.
+
 
 \section{Justificación}
 
 
-Hoy en día existen distintas maneras de informarse acerca de los acontecimientos más recientes, por ejemplo, en la televisión, blogs, redes sociales, foros, diarios, etc. Esto ha provocado que la información se encuentre más dispersa y se tenga que acceder a muchos recursos para recopilarla. Esta situación implica un gran esfuerzo y tiempo. Para ayudar en este problema existen herramientas que hacen la búsqueda de noticias de interés para el usuario en forma automática. Sin embargo, dichas herramientas dependen de que los sitios a consultar cuenten con una etiquetación correcta y homogénea de la información.\\
 
-Según El Economista [8] el sitio web “Animal Político” (www.animalpolitico.com) ocupa el lugar número cuatro en el ranking de medios nativos digitales y clasifica sus noticias de una manera poco habitual para los lectores, como la sección “El sabueso”, “El plumaje”, “Hablemos de … “, entre otras, lo que hace complicado obtener los artículos para los métodos tradicionales de recopilación que se basan sólo en las etiquetas que identifican cada sección y no el contenido de las noticias.
-Debido a lo anterior se propone crear un recolector de noticias el cual permita recopilar noticias de distintas fuentes de información, y mediante el análisis automático de su contendido determine si este guarda relación con las secciones de interés del usuario y el periodo establecido. Finalmente, las noticias que satisfagan ambos filtros serán las que se le mostrarán al usuario.
+Hoy en día existen distintas maneras de informarse acerca de los acontecimientos más recientes, por ejemplo, la televisión, blogs, redes sociales, foros,
+diarios, etc. Esto ha provocado que la información se encuentre dispersa y
+se deba acceder a múltiples recursos para ser recopilada, implicando
+una inversión de tiempo y esfuerzo. Para ayudar en está problemática existen herramientas
+que hacen la búsqueda de noticias de interés para el usuario en forma automática. Sin embargo, dichas herramientas dependen de los sitios a consultar los cuales deben contener etiquetas definidas y homogéneas.\\
+
+Según El Economista [3] el sitio web “Animal Político” (www.animalpolitico.com)
+ocupa el lugar número cuatro en el ranking de medios nativos digitales, clasifica sus noticias de una manera poco habitual para los lectores como la sección
+\textit{El sabueso}, \textit{El plumaje}, \textit{Hablemos de . . . }, entre otras, lo que hace complicado obtener los artículos con los métodos tradicionales de recopilación que,
+se basan sólo en las etiquetas que identifican cada sección y no el contenido de
+las noticias. Se propone crear un sitio web, el cual permite recolecta noticias de la internet
+de forma automática; las cuales serán clasificadas de acuerdo con su contenido y
+posteriormente serán mostradas al usuario. Cabe mencionar que el sitio permite filtrar las noticias de
+acuerdo a su contenido y a su fecha publicación.
+
 
 \section{Solución Propuesta}
 
-
-Se propone crear un sitio web, el cual permite recolecta noticias de la internet de forma automática; las cuales serán  clasificadas de acuerdo a su contenido y posteriormente son mostradas al usuario. El sitio permite filtrar las noticias de acuerdo a su contenido y asu fecha publicación.
-
+Se propone crear un portal web el cual recolecte y clasifique noticias de acuerdo 
+a su contenido y periodo de difusión, con el uso de recopiladores web ( Crawler ) y la implementación de algoritmos de procesamiento de lenguaje natural. Finalmente, las noticias
+que satisfagan ambos filtros (Tipo de contenido y fecha de publicación) serán mostradas al usuario.
 
 \section{Objetivo}
 
