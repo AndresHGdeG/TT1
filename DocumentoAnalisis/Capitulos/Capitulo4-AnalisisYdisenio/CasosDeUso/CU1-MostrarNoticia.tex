@@ -30,8 +30,10 @@ Brinda al usuario un punto de acceso para visualizar el portal web correspondien
 	\hline
 	\textbf{Reglas de negocio:} &\RNref{RN2}{Lenguaje de direcciones web} \\
 	\hline
-	\textbf{Errores:} & \Tref{MSG1}{MSG1 Catálago vacio}: Se muestra cuando el catálogo \textbf{Sitios} No contiene\\
-	& información. \\
+	\textbf{Errores:} & 1. \Tref{MSG1}{MSG1 Catálago vacio}: Se muestra cuando el\\
+	&catálogo \textbf{Sitios} No contiene información. \\
+	&2. \Tref{MSG2}{MSG2 Lenguaje de sitio}: Se muestra cuando los sitios \\
+	&proporcionados no se encuentran redactados en lenguaje español.\\
 	\hline
 	\textbf{Autor:} & Carlos Andres Hernandez Gomez \\
 	\hline
@@ -48,7 +50,9 @@ Brinda al usuario un punto de acceso para visualizar el portal web correspondien
 	\item \actor Selecciona la opción \textbf{Política} de la pantalla \Tref{UI1}{UI1 Inicio}. \TAref{A} \TAref{B} \TAref{C}
 	\item \sistema Obtiene el catálogo \textbf{Sitios}.
 	\item \sistema Verifica que el catálogo \textbf{Sitios} contenga información. \TAref{D}
-	\item \sistema 
+	\item \sistema Verifica que al menos un sitio cumpla con la regla de negocio \RNref{RN2}{Lenguaje de direcciones web}. \TAref{E}
+	\item \sistema Incluye el caso de uso \Tref{CU2}{CU2 Recolectar noticas}.
+	\item \sistema Incluye el caso de uso \Tref{CU3}{CU3 Calasificar noticias}.
 	\item \finCU	
 \end{enumerate}
 
@@ -105,6 +109,19 @@ Brinda al usuario un punto de acceso para visualizar el portal web correspondien
 \begin{enumerate}[{D-}1.]
 
 	\item \sistema Muestra el mensaje \Tref{MSG1}{MSG1 Catálago vacio} en la pantalla \Tref{UI1}{UI1 Inicio}.
+	\item \finCU	
+
+\end{enumerate}
+
+%--------------------trayectoria Alternativa E---------%
+\begin{large}
+	\Talterna{E}\\
+\end{large}	
+\textbf{Condición:} \textit{Los sitios proporcionados no estan redactados en lenguaje español}
+
+\begin{enumerate}[{E-}1.]
+
+	\item \sistema Muestra el mensaje  \Tref{MSG2}{Lenguaje de sitio} en la pantalla \Tref{UI1}{UI1 Inicio}.
 	\item \finCU	
 
 \end{enumerate}
