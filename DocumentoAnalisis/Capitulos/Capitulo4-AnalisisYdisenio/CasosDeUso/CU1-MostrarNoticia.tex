@@ -1,13 +1,13 @@
-f\Tsubsection{CU1 Mostrar noticias}
+\Tlabel{CU1}\Tsubsection{CU1 Mostrar noticias}
 
 \begin{large}
 	\textbf{Resumen}\\
 \end{large}
 
-Brinda al usuario un punto de acceso para visualizar el portal web correspondiente a cada tipo clasificación, ya sea \textbf{Política}, \textbf{Deportes}, \textbf{Ciencia} o \textbf{Economía}; El sitio muestra al menos 15 noticias las cuales se encuentran ordenadas de forma descendente por la fecha de difusión, cada artículo contiene el \textbf{Título} , la \textbf{Fecha de publicación}, si es el caso un \textbf{Resumen de la información}  y un \textbf{Link} el cual direcciona a la página fuente. Cabe mencionar que los datos mostrados datan des de un mes anterior a la fecha en el cual el actor ha ingresado a la página.\\
+Brinda al usuario un punto de acceso para visualizar el portal web correspondiente a cada tipo clasificación, ya sea \textbf{Política}, \textbf{Deportes}, \textbf{Ciencia} o \textbf{Economía}; El sitio muestra al menos 15 noticias las cuales se encuentran ordenadas de forma descendente por la fecha de difusión, cada artículo contiene el \textbf{Título} , la \textbf{Fecha de publicación}, si es el caso un \textbf{Resumen de la información}  y un \textbf{Link} el cual direcciona a la página fuente. Cabe mencionar que la primera vez que los datos son mostrados datan de un mes anterior a la fecha consultada.\\
 
 \begin{large}
-	\textbf{Descripción}
+	\textbf{Descripción}\\
 \end{large}
 
 \begin{tabular}{|l|l|}
@@ -17,22 +17,23 @@ Brinda al usuario un punto de acceso para visualizar el portal web correspondien
 	\hline
 	\textbf{Actor:} & 	Usuario	\\
 	\hline
-	\textbf{Propósito:} & Proporciona una herramienta al usuario para acceder \\
+	\textbf{Propósito:} & Proporcionar una herramienta al usuario para acceder \\
 	&a los diferentes tipos de clasificaciones disponibles.\\
 	\hline
 	\textbf{Entradas:} & Ninguna. \\
 	\hline
 	\textbf{Salidas:} & Noticias clasificadas y ordenadas.\\
 	\hline
-	\textbf{Precondición:} & El catálogo \textbf{Direcciónes de sitios} debe estar poblado.\\
+	\textbf{Precondición:} & El catálogo \textbf{Sitios} debe estar poblado.\\
 	\hline
 	\textbf{Postcondiciones:} & El usario tendrá la facultad de consultar las noticias.\\
 	\hline
-	\textbf{Reglas de negocio:} & {RN2}{Lenguaje de direcciones web}\\
+	\textbf{Reglas de negocio:} &\RNref{RN2}{Lenguaje de direcciones web} \\
 	\hline
-	\textbf{Errores:} & Lorem Ipsum \\
+	\textbf{Errores:} & \Tref{MSG1}{MSG1 Catálago vacio}: Se muestra cuando el catálogo \textbf{Sitios} No contiene\\
+	& información. \\
 	\hline
-	\textbf{Autor:} & Lorem Ipsum \\
+	\textbf{Autor:} & Carlos Andres Hernandez Gomez \\
 	\hline
 \end{tabular}\\\\
 
@@ -40,26 +41,25 @@ Brinda al usuario un punto de acceso para visualizar el portal web correspondien
 
 
 \begin{large}
-	\textbf{Trayectoria principal}
+	\textbf{Trayectoria principal}\\
 \end{large}	
 
 \begin{enumerate}[1.]
-	\item \actor lorem ipsum
-	\item \sistema lorem ipsum
-	\item \sistema lorem ipsum
-	\item \sistema lorem ipsum
+	\item \actor Selecciona la opción \textbf{Política} de la pantalla \Tref{UI1}{UI1 Inicio}. \TAref{A} \TAref{B} \TAref{C}
+	\item \sistema Obtiene el catálogo \textbf{Sitios}.
+	\item \sistema Verifica que el catálogo \textbf{Sitios} contenga información. \TAref{D}
+	\item \sistema 
 	\item \finCU	
 \end{enumerate}
 
 
-%--------------------trayectoria Alternatia A---------%
+%--------------------trayectoria Alternativa A---------%
 
 \begin{large}
-	\textbf{Trayectoria alternativa A:}\\
+	\Talterna{A}\\
 \end{large}	
-\textbf{Condición:} \textit{Se escribe la condición}
+\textbf{Condición:} \textit{Selecciona la opción \textbf{Deportes}}
 \begin{enumerate}[{A-}1.]
-
 	\item \actor lorem ipsum
 	\item \sistema lorem ipsum
 	\item \finTA	
@@ -67,11 +67,11 @@ Brinda al usuario un punto de acceso para visualizar el portal web correspondien
 \end{enumerate}
 
 
-%--------------------trayectoria Alternatia b---------%
+%--------------------trayectoria Alternativa B---------%
 \begin{large}
-	\textbf{Trayectoria alternativa B:}\\
+	\Talterna{B}\\
 \end{large}	
-\textbf{Condición:} \textit{Se escribe la condición}
+\textbf{Condición:} \textit{Selecciona la opción \textbf{Ciencia}}
 
 \begin{enumerate}[{B-}1.]
 
@@ -81,6 +81,33 @@ Brinda al usuario un punto de acceso para visualizar el portal web correspondien
 
 \end{enumerate}
 
+
+%--------------------trayectoria Alternativa C---------%
+\begin{large}
+	\Talterna{C}\\
+\end{large}	
+\textbf{Condición:} \textit{Selecciona la opción \textbf{Economía}}
+
+\begin{enumerate}[{C-}1.]
+
+	\item \actor lorem ipsum
+	\item \sistema lorem ipsum
+	\item \finTA	
+
+\end{enumerate}
+
+%--------------------trayectoria Alternativa D---------%
+\begin{large}
+	\Talterna{D}\\
+\end{large}	
+\textbf{Condición:} \textit{El catálogo \textbf{Sitios} no contiene información}
+
+\begin{enumerate}[{D-}1.]
+
+	\item \sistema Muestra el mensaje \Tref{MSG1}{MSG1 Catálago vacio} en la pantalla \Tref{UI1}{UI1 Inicio}.
+	\item \finCU	
+
+\end{enumerate}
 
 %--------------------Puntos de extención--------------------%
 

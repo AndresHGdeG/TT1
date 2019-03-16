@@ -7,11 +7,25 @@
 \newcommand{\finTA}[0]{\textit{- - - - Fin de la trayectoria.}\\}
 \newcommand{\Tsubsection}[1]{\textcolor{myBlueDark}{\subsection{#1}}}
 
-%---------------------Comando para estilo de las reglas de negocio----------------%
+%---------------------Titulo para los requisitos funcionales----------------%
 \newcommand{\Dline}[2]{{\setlength{\parindent}{0pt}\textbf{\textcolor{myBlue}{\large{#1} \large{#2}}}} \\\rule[3mm]{110mm}{0.3mm}\includegraphics[scale=.5]{imagenes/Documento.png}}%Linea de separadora 
 
-\newcommand{\DGline}[2]{{\setlength{\parindent}{0pt}\textbf{\textcolor{myBlue}{\large{#1} \large{#2}}}} \\\rule[3mm]{110mm}{0.3mm}\includegraphics[scale=.5]{imagenes/DocumentoG.png} }%Linea de separadora 
-
+%----------------------------Titulo para las reglas del negocio-------------------%
+\newcommand{\DGline}[2]{\hypertarget{#1}{ }{\setlength{\parindent}{0pt}\textbf{\textcolor{myBlue}{\large{#1} \large{#2}}}} \\\rule[3mm]{110mm}{0.3mm}\includegraphics[scale=.5]{imagenes/DocumentoG.png}}%Linea de separadora 
+%----------------------------Titulo para los requisitos no funcionales-------------------%
 \newcommand{\DVline}[2]{{\setlength{\parindent}{0pt}\textbf{\textcolor{myBlue}{\large{#1} \large{#2}}}} \\\rule[3mm]{110mm}{0.3mm}\includegraphics[scale=.5]{imagenes/DocumentoV.png}}%Linea de separadora 
 
-%\newcommand{\RNref}[1]{\ref{#1}}
+%----------------------------Titulo para los mensajes -------------------
+\newcommand{\Mline}[2]{\hypertarget{#1}{ }{\setlength{\parindent}{0pt}\textbf{\textcolor{myBlue}{\large{#1} \large{#2}}}} \\\rule[3mm]{110mm}{0.3mm}\includegraphics[scale=.5]{imagenes/Mensaje.png}}%Linea de 
+
+%----------------link para hacer referencia a una regla de negocio---------------------%
+\newcommand{\RNref}[2]{\hyperlink{#1}{#1 #2} }
+%----------------Etiqueta para marcar en cual quier parte del documentop---------------------%
+\newcommand{\Tlabel}[1]{\hypertarget{#1}{ }}
+%----------------referencia para ir a las etiquetas previamente marcadas-------------------%
+\newcommand{\Tref}[2]{\hyperlink{#1}{#2}}
+
+%---------------------------Trayectoria alternativa-----------------%
+
+\newcommand{\Talterna}[1]{\hypertarget{TA#1}{ }\textbf{Trayectoria alternativa #1:}}
+\newcommand{\TAref}[1]{\hyperlink{TA#1}{[Trayectoria #1]}}
