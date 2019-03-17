@@ -25,9 +25,14 @@ Brinda al usuario un punto de acceso para visualizar el portal web correspondien
 	\textbf{Entradas:} & Ninguna. \\
 	\hline
 
-	\textbf{Salidas:} &$\bullet$ Noticias clasificadas y ordenadas.\\
-	&$\bullet$ \textit{Fecha inicio}\\
+	\textbf{Salidas:} &$\bullet$ \textit{Fecha inicio}\\
 	&$\bullet$ \textit{Feha fin}\\
+	&$\bullet$ Noticias clasificadas; De cada una se muestra:\\
+	&\ \ \ $\circ$ \textbf{Título}\\
+	&\ \ \ $\circ$ \textbf{Nombre de la página fuente}\\
+	&\ \ \ $\circ$ \textbf{Link al artículo}\\
+	&\ \ \ $\circ$ \textbf{Fecha de difusión}\\
+	&\ \ \ $\circ$ \textbf{Resumen}\\
 	\hline
 
 	\textbf{Precondición:} & El catálogo \textbf{Sitios} debe estar poblado.\\
@@ -35,9 +40,9 @@ Brinda al usuario un punto de acceso para visualizar el portal web correspondien
 
 	\textbf{Postcondiciones:} &$\bullet$ El usario tendrá la facultad de consultar las noticias.\\
 	&$\bullet$ El usario tendrá la facultad de acceder a los sitios web\\
-	&de origen de las noticias.\\
+	&\ \ de origen de las noticias.\\
 	&$\bullet$ El usario tendrá la facultad consultar noticias de un\\
-	&periodo diferente al establecido.\\
+	&\ \ periodo diferente al establecido.\\
 	\hline
 
 	\textbf{Reglas de negocio:} &$\bullet$ \RNref{RN2}{Lenguaje de direcciones web} \\
@@ -46,10 +51,10 @@ Brinda al usuario un punto de acceso para visualizar el portal web correspondien
 	\hline
 
 	\textbf{Errores:} & $\bullet$ \Tref{MSG1}{MSG1 Catálago vacio}: Se muestra cuando el\\
-	&catálogo \textbf{Sitios} No contiene información. \\
+	&\ \ catálogo \textbf{Sitios} No contiene información. \\
 	&$\bullet$ \Tref{MSG2}{MSG2 Lenguaje de sitio}: Se muestra cuando los sitios \\
-	&proporcionados no se encuentran redactados en lenguaje\\
-	& español.\\
+	&\ \ proporcionados no se encuentran redactados en lenguaje\\
+	&\ \ español.\\
 	\hline
 
 	\textbf{Autor:} & Carlos Andres Hernandez Gomez \\
@@ -65,7 +70,7 @@ Brinda al usuario un punto de acceso para visualizar el portal web correspondien
 
 \begin{enumerate}[1.]
 	
-	\item \actor Selecciona una opción de la pantalla \Tref{UI1}{UI1 Inicio}, ya sea \textbf{Política}, \textbf{Economía}, \textbf{Deportes} o \textbf{Ciencia}. 
+	\item \actor Selecciona una opción de la pantalla \Tref{UI1}{UI1 Inicio}; \textbf{Política}, \textbf{Economía}, \textbf{Deportes} o \textbf{Ciencia}. 
 	
 	\item \sistema Obtiene el catálogo \textbf{Sitios}.
 	
@@ -76,16 +81,18 @@ Brinda al usuario un punto de acceso para visualizar el portal web correspondien
 	\item \sistema Incluye el caso de uso \Tref{CU2}{CU2 Recolectar noticas}.
 	
 	\item \sistema \label{CU1:ClasificarN}Incluye el caso de uso \Tref{CU3}{CU3 Calasificar noticias}.
-	
-	\item \sistema Ordena de forma descendente las noticias clasificadas del paso \ref{CU1:ClasificarN} deacuerdo a su fecha de difusión.
-	
+
+	\item \sistema \label{CU1:DatosN}Obtiene de cada noticia clasificada en el paso \ref{CU1:ClasificarN} de la trayectoria principal el \textbf{Título}, \textbf{Nombre de la página fuente}, \textbf{Link al artículo}, \textbf{Fecha de difusión} y de contar con ello el \textbf{Resumen}.
+
+	\item \sistema \label{CU1:OrdenaN}Ordena de forma descendente las noticias clasificadas del paso \ref{CU1:ClasificarN} deacuerdo a su fecha de difusión.
+
 	\item \sistema Obtiene la fecha actual.
-	
+
 	\item \sistema \label{CU1:FechaI}Calcula el campo \textbf{Fecha incio} deacuerdo a la regla de negocio \RNref{RN10}{Fecha de partida}
-	
+
 	\item \sistema Habilita el campo \textbf{Fecha inicio}, \textbf{Fecha fin} y el botón \textbf{Buscar}.
-	
-	\item \sistema Muestra 15 noticias deacuerdo a la regla de negocio \RNref{RN11}{Orden de publicación}, llena el campo \textbf{Fecha inicio} calculado en el paso \ref{CU1:FechaI} de la trayectoria principal y el campo \textbf{Fecha fin} con la fecha actual, como se visualiza en la pantalla \Tref{UI2}{UI2 Sección política}.
+
+	\item \sistema Muestra 15 noticias de las ordenadas, deacuerdo a la regla de negocio \RNref{RN11}{Orden de publicación} con la información obtenida en el paso \ref{CU1:DatosN} de la trayectoria principal, llena el campo \textbf{Fecha inicio} con lo antes calculado y el campo \textbf{Fecha fin} con la fecha actual, como se visualiza en la pantalla \Tref{UI2}{UI2 Sección política}.
 
 	\item \actor \label{CU1:Consulta}Consulta la información.
 
