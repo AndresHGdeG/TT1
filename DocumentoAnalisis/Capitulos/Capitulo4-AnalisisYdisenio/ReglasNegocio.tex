@@ -52,32 +52,64 @@
     \end{itemize}
 
     %------------------RN6-----------------------%
-     \DGline{RN6}{Fecha de consulta}
+     \DGline{RN6}{Periodo válido}
 
     \begin{itemize}
-      \item \textbf{Tipo:}  
-      \item \textbf{Descripción:} La fecha de incio debe ser menor o igual a la fecha fin de consulta.
+      \item \textbf{Tipo:} Derivación.
+      \item \textbf{Descripción:}\\
+      $Sea$\\
+
+      $F_i:Fecha\_inicio$\\
+      $F_f:Fecha\_fin$\\
+
+      $T=\{Valido,Invalido\}$\\
+      $\psi\ \epsilon\ T$\\
+
+      Un periodo de fecha válido se defino como:\\
+
+      $(\psi=Valido)\leftrightarrow(F_i\ \leq\ F_f)$\\
+      $(\psi=Invalido)\leftrightarrow(F_i\ >\ F_f)$\\
       \item \textbf{Ejemplo:}
-      \item \textbf{Referenciado por:}  \\
+      \item \textbf{Referenciado por:} \Tref{CU2}{CU2 Buscar noticias} \\
     \end{itemize}
 
 
     %------------------RN7-----------------------%
-     \DGline{RN7}{Fecha actual}
+     \DGline{RN7}{Limite de periodo}
 
     \begin{itemize}
-      \item \textbf{Tipo:}  
-      \item \textbf{Descripción:} La fecha fin de consulta no puede ser mayor a la fecha actual.
-      \item \textbf{Referenciado por:}  \\
+      \item \textbf{Tipo:} Derivación. 
+      \item \textbf{Descripción:} 
+
+      $Sea$\\
+
+      $F_i:Fecha\_inicio$\\
+      $F_f:Fecha\_fin$\\
+      $F_a:Fecha\_actual$\\
+      $F_c:01/01/1990$\\
+
+      $T=\{Valido,Invalido\}$\\
+      $\psi\ \epsilon\ T$\\
+
+      $\Phi=[F_c,F_a]$\\
+      $I=[F_i,F_f]$\\
+      
+
+      Un intervalo de tiempo válido dentro de los limites del sistema se define como:\\
+
+      $(\psi=Valido)\leftrightarrow(I\ \subseteq\ \Phi)$\\
+      $(\psi=Invalido)\leftrightarrow(I\ \nsubseteq \Phi)$\\
+
+      \item \textbf{Referenciado por:} \Tref{CU2}{CU2 Buscar noticias} \\
     \end{itemize}
 
       %------------------RN8-----------------------%
      \DGline{RN8}{Campos obligatorios}
 
     \begin{itemize}
-      \item \textbf{Tipo:}  
-      \item \textbf{Descripción:} La fecha incio y fecha fin de consulta no pueden estar vacios o incompletos.
-      \item \textbf{Ejemplo:}
+      \item \textbf{Tipo:} Restricción.  
+      \item \textbf{Descripción:} Los campos marcados con \* no se deben omitir.
+      \item \textbf{Ejemplo:} 
       \item \textbf{Referenciado por:}  \\
     \end{itemize}
       %------------------RN9-----------------------%
@@ -112,6 +144,31 @@
     \begin{itemize}
       \item \textbf{Tipo:} Descripción
       \item \textbf{Descripción:} Las noticias se muestrán de forma descendente deacuerdo a su fecha de difusión; Es decir la primera publicación en mostrarse es aquella que tiene la fecha y hora mas sercana a la del sistema.
+      \item \textbf{Ejemplo:} 
+      \item \textbf{Referenciado por:} \Tref{CU2}{CU2 Buscar noticias} \\
+    \end{itemize}
+
+      %------------------RN12-----------------------%
+     \DGline{RN12}{Formato de fecha}
+
+    \begin{itemize}
+      \item \textbf{Tipo:} Derivación.
+      \item \textbf{Descripción:} Un formato de fecha correcto se define como:\\
+
+      $F=D/M/A$
+
+      $donde$\\ 
+
+      $F:Fecha$\\
+      $\Lambda_i:Anio\_actual$\\
+
+      $D=\{x/x\ E\ N,1\leq\ x\ \leq31\}$\\
+      $M=\{y/y\ E\ N,1\leq\ y\ \leq12\}$\\
+      $A=\{z/z\ E\ N,1990\leq\ z\ \leq\Lambda_i\}$\\
+
+
+
+
       \item \textbf{Ejemplo:} 
       \item \textbf{Referenciado por:} \Tref{CU2}{CU2 Buscar noticias} \\
     \end{itemize}

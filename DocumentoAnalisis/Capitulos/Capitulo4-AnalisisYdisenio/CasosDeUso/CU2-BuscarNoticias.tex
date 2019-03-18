@@ -4,7 +4,7 @@
 	\textbf{Resumen}\\
 \end{large}
 
-Permite al actor realizar una busqueda de las noticias correspondiente a cada tipo clasificación, ya sea \textbf{Política}, \textbf{Deportes}, \textbf{Ciencia} o \textbf{Economía}; El sitio muestra al menos 15 noticias las cuales se encuentran ordenadas de forma descendente por la fecha de difusión; Cada artículo contiene el \textbf{Título} , la \textbf{Fecha de publicación}, si es el caso un \textbf{Resumen de la información}  y un \textbf{Link} el cual direcciona a la página fuente.\\
+Permite al actor realizar una busqueda de noticias correspondiente a cada tipo clasificación, ya sea \textbf{Política}, \textbf{Deportes}, \textbf{Ciencia} o \textbf{Economía}; El sitio muestra 15 noticias ordenadas de forma descendente deacuerdo a la fecha de difusión; Cada artículo contiene el \textbf{Título} , la \textbf{Fecha de publicación},un \textbf{Link} el cual direcciona a la página fuentey de contar con ello  un \textbf{Resumen de la información}.\\
 
 \begin{large}
 \textbf{Descripción}\\
@@ -18,8 +18,8 @@ Permite al actor realizar una busqueda de las noticias correspondiente a cada ti
 \textbf{Actor:} & 	Usuario	\\
 \hline
 
-\textbf{Propósito:} & Proporcionar una herramienta para  \\
-&recolectar y clasificar noticias de una sección específica.\\
+\textbf{Propósito:} & Proporcionar una herramienta para  recolectar y clasificar\\
+&noticias de una sección específica.\\
 \hline
 
 \textbf{Entradas:} &$\bullet$ \textit{Fecha inicio}\\
@@ -44,9 +44,14 @@ Permite al actor realizar una busqueda de las noticias correspondiente a cada ti
 \hline
 
 \textbf{Reglas de negocio:} &$\bullet$ \RNref{RN11}{Orden de publicación}\\
+&$\bullet$ \RNref{RN8}{Campos obligatorios}\\
+&$\bullet$ \RNref{RN12}{Formato de fecha}\\
+&$\bullet$ \RNref{RN6}{Periodo válido}\\
+&$\bullet$ \RNref{RN7}{Limite de periodo}\\
+
 \hline
 
-\textbf{Errores:} Ninguno.\\
+\textbf{Errores:} & Ninguno.\\
 \hline
 
 \textbf{Autor:} & Carlos Andres Hernandez Gomez \\
@@ -61,6 +66,10 @@ Permite al actor realizar una busqueda de las noticias correspondiente a cada ti
 \begin{enumerate}[1.]
 
 \item \actor Da click en el botón \textbf{Buscar} de la pantalla \Tref{UI2}{UI2 Sección política}. \TAref{A}
+
+\item \sistema Verifica la regla de negocio \RNref{RN8}{Campos obligatorios}
+
+\item \sistema 
 
 \item \sistema Incluye el caso de uso \Tref{CU3}{CU3 Recolectar noticas}.
 
