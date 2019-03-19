@@ -1,174 +1,211 @@
 
+
+En esta sección se describen las reglas de negocio implementadas en el trabajo propuesto.\\\\
+%------------------RN1-----------------------%
+\DGline{RN1}{Número de palabras}
+\begin{itemize}
+  \item \textbf{Tipo:}  
+  \item \textbf{Descripción:}  La notica debe tener almenos 180 palabras
+  \item \textbf{Ejemplo:}
+  \item \textbf{Refer:}
+\end{itemize}
+%------------------RN2-----------------------%
+\DGline{RN2}{Lenguaje de direcciones web}
+
+\begin{itemize}
+  \item \textbf{Tipo:}  
+  \item \textbf{Descripción:} Las direcciones de los sitios a consultar deben estar redactadas en lenguaje español.
+  \item \textbf{Referenciado por:} \Tref{CU1}{CU1 Seleccionar sección} \\
+\end{itemize}
+%------------------RN3-----------------------%
+\DGline{RN3}{Lenguaje de noticias}
+
+\begin{itemize}
+  \item \textbf{Tipo:}  
+  \item \textbf{Descripción:} Las noticias deben estar redactadas en lenguaje español mexicano.
+  \item \textbf{Ejemplo:}
+  \item \textbf{Referenciado por:}  \\
+\end{itemize}
+%------------------RN4-----------------------%
+\DGline{RN4}{Restricción en la recoleción}
+
+\begin{itemize}
+  \item \textbf{Tipo:}  
+  \item \textbf{Descripción:} Solo se puede recoletar información de los sitios que lo permitan.
+  \item \textbf{Ejemplo:}
+  \item \textbf{Referenciado por:}  \\
+\end{itemize}
+%------------------RN5-----------------------%
+\DGline{RN5}{Porcentaje de aceptación}
+
+\begin{itemize}
+  \item \textbf{Tipo:}  
+  \item \textbf{Descripción:} Solo se puede mostrar una noticia si cumple con un porcentaje de aceptación mayor a 60\%.
+  \item \textbf{Ejemplo:}
+  \item \textbf{Referenciado por:}  \\
+\end{itemize}
+%------------------RN6-----------------------%
+\DGline{RN6}{Formato de fecha}
+
+\begin{itemize}
+  \item \textbf{Tipo:} Derivación.
+  \item \textbf{Descripción:} El formato de fecha se define como:\\
+
+  $F=D/M/A$
+
+  $donde$\\ 
+
+  $D=\{x/x\ E\ N,1\leq\ x\ \leq31\}$\\
+  $M=\{y/y\ E\ N,1\leq\ y\ \leq12\}$\\
+  $A=\{z/z\ E\ N,1990\leq\ z\ \leq\Lambda_i\}$\\
+
+  $F:Fecha$\\
+  $\Lambda_i:Anio\_actual$\\
+
+  \item \textbf{Ejemplo:} 
+  \item \textbf{Referenciado por:} \Tref{CU2}{CU2 Buscar noticias} \\
+\end{itemize}
+
+%------------------RN7-----------------------%
+\DGline{RN7}{Perido preestablecido}
+
+\begin{itemize}
+  \item \textbf{Tipo:} Cálculo
+  \item \textbf{Descripción:} El formato de fecha es el descrito en la \RNref{RN6}{Formato de fecha}; El periodo establecido se define de la siguiente forma.\\\\
+  \textbf{Fecha fin}:Toma el valor de la fecha actual.\\
+  \textbf{Fecha inicio}: Es colocada 5 día antes de la fecha actual; Se muestra la forma completa para el cálculo del día, mes y año:\\
+  $Sea$\\
+  $D_a:Dia\_actual$\\
+  $M_a:Mes\_actual$\\
+  $A_a:Anio\_actual$\\
+  $F_i:Fecha\_inicio$\\
+  $mod:Operacion\ modulo$\\
+  $\Psi(M_a):Funcion\ dias\ de \ mes$\\
+
+  $\xi=\frac{D_a-5}{\mid D_a-5 \mid}$\\
+
+  $\delta=\frac{\xi(\mid\xi-1\mid)}{2}$\\
+
+  La fecha toma el sigueinte valor:\\
+  $F_i=D_c/M_c/A_c$\\ 
+  Existen 4 casos para calcular el día, mes y años; Dependen del mes y el día actual: \\
+
+  \begin{tabular}{|l|c|c|}
+  	\hline
+	\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{\textbf{Caso:}} }&
+	\multicolumn{1}{| >{\columncolor{black}}c|}{ \textcolor{myWhite}{1} }&\multicolumn{1}{| >{\columncolor{black}}c|}{ \textcolor{myWhite}{2} }\\
+	\hline
+	\textbf{Restricción:}&$2\leq\ M_a\leq\ 12;D_a\neq5$  &$2\leq\ M_a\leq\ 12;D_a=5$\\
+	\hline 
+	\textbf{$D_c:$}&$(D_a-5)\pmod{\Psi(M_a-1)+1}$   &$\Psi(M_a-1)$\\
+	\hline
+	\textbf{$M_c:$}&$M_a+\delta$        			 &$M_a-1$\\
+	\hline
+	\textbf{$A_c:$}&$A_a$        				     &$A_a$\\
+	\hline
+  \end{tabular}
+
+
+  \begin{tabular}{|l|c|c|}
+  	\hline
+	\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{\textbf{Caso:}} }&
+	\multicolumn{1}{| >{\columncolor{black}}c|}{ \textcolor{myWhite}{3} }&\multicolumn{1}{| >{\columncolor{black}}c|}{ \textcolor{myWhite}{4} }\\
+	\hline
+	\textbf{Restricción:}&$M_a=1;D_a \neq 5$&\ \ \ \ \ \ $M_a=1;D_a=5$\ \ \ \ \ \\
+	\hline 
+	\textbf{$D_c:$}&\ \ \ \ \ \ \ \ \ $(D_a-5)\pmod{32}$\ \ \ \ \ \ \ \ & $31$\\
+	\hline
+	\textbf{$M_c:$}&$\xi\pmod{13}$&$12$\\
+	\hline
+	\textbf{$A_c:$}&$A_a+\delta$&$A_a-1$\\
+	\hline
+  \end{tabular}
+
+
+  \item \textbf{Ejemplo:} 
+  \item \textbf{Referenciado por:} \Tref{CU1}{CU1 Seleccionar sección} \\
+\end{itemize}%------------------RN8-----------------------%
+\DGline{RN8}{Periodo válido}
+
+\begin{itemize}
+  \item \textbf{Tipo:} Derivación.
+  \item \textbf{Descripción:}\\
+  $Sea$\\
+
+  $F_i:Fecha\_inicio$\\
+  $F_f:Fecha\_fin$\\
+
+  $T=\{Valido,Invalido\}$\\
+  $\psi\ \epsilon\ T$\\
+
+  Un periodo de fecha se defino como:\\
+
+  $(\psi=Valido)\leftrightarrow(F_i\ \leq\ F_f)$\\
+  $(\psi=Invalido)\leftrightarrow(F_i\ >\ F_f)$\\
+  \item \textbf{Ejemplo:}
+  \item \textbf{Referenciado por:} \Tref{CU2}{CU2 Buscar noticias} \\
+\end{itemize}
+%------------------RN9-----------------------%
+\DGline{RN9}{Limite de periodo}
+
+\begin{itemize}
+  \item \textbf{Tipo:} Derivación. 
+  \item \textbf{Descripción:} 
+
+  $Sea$\\
+
+  $F_i:Fecha\_inicio$\\
+  $F_f:Fecha\_fin$\\
+  $F_a:Fecha\_actual$\\
+  $F_c:01/01/1990$\\
+
+  $T=\{Valido,Invalido\}$\\
+  $\psi\ \epsilon\ T$\\
+
+  $\Phi=[F_c,F_a]$\\
+  $I=[F_i,F_f]$\\
   
-  En esta sección se describen las reglas de negocio implementadas en el trabajo propuesto.\\\\
 
+  Un intervalo de tiempo dentro de los limites del sistema se define como:\\
 
-  %------------------RN1-----------------------%
-     \DGline{RN1}{Número de palabras}
+  $(\psi=Valido)\leftrightarrow(I\ \subseteq\ \Phi)$\\
+  $(\psi=Invalido)\leftrightarrow(I\ \nsubseteq \Phi)$\\
+
+  \item \textbf{Referenciado por:} \Tref{CU2}{CU2 Buscar noticias} \\
+\end{itemize}
+
+%------------------RN10-----------------------%
+\DGline{RN10}{Campos obligatorios}
+
+\begin{itemize}
+  \item \textbf{Tipo:} Restricción.  
+  \item \textbf{Descripción:} Los campos marcados con \* no se deben omitir.
+  \item \textbf{Ejemplo:} 
+  \item \textbf{Referenciado por:}  \\
+\end{itemize}
+%------------------RN11-----------------------%
+\DGline{RN11}{Sitios restringidos}
+
+\begin{itemize}
+  \item \textbf{Tipo:}m
+  \item \textbf{Descripción:} No se debe acceder a las siguientes páginas:
     \begin{itemize}
-      \item \textbf{Tipo:}  
-      \item \textbf{Descripción:}  La notica debe tener almenos 180 palabras
-      \item \textbf{Ejemplo:}
-      \item \textbf{Referenciado por:} nombre caso de uso \\
-    \end{itemize}
+        \item Facebook
+        \item Youtube
+        \item Twitter
+        \item Instagram 
+    \end{itemize} 
+  \item \textbf{Ejemplo:}
+  \item \textbf{Referenciado por:}  \\
+\end{itemize}
+%------------------RN12-----------------------%
+\DGline{RN12}{Orden de publicación}
 
-  %------------------RN2-----------------------%
-     \DGline{RN2}{Lenguaje de direcciones web}
-
-    \begin{itemize}
-      \item \textbf{Tipo:}  
-      \item \textbf{Descripción:} Las direcciones de los sitios a consultar deben estar redactadas en lenguaje español.
-      \item \textbf{Referenciado por:} \Tref{CU1}{CU1 Seleccionar sección} \\
-    \end{itemize}
-
-  %------------------RN3-----------------------%
-     \DGline{RN3}{Lenguaje de noticias}
-
-    \begin{itemize}
-      \item \textbf{Tipo:}  
-      \item \textbf{Descripción:} Las noticias deben estar redactadas en lenguaje español mexicano.
-      \item \textbf{Ejemplo:}
-      \item \textbf{Referenciado por:}  \\
-    \end{itemize}
-
-  %------------------RN4-----------------------%
-     \DGline{RN4}{Extración de información}
-
-    \begin{itemize}
-      \item \textbf{Tipo:}  
-      \item \textbf{Descripción:} Solo se puede recoletar información de los sitios que lo permitan.
-      \item \textbf{Ejemplo:}
-      \item \textbf{Referenciado por:}  \\
-    \end{itemize}
-
-    %------------------RN5-----------------------%
-     \DGline{RN5}{Porcentaje de aceptación}
-
-    \begin{itemize}
-      \item \textbf{Tipo:}  
-      \item \textbf{Descripción:} Solo se puede mostrar una noticia si cumple con un porcentaje de aceptación mayor a 60\%.
-      \item \textbf{Ejemplo:}
-      \item \textbf{Referenciado por:}  \\
-    \end{itemize}
-
-    %------------------RN6-----------------------%
-     \DGline{RN6}{Periodo válido}
-
-    \begin{itemize}
-      \item \textbf{Tipo:} Derivación.
-      \item \textbf{Descripción:}\\
-      $Sea$\\
-
-      $F_i:Fecha\_inicio$\\
-      $F_f:Fecha\_fin$\\
-
-      $T=\{Valido,Invalido\}$\\
-      $\psi\ \epsilon\ T$\\
-
-      Un periodo de fecha válido se defino como:\\
-
-      $(\psi=Valido)\leftrightarrow(F_i\ \leq\ F_f)$\\
-      $(\psi=Invalido)\leftrightarrow(F_i\ >\ F_f)$\\
-      \item \textbf{Ejemplo:}
-      \item \textbf{Referenciado por:} \Tref{CU2}{CU2 Buscar noticias} \\
-    \end{itemize}
+\begin{itemize}
+  \item \textbf{Tipo:} Descripción
+  \item \textbf{Descripción:} Las noticias se muestrán de forma descendente deacuerdo a su fecha de difusión; Es decir la primera publicación en mostrarse es aquella que tiene la fecha y hora mas sercana a la del sistema.
+  \item \textbf{Ejemplo:} 
+  \item \textbf{Referenciado por:} \Tref{CU2}{CU2 Buscar noticias} \\
+\end{itemize}
 
 
-    %------------------RN7-----------------------%
-     \DGline{RN7}{Limite de periodo}
-
-    \begin{itemize}
-      \item \textbf{Tipo:} Derivación. 
-      \item \textbf{Descripción:} 
-
-      $Sea$\\
-
-      $F_i:Fecha\_inicio$\\
-      $F_f:Fecha\_fin$\\
-      $F_a:Fecha\_actual$\\
-      $F_c:01/01/1990$\\
-
-      $T=\{Valido,Invalido\}$\\
-      $\psi\ \epsilon\ T$\\
-
-      $\Phi=[F_c,F_a]$\\
-      $I=[F_i,F_f]$\\
-      
-
-      Un intervalo de tiempo válido dentro de los limites del sistema se define como:\\
-
-      $(\psi=Valido)\leftrightarrow(I\ \subseteq\ \Phi)$\\
-      $(\psi=Invalido)\leftrightarrow(I\ \nsubseteq \Phi)$\\
-
-      \item \textbf{Referenciado por:} \Tref{CU2}{CU2 Buscar noticias} \\
-    \end{itemize}
-
-      %------------------RN8-----------------------%
-     \DGline{RN8}{Campos obligatorios}
-
-    \begin{itemize}
-      \item \textbf{Tipo:} Restricción.  
-      \item \textbf{Descripción:} Los campos marcados con \* no se deben omitir.
-      \item \textbf{Ejemplo:} 
-      \item \textbf{Referenciado por:}  \\
-    \end{itemize}
-      %------------------RN9-----------------------%
-     \DGline{RN9}{Sitios restringidos}
-
-    \begin{itemize}
-      \item \textbf{Tipo:}m
-      \item \textbf{Descripción:} No se debe acceder a las siguientes páginas:
-        \begin{itemize}
-            \item Facebook
-            \item Youtube
-            \item Twitter
-            \item Instagram 
-        \end{itemize} 
-      \item \textbf{Ejemplo:}
-      \item \textbf{Referenciado por:}  \\
-    \end{itemize}
-
-      %------------------RN10-----------------------%
-     \DGline{RN10}{Fecha de partida}
-
-    \begin{itemize}
-      \item \textbf{Tipo:} Cálculo
-      \item \textbf{Descripción:} La fecha inicio debe calcularse restando 5 días a la fecha actual.
-      \item \textbf{Ejemplo:} 
-      \item \textbf{Referenciado por:} \Tref{CU1}{CU1 Seleccionar sección} \\
-    \end{itemize}
-
-      %------------------RN11-----------------------%
-     \DGline{RN11}{Orden de publicación}
-
-    \begin{itemize}
-      \item \textbf{Tipo:} Descripción
-      \item \textbf{Descripción:} Las noticias se muestrán de forma descendente deacuerdo a su fecha de difusión; Es decir la primera publicación en mostrarse es aquella que tiene la fecha y hora mas sercana a la del sistema.
-      \item \textbf{Ejemplo:} 
-      \item \textbf{Referenciado por:} \Tref{CU2}{CU2 Buscar noticias} \\
-    \end{itemize}
-
-      %------------------RN12-----------------------%
-     \DGline{RN12}{Formato de fecha}
-
-    \begin{itemize}
-      \item \textbf{Tipo:} Derivación.
-      \item \textbf{Descripción:} Un formato de fecha correcto se define como:\\
-
-      $F=D/M/A$
-
-      $donde$\\ 
-
-      $F:Fecha$\\
-      $\Lambda_i:Anio\_actual$\\
-
-      $D=\{x/x\ E\ N,1\leq\ x\ \leq31\}$\\
-      $M=\{y/y\ E\ N,1\leq\ y\ \leq12\}$\\
-      $A=\{z/z\ E\ N,1990\leq\ z\ \leq\Lambda_i\}$\\
-
-
-
-
-      \item \textbf{Ejemplo:} 
-      \item \textbf{Referenciado por:} \Tref{CU2}{CU2 Buscar noticias} \\
-    \end{itemize}

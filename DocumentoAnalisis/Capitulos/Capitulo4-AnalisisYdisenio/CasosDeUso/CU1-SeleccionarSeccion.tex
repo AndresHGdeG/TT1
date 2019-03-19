@@ -39,7 +39,7 @@ Brinda al usuario un punto de acceso para elegir una sección; Las clasificacion
 	\hline
 
 	\textbf{Reglas de negocio:} &$\bullet$ \RNref{RN2}{Lenguaje de direcciones web} \\
-	&$\bullet$ \RNref{RN10}{Fecha de partida}\\
+	&$\bullet$ \RNref{RN7}{Perido preestablecido}\\
 	\hline
 
 	\textbf{Errores:} & $\bullet$ \Tref{MSG1}{MSG1 Catálago vacio}: Se muestra cuando el\\
@@ -72,9 +72,9 @@ Brinda al usuario un punto de acceso para elegir una sección; Las clasificacion
 
 	\item \sistema Obtiene la fecha actual.
 
-	\item \sistema \label{CU1:FechaI}Calcula el campo \textbf{Fecha incio} deacuerdo a la regla de negocio \RNref{RN10}{Fecha de partida}
+	\item \sistema \label{CU1:FechaI}Calcula el campo \textbf{Fecha incio} y \textbf{Fecha fin} deacuerdo a la regla de negocio \RNref{RN7}{Perido preestablecido}.
 
-	\item \label{CU1:Pantalla}\sistema Muestra deshabilitado y con fechas los campos \textbf{Fecha inicio} con lo antes calculado y el campo \textbf{Fecha fin} con la fecha actual, como se visualiza en la pantalla \Tref{UI2}{UI2 Sección política}.
+	\item \label{CU1:Pantalla}\sistema Muestra deshabilitado y con fechas los campos \textbf{Fecha inicio} y \textbf{Fecha fin} con lo antes calculado, como se visualiza en la pantalla \Tref{UI2}{UI2 Sección política}.
 	
 	\item \finCU	
 
