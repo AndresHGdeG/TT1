@@ -4,51 +4,73 @@
 	\textbf{Resumen}\\
 \end{large}
 
-Brinda al usuario un punto de acceso para elegir una sección; Las clasificaciones son, \textbf{Política}, \textbf{Deportes}, \textbf{Ciencia} y \textbf{Economía} en cada una se podrá consultar noticias, artículos y publicaciones dentro de un intervalo de tiempo específico; La fuente de información será un diccionario de los sitios web mas consultados y confiables en México. Cabe mencionar que el intervalo de tiempo por defecto para la consulta es anterior a cinco dias de la fecha que se ha ingresa al portal.\\
+Brinda al usuario un punto de acceso para elegir una sección; Las clasificaciones son, \textbf{Política}, \textbf{Deportes}, \textbf{Ciencia} y \textbf{Economía} en cada una se podrá consultar noticias, artículos y publicaciones dentro de un intervalo de tiempo específico; La fuente de información será un diccionario de los sitios web mas consultados y confiables en México. Cabe mencionar que el intervalo de tiempo por defecto es anterior en cinco dias de la fecha que se ha ingresa al portal.\\
 
 \begin{large}
 	\textbf{Descripción}\\
 \end{large}
 
+%============================================Tabla 1======================================%
+
 \begin{tabular}{|l|l|}
+
+%-----------------------Ecanbezado--------------------------%
 	\hline
 	\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{\textbf{Caso de uso: }} }&
 	\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{CU1 Seleccionar sección} }\\
 	\hline
+
+%-----------------------Actor--------------------------------%
 	\textbf{Actor:} & 	Usuario	\\
 	\hline
 
+%-----------------------Propósito------------------------------%
 	\textbf{Propósito:} & Proporcionar una herramienta para acceder \\
 	&a los diferentes tipos de clasificaciones disponibles.\\
 	\hline
 
+%----------------------Entradas--------------------------------%
 	\textbf{Entradas:} & Ninguna. \\
 	\hline
 
+%-----------------------Salidas---------------------------------%
 	\textbf{Salidas:} &$\bullet$ \textit{Fecha inicio}\\
 	&$\bullet$ \textit{Feha fin}\\
 	\hline
 
+%-----------------------Precondiciones------------------------------%
 	\textbf{Precondición:} & El catálogo \textbf{Direcciones web} debe estar poblado.\\
 	\hline
 
+%-----------------------Postcondiciones-----------------------------%
+
+%---------Post 1----------%
 	\textbf{Postcondiciones:} &$\bullet$ El usario tendrá la facultad de buscar noticias\\
 	&\ \ de la sección elegida\\
-	&$\bullet$ El usario tendrá la facultad de establecer un intervalo \\
-	&\ \ de tiempo para buscar los artículos\\
+%---------Post 2----------%
+	&$\bullet$ El usario tendrá la facultad de establecer un \\
+	&\ \ intervalo de tiempo para buscar los artículos\\
 	\hline
 
+%-----------------------Reglas de negocio----------------------------%
 	\textbf{Reglas de negocio:} &$\bullet$ \RNref{RN2}{Lenguaje de direcciones web} \\
 	&$\bullet$ \RNref{RN7}{Perido preestablecido}\\
 	\hline
 
-	\textbf{Errores:} & $\bullet$ \Tref{MSG1}{MSG1 Catálago vacio}: Se muestra cuando el\\
-	&\ \ catálogo \textbf{Direcciones web} No contiene información. \\
-	&$\bullet$ \Tref{MSG2}{MSG2 Lenguaje de sitio}: Se muestra cuando los sitios \\
-	&\ \ proporcionados no se encuentran redactados en lenguaje\\
-	&\ \ español.\\
+%---------------------------Errores-----------------------------------%
+
+%------Error 1----------%
+	\textbf{Errores:} & $\bullet$ \TError{CU1}{Uno} Cuando el  catálogo \textbf{Direcciones web}\\
+	&\ \ no contiene información se muestra el mensaje\\
+	&\ \  \Tref{MSG1}{MSG1 Catálago vacio}, fin del caso de uso\\
+%------Error 2----------%
+	&$\bullet$ \TError{CU1}{Dos} Cuando los sitios proporcionados no se\\
+	&\ \ \ encuentran redactados en lenguaje  español se\\
+	&\ \ muestra el mensaje \Tref{MSG2}{MSG2 Lenguaje de sitio}, fin\\
+	&\ \ del caso de uso\\
 	\hline
 
+%-------------------------Autor---------------------------------------%
 	\textbf{Autor:} & Carlos Andres Hernandez Gomez \\
 	\hline
 \end{tabular}\\\\
@@ -66,9 +88,9 @@ Brinda al usuario un punto de acceso para elegir una sección; Las clasificacion
 	
 	\item \sistema Obtiene el catálogo \textbf{Direcciones web}.
 	
-	\item \sistema Verifica que el catálogo \textbf{Direcciones web} contenga información. \TAref{A}
+	\item \sistema Verifica que el catálogo \textbf{Direcciones web} contenga información. \TEref{CU1}{Uno}
 	
-	\item \sistema Verifica que al menos un sitio cumpla con la regla de negocio \RNref{RN2}{Lenguaje de direcciones web}. \TAref{B}
+	\item \sistema Verifica que al menos un sitio cumpla con la regla de negocio \RNref{RN2}{Lenguaje de direcciones web}. \TEref{CU1}{Dos}
 
 	\item \sistema Obtiene la fecha actual.
 
@@ -82,37 +104,8 @@ Brinda al usuario un punto de acceso para elegir una sección; Las clasificacion
 
 
 
-%--------------------trayectoria Alternativa A---------%
-\begin{large}
-	\Talterna{A}\\
-\end{large}	
-\textbf{Condición:} \textit{El catálogo \textbf{Direcciones web} no contiene información}
 
-\begin{enumerate}[{A-}1.]
 
-	\item \sistema Muestra el mensaje \Tref{MSG1}{MSG1 Catálago vacio} en la pantalla \Tref{UI1}{UI1 Inicio}.
-	\item \finCU	
-
-\end{enumerate}
-
-%--------------------trayectoria Alternativa B---------%
-\begin{large}
-	\Talterna{B}\\
-\end{large}	
-\textbf{Condición:} \textit{Los sitios proporcionados no se encuentran redactados en lenguaje español}
-
-\begin{enumerate}[{B-}1.]
-
-	\item \sistema Muestra el mensaje  \Tref{MSG2}{MSG2 Lenguaje de sitio} en la pantalla \Tref{UI1}{UI1 Inicio}.
-	\item \finCU	
-
-\end{enumerate}
-
-%--------------------Puntos de extención--------------------%
-
-\begin{large}
-	\textbf{Puntos de extensión}\\
-\end{large}	
 
 \textbf{Causa de la extensión:} El actor desea consultar las noticias de una sección.\\
 \textbf{Región de la trayectorioa:} Paso \ref{CU1:Pantalla} de la trayectoria principal.\\

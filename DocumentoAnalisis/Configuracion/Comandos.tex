@@ -27,6 +27,10 @@
 %----------------referencia para ir a las etiquetas previamente marcadas-------------------%
 \newcommand{\Tref}[2]{\hyperlink{#1}{#2}}
 
+%---------------------------Errores-----------------%
+\newcommand{\TError}[2]{\hypertarget{TE#1:#2}{ }\textbf{#2:}}
+\newcommand{\TEref}[2]{\hyperlink{TE#1:#2}{[Error #2]}}
+
 %---------------------------Trayectoria alternativa-----------------%
-\newcommand{\Talterna}[1]{\hypertarget{TA#1}{ }\textbf{Trayectoria alternativa #1:}}
-\newcommand{\TAref}[1]{\hyperlink{TA#1}{[Trayectoria #1]}}
+\newcommand{\Talterna}[2]{\hypertarget{TA#1:#2}{ }\textbf{Trayectoria alternativa #2:}}
+\newcommand{\TAref}[2]{\hyperlink{TA#1:#2}{[Trayectoria #2]}}
