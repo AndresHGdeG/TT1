@@ -1,5 +1,7 @@
 \Tlabel{CU1}\Tsubsection{CU1 Seleccionar sección}
 
+%================================Intriodcucción==================================%
+%----------------------Resumen-----------------------------------%
 \begin{large}
 	\textbf{Resumen}\\
 \end{large}
@@ -10,21 +12,21 @@ Brinda al usuario un punto de acceso para elegir una sección; Las clasificacion
 	\textbf{Descripción}\\
 \end{large}
 
-%============================================Tabla 1======================================%
+%=====================================Tabla 1====================================%
 
 \begin{tabular}{|l|l|}
 
-%-----------------------Ecanbezado--------------------------%
+%-----------------------Ecanbezado-----------------------------------%
 	\hline
 	\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{\textbf{Caso de uso: }} }&
 	\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{CU1 Seleccionar sección} }\\
 	\hline
 
-%-----------------------Actor--------------------------------%
+%-----------------------Actor----------------------------------------%
 	\textbf{Actor:} & 	Usuario	\\
 	\hline
 
-%-----------------------Propósito------------------------------%
+%-----------------------Propósito------------------------------------%
 	\textbf{Propósito:} & Proporcionar una herramienta para acceder \\
 	&a los diferentes tipos de clasificaciones disponibles.\\
 	\hline
@@ -33,16 +35,16 @@ Brinda al usuario un punto de acceso para elegir una sección; Las clasificacion
 	\textbf{Entradas:} & Ninguna. \\
 	\hline
 
-%-----------------------Salidas---------------------------------%
+%-----------------------Salidas--------------------------------------%
 	\textbf{Salidas:} &$\bullet$ \textit{Fecha inicio}\\
 	&$\bullet$ \textit{Feha fin}\\
 	\hline
 
-%-----------------------Precondiciones------------------------------%
+%-----------------------Precondiciones-------------------------------%
 	\textbf{Precondición:} & El catálogo \textbf{Direcciones web} debe estar poblado.\\
 	\hline
 
-%-----------------------Postcondiciones-----------------------------%
+%-----------------------Postcondiciones------------------------------%
 
 %---------Post 1----------%
 	\textbf{Postcondiciones:} &$\bullet$ El usario tendrá la facultad de buscar noticias\\
@@ -57,7 +59,7 @@ Brinda al usuario un punto de acceso para elegir una sección; Las clasificacion
 	&$\bullet$ \RNref{RN7}{Perido preestablecido}\\
 	\hline
 
-%---------------------------Errores-----------------------------------%
+%---------------------------Errores----------------------------------%
 
 %------Error 1----------%
 	\textbf{Errores:} & $\bullet$ \TError{CU1}{Uno} Cuando el  catálogo \textbf{Direcciones web}\\
@@ -70,12 +72,14 @@ Brinda al usuario un punto de acceso para elegir una sección; Las clasificacion
 	&\ \ del caso de uso\\
 	\hline
 
-%-------------------------Autor---------------------------------------%
+%-------------------------Autor--------------------------------------%
 	\textbf{Autor:} & Carlos Andres Hernandez Gomez \\
 	\hline
 \end{tabular}\\\\
 
-%--------------------Trayectoria Principal-----------%
+%============================Trayectorias========================================%
+
+%-----------------------Trayectoria Principal-----------------------%
 
 
 \begin{large}
@@ -103,10 +107,10 @@ Brinda al usuario un punto de acceso para elegir una sección; Las clasificacion
 \end{enumerate}
 
 
+%================================Puntos de extención=============================%
 
 
-
-
+%--------------------Puntos de extención 1------------------------%
 \textbf{Causa de la extensión:} El actor desea consultar las noticias de una sección.\\
 \textbf{Región de la trayectorioa:} Paso \ref{CU1:Pantalla} de la trayectoria principal.\\
 \textbf{Extiende a :} \Tref{CU2}{CU2 Buscar noticia}.\\\\

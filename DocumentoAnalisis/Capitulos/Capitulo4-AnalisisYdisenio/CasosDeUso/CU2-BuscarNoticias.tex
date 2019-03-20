@@ -1,5 +1,8 @@
 \Tlabel{CU2}\Tsubsection{CU2 Buscar noticias}
 
+%================================Intriodcucción==================================%
+%----------------------Resumen-----------------------------------%
+
 \begin{large}
 	\textbf{Resumen}\\
 \end{large}
@@ -12,29 +15,29 @@ Permite al actor realizar una busqueda de noticias correspondiente a la sección
 
 
 
-%============================================Tabla 1======================================%
+%=====================================Tabla 1====================================%
 
 \begin{tabular}{|l|l|}
 
-%-----------------------Ecanbezado-----------------------------%
+%-----------------------Ecanbezado-----------------------------------%
 	\hline
 	\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{\textbf{Caso de uso: }} }&
 	\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{CU2 Buscar noticias} }\\
 	\hline
-%-----------------------Actor-----------------------------%
+%-----------------------Actor----------------------------------------%
 	\textbf{Actor:} & 	Usuario	\\
 	\hline
-%-----------------------Propósito------------------------------%
+%-----------------------Propósito------------------------------------%
 	\textbf{Propósito:} & Brindar una herramienta que permita recolectar y clasificar\\
 	&noticias de una sección específica en un periodo de tiempo.\\
 	\hline
 
-%----------------------Entradas--------------------------------%
+%----------------------Entradas--------------------------------------%
 	\textbf{Entradas:} &$\bullet$ \textit{Fecha inicio}\\
 	&$\bullet$ \textit{Feha fin}\\
 	\hline
 
-%-----------------------Salidas---------------------------------%
+%-----------------------Salidas--------------------------------------%
 	\textbf{Salidas:}&Noticias clasificadas; De cada una se muestra:\\
 	&$\bullet$ \textbf{Título}\\
 	&$\bullet$ \textbf{Nombre de la página fuente}\\
@@ -43,12 +46,12 @@ Permite al actor realizar una busqueda de noticias correspondiente a la sección
 	&$\bullet$ \textbf{Resumen}\\
 	\hline
 
-%-----------------------Precondiciones------------------------------%
+%-----------------------Precondiciones-------------------------------%
 
 	\textbf{Precondición:} & Una sección debe estar seleccionada.\\
 	\hline
 
-%-----------------------Postcondiciones-----------------------------%
+%-----------------------Postcondiciones------------------------------%
 
 %---------Post 1----------%
 	\textbf{Postcondiciones:} &$\bullet$ El usario tendrá la facultad de consultar las noticias\\
@@ -65,7 +68,7 @@ Permite al actor realizar una busqueda de noticias correspondiente a la sección
 	&$\bullet$ \RNref{RN10}{Campos obligatorios}\\
 	&$\bullet$ \RNref{RN11}{Orden de publicación}\\
 	\hline
-%---------------------------Errores-----------------------------------%
+%---------------------------Errores----------------------------------%
 
 %------Error 1----------%
 	\textbf{Errores:} &$\bullet$\TError{CU2}{Uno} Cuando hay campos vacios marcados como obliga-\\
@@ -82,7 +85,7 @@ Permite al actor realizar una busqueda de noticias correspondiente a la sección
 %============================================Tabla 2======================================%
 \begin{tabular}{|l|l|}
 
-%-----------------------Ecanbezado-----------------------------%
+%-----------------------Ecanbezado-----------------------------------%
 	\hline
 	\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{\textbf{Caso de uso: }} }&
 	\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{CU2 Buscar noticias} }\\
@@ -99,13 +102,16 @@ Permite al actor realizar una busqueda de noticias correspondiente a la sección
 	&\ \ \Tref{MSG6}{MSG6 Litimes fuera de rango} y continua en el paso \ref{CU2:FechaI} de\\
 	&\ \ la trayectoria alternativa A\\
 	\hline 
-%-------------------------Autor---------------------------------------%
+%-------------------------Autor--------------------------------------%
 
 	\textbf{Autor:} & Carlos Andres Hernandez Gomez \\
 	\hline
 \end{tabular}\\\\
 
-%%--------------------Trayectoria Principal---------------------------%
+%============================Trayectorias========================================%
+
+%-----------------------Trayectoria Principal-----------------------%
+
 \begin{large}
 	\textbf{Trayectoria principal}\\
 \end{large}	
@@ -138,7 +144,7 @@ Permite al actor realizar una busqueda de noticias correspondiente a la sección
 \end{enumerate}
 
 \newpage
-%%--------------------trayectoria Alternativa A----------%
+%-------------------------trayectoria Alternativa A-----------------%
 \begin{large}
 	\Talterna{CU2}{A}\\
 \end{large}	
@@ -162,7 +168,7 @@ Permite al actor realizar una busqueda de noticias correspondiente a la sección
 \end{enumerate}
 
 
-%%--------------------trayectoria Alternativa B----------%
+%-------------------------trayectoria Alternativa B-----------------%
 \begin{large}
 	\Talterna{CU2}{B}\\
 \end{large}	
@@ -182,5 +188,14 @@ Permite al actor realizar una busqueda de noticias correspondiente a la sección
 
 \end{enumerate}
 
+%================================Puntos de extención=============================%
 
 
+\begin{large}
+	\textbf{Puntos de extensión}\\
+\end{large}	
+
+%--------------------Puntos de extención 1------------------------%
+\textbf{Causa de la extensión:} Lorem ipsum\\
+\textbf{Región de la trayectorioa:} Lorem ipsum\\
+\textbf{Extiende a :} Lorem ipsum\\\\
