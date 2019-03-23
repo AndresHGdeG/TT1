@@ -196,7 +196,7 @@ En esta sección se describen las reglas de negocio implementadas en el trabajo 
         \item Instagram 
     \end{itemize} 
   \item \textbf{Ejemplo:}
-  \item \textbf{Referenciado por:}  \Tref{CU2}{CU2 Buscar noticias} \\
+  \item \textbf{Referenciado por:} \Tref{CU3}{CU3 Recolectar noticias} \\
 \end{itemize}
 %------------------RN12-----------------------%
 \DGline{RN12}{Orden de publicación}
@@ -208,4 +208,37 @@ En esta sección se describen las reglas de negocio implementadas en el trabajo 
   \item \textbf{Referenciado por:} \Tref{CU2}{CU2 Buscar noticias} \\
 \end{itemize}
 
+%------------------RN13-----------------------%
+\DGline{RN13}{Profundidad de búsqueda}
+
+\begin{itemize}
+  \item \textbf{Tipo:} Cálculo.
+  \item \textbf{Descripción:} Se muestra la forma correcta de realizar el cáculo para obtener la profundidad de búsqueda dependiendo del número de noticias a recolectar y la cantidad de hiperbínculos de la página.\\
+ 
+  $Sea$\\
+
+  $\Lambda(\psi,\mu)=\frac{\psi(\psi\mu-1)}{\psi-1}$\\\\
+  $donde$\\
+  $\psi:Numero\ de\ URL\ por\ pagina$\\
+  $\mu:Profundidad\ de\ busqueda$\\
+  $\Lambda:Numero\ de\ noticias\ recolectadas$\\
+
+  $Corolario$\\ 
+ El cálculo de la profundidad deacuerdo a $\psi$ y a un $\Lambda$ deseado se realiza de la siguiente forma:\\
+
+  $\mu=\log_{\psi}{(\Lambda(\psi-1)+\psi)}-1$\\
+
+  \item \textbf{Ejemplo:} 
+  \item \textbf{Referenciado por:} \Tref{CU3}{CU3 Recolectar noticias}\\
+\end{itemize}
+
+%------------------RN14-----------------------%
+\DGline{RN14}{Número de peticiones}
+
+\begin{itemize}
+  \item \textbf{Tipo:} Restricción
+  \item \textbf{Descripción:} El número de peticiones realizadas a una página no debe exceder el permitido por el dominio.
+  \item \textbf{Ejemplo:} 
+  \item \textbf{Referenciado por:} \Tref{CU3}{CU3 Recolectar noticias} \\
+\end{itemize}
 

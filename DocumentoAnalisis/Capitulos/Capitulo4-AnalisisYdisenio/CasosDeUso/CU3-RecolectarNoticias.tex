@@ -6,7 +6,7 @@
 	\textbf{Resumen}\\
 \end{large}
 
-Texto.\\
+Brinda una harramienta para recoletar noticias de los sitios registrados en el \textbf{Diccionario de URL's}.\\
 
 \begin{large}
 	\textbf{Descripción}\\
@@ -18,45 +18,55 @@ Texto.\\
 %-----------------------Ecanbezado-----------------------------------%
 	\hline
 	\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{\textbf{Caso de uso: }} }&
-	\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{CU-1 Recolectar noticias} }\\
+	\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{CU-3 Recolectar noticias} }\\
 	\hline
 %-----------------------Actor----------------------------------------%
-	\textbf{Actor:} & 	Lorem Ipsum	\\
+	\textbf{Actor:} & 	Sistema\\
 	\hline
 
 %-----------------------Propósito------------------------------------%
 
-	\textbf{Propósito:} & Lorem Ipsum \\
+	\textbf{Propósito:} & Recolectar noticias de la internet. \\
 	\hline
 
 %----------------------Entradas--------------------------------------%
 
-	\textbf{Entradas:} & Lorem Ipsum \\
+	\textbf{Entradas:} & URL'S de las paginas a consultar\\
 	\hline
 
 %-----------------------Salidas--------------------------------------%
 
-	\textbf{Salidas:} & Lorem Ipsum\\
+	\textbf{Salidas:} & Noticias; Cada una contiene\\
+	&$\bullet$ Fecha de publicación\\	
+	&$\bullet$ Título\\	
+	&$\bullet$ Contenido\\	
+	&$\bullet$ Resumen\\	
+	&$\bullet$ URL de la noticia\\	
+	&$\bullet$ Nombre de la página fuente\\	
 	\hline
 
 %-----------------------Precondiciones-------------------------------%
 
-	\textbf{Precondición:} & Lorem Ipsum \\
+	\textbf{Precondición:} & EL \textbf{Diccionario de URL'S} debe contener los vínculos\\
+	&a las páginas web\\
 	\hline
 %-----------------------Postcondiciones------------------------------%
 
-	\textbf{Postcondiciones:} & Lorem Ipsum \\
+	\textbf{Postcondiciones:} & Las noticias recolectadas serán clasificadas \\
 	\hline
 %-----------------------Reglas de negocio----------------------------%
 
-	\textbf{Reglas de negocio:} & Lorem Ipsum \\
+	\textbf{Reglas de negocio:} &$\bullet$ \RNref{RN11}{Sitios restringidos} \\
+	&$\bullet$ \RNref{RN13}{Profundidad de búsqueda} \\
+	&$\bullet$ \RNref{RN14}{Número de peticiones} \\
 	\hline
 
 %---------------------------Errores----------------------------------%
-	\textbf{Errores:} & Lorem Ipsum \\
+	\textbf{Errores:} &$\bullet$ El Diccionario URL está vacio \\
+	 &$\bullet$ No se pudo extraer informadión de los sitios brindados \\
 	\hline
 %-------------------------Autor--------------------------------------%
-	\textbf{Autor:} & Lorem Ipsum \\
+	\textbf{Autor:} & Carlos Hernandez, Daniel Meza \\
 	\hline
 \end{tabular}\\\\
 
