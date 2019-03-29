@@ -6,7 +6,7 @@
 	\textbf{Resumen}\\
 \end{large}
 
-Brinda una harramienta para recoletar noticias de los sitios registrados en el \textbf{Diccionario de URL's}.\\
+Brinda un servicio para recolectar noticias en la web (Crawler); Toma como punto de partida los portales registrados en el diccionario \textbf{URL's}. Se crea un proceso de trabajo independiente por cada liga en el diccionario, para simular un ambiente de extracción en paralelo; De cada sitio se recoleta las noticas publicadas; De cada artículo se obtiene \textbf{Fecha de publicación}, \textbf{Título}, \textbf{Contenido}, \textbf{URL de la noticia}, \textbf{Nombre de la página fuente} y de contar con ello el \textbf{Resumen}. Cabe destacar que las ligas contenidas en los sitios visitdos son extraidas para suposterior análisis.\\
 
 \begin{large}
 	\textbf{Descripción}\\
@@ -18,41 +18,44 @@ Brinda una harramienta para recoletar noticias de los sitios registrados en el \
 %-----------------------Ecanbezado-----------------------------------%
 	\hline
 	\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{\textbf{Caso de uso: }} }&
-	\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{CU-3 Recolectar noticias} }\\
+	\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{CU3 Recolectar noticias} }\\
 	\hline
 %-----------------------Actor----------------------------------------%
-	\textbf{Actor:} & 	Sistema\\
+	\textbf{Actor:} & 	Usuario\\
 	\hline
 
 %-----------------------Propósito------------------------------------%
 
-	\textbf{Propósito:} & Recolectar noticias de la internet. \\
+	\textbf{Propósito:} & Brindar una herramienta de recolección del ciber\\
+	&espacio(Crawler). \\
 	\hline
 
 %----------------------Entradas--------------------------------------%
 
-	\textbf{Entradas:} & URL'S de las paginas a consultar\\
+	\textbf{Entradas:} & URL'S de las paginas por consultar\\
 	\hline
 
 %-----------------------Salidas--------------------------------------%
 
-	\textbf{Salidas:} & Noticias; Cada una contiene\\
-	&$\bullet$ Fecha de publicación\\	
-	&$\bullet$ Título\\	
-	&$\bullet$ Contenido\\	
-	&$\bullet$ Resumen\\	
-	&$\bullet$ URL de la noticia\\	
-	&$\bullet$ Nombre de la página fuente\\	
+	\textbf{Salidas:} &$\bullet$ Noticias; De cada una se obtiene\\
+	&\ \ $\circ$ \textbf{Fecha de publicación}\\	
+	&\ \ $\circ$ \textbf{Título}\\	
+	&\ \ $\circ$ \textbf{Contenido}\\	
+	&\ \ $\circ$ \textbf{Resumen}\\	
+	&\ \ $\circ$ \textbf{URL de la noticia}\\	
+	&\ \ $\circ$ \textbf{Nombre de la página fuente}\\
+	&$\bullet$ \Tref{MSG7}{MSG7 Petición vacía}\\	
+	&$\bullet$ \Tref{MSG9}{MSG9 Fallo en la recolección}\\
 	\hline
 
 %-----------------------Precondiciones-------------------------------%
 
-	\textbf{Precondición:} & EL \textbf{Diccionario de URL'S} debe contener los vínculos\\
-	&a las páginas web\\
+	\textbf{Precondición:} & EL \textbf{Diccionario de URL'S} debe contener los\\
+	&vínculos de los sitios a consultar\\
 	\hline
 %-----------------------Postcondiciones------------------------------%
 
-	\textbf{Postcondiciones:} & Las noticias recolectadas serán clasificadas \\
+	\textbf{Postcondiciones:} & Las noticias recolectadas serán clasificadas. \\
 	\hline
 %-----------------------Reglas de negocio----------------------------%
 
@@ -62,11 +65,20 @@ Brinda una harramienta para recoletar noticias de los sitios registrados en el \
 	\hline
 
 %---------------------------Errores----------------------------------%
-	\textbf{Errores:} &$\bullet$ El Diccionario URL está vacio \\
-	 &$\bullet$ No se pudo extraer informadión de los sitios brindados \\
+
+%------Error 1----------%	
+	\textbf{Errores:}&$\bullet$ \TError{CU3}{Uno} Cuando no se ha encontrado noticias en \\
+	&\ \ el periodo establecido se muestra el mensaje \Tref{MSG7}{MSG7}\\
+	&\ \ \Tref{MSG7}{Petición vacía}, fin del caso de uso\\
+
+%------Error 2----------%
+
+	 &$\bullet$ \TError{CU3}{Dos} Cuando no se puede extraer información de\\
+	 &\ \  los sitios brindados, se muestra el mensaje \Tref{MSG9}{MSG9} \\
+	 &\ \ \Tref{MSG9}{Fallo en la recolección}, fin del caso de uso\\
 	\hline
 %-------------------------Autor--------------------------------------%
-	\textbf{Autor:} & Carlos Hernandez, Daniel Meza \\
+	\textbf{Autor:} & Carlos Andres Hernandez, Luis Daniel Meza\\
 	\hline
 \end{tabular}\\\\
 
@@ -82,10 +94,9 @@ Brinda una harramienta para recoletar noticias de los sitios registrados en el \
 \end{large}	
 
 \begin{enumerate}[1.]
-	\item \actor lorem ipsum
-	\item \sistema lorem ipsum
-	\item \sistema lorem ipsum
-	\item \sistema lorem ipsum
+	\item \actor Solicita realizar una búsqueda de noticias con el botón \textbf{Buscar} de la pantalla \Tref{UI2}{UI2 Sección política}.
+	\item \sistema Obtiene los vínculos de los sitios web registrados en el diccionario \textbf{URL's}.
+	\item \sistema 
 	\item \finCU	
 \end{enumerate}
 

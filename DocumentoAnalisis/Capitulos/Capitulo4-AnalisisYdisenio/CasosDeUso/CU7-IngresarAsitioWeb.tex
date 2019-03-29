@@ -7,7 +7,7 @@
 	\textbf{Resumen}\\
 \end{large}
 
-Texto.\\
+Permite al usuario acceder al portal web de las noticias mostradas.\\
 
 \begin{large}
 	\textbf{Descripción}\\
@@ -19,45 +19,52 @@ Texto.\\
 %-----------------------Ecanbezado-----------------------------------%
 	\hline
 	\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{\textbf{Caso de uso: }} }&
-	\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{CU-1 Recolectar noticias} }\\
+	\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{CU7 Ingresar a sitio web} }\\
 	\hline
 %-----------------------Actor----------------------------------------%
-	\textbf{Actor:} & 	Lorem Ipsum	\\
+	\textbf{Actor:} & Usuario.\\
 	\hline
 
 %-----------------------Propósito------------------------------------%
 
-	\textbf{Propósito:} & Lorem Ipsum \\
+	\textbf{Propósito:} & Brindar un punto de acceso a los sitios web\\
+	&que han proporcionado la información.\\
 	\hline
 
 %----------------------Entradas--------------------------------------%
 
-	\textbf{Entradas:} & Lorem Ipsum \\
+	\textbf{Entradas:} & URL:Es seleccionado con el mouse.\\
 	\hline
 
 %-----------------------Salidas--------------------------------------%
 
-	\textbf{Salidas:} & Lorem Ipsum\\
+	\textbf{Salidas:} &$\bullet$ Sitio web de la URL seleccionada\\
+	&$\bullet$ \Tref{MSG8}{MSG8 Fallo al ingresar a sitio web}\\
 	\hline
 
 %-----------------------Precondiciones-------------------------------%
 
-	\textbf{Precondición:} & Lorem Ipsum \\
+	\textbf{Precondición:} & Debe existir almenos una noticia mostrada\\
+	& en el portal.\\
 	\hline
 %-----------------------Postcondiciones------------------------------%
 
-	\textbf{Postcondiciones:} & Lorem Ipsum \\
+	\textbf{Postcondiciones:} & El usario tendra la facultad de visualizar la\\ 
+	&noticia completa.\\
 	\hline
 %-----------------------Reglas de negocio----------------------------%
 
-	\textbf{Reglas de negocio:} & Lorem Ipsum \\
+	\textbf{Reglas de negocio:} & Ninguna.\\
 	\hline
 
 %---------------------------Errores----------------------------------%
-	\textbf{Errores:} & Lorem Ipsum \\
+	\textbf{Errores:} &\TError{CU7}{Uno} Cuando no es posible ingresar al sitio\\
+	&\ web seleccionado, se muestra el mensaje \Tref{MSG8}{MSG8}\\
+	&\ \Tref{MSG8}{Fallo al ingresar a sitio web} en la pantalla\\
+	&\ \Tref{UI3}{UI3 Resultados de búsqueda}, fin del caso de uso.\\
 	\hline
 %-------------------------Autor--------------------------------------%
-	\textbf{Autor:} & Lorem Ipsum \\
+	\textbf{Autor:} & Carlos Andres Hernandez Gomez\\
 	\hline
 \end{tabular}\\\\
 
@@ -73,58 +80,16 @@ Texto.\\
 \end{large}	
 
 \begin{enumerate}[1.]
-	\item \actor lorem ipsum
-	\item \sistema lorem ipsum
-	\item \sistema lorem ipsum
-	\item \sistema lorem ipsum
+	\item \actor Solicita ver la noticia completa dando click en la \textbf{URL} de la publicación deseada, en la pantalla \Tref{UI3}{UI3 Resultados de búsqueda}.
+	\item \sistema Abre una ventana en el navegador y en ella se direcciona a la URL seleccionada. \TEref{CU7}{Uno}
+	\item \sistema Muestra la pantalla \Tref{UI4}{UI4 Página de sitio web}
 	\item \finCU	
 \end{enumerate}
 
 
-%-------------------------trayectoria Alternativa A-----------------%
-
-\begin{large}
-	\textbf{Trayectoria alternativa A:}\\
-\end{large}	
-\textbf{Condición:} \textit{Se escribe la condición}
-\begin{enumerate}[{A-}1.]
-
-	\item \actor lorem ipsum
-	\item \sistema lorem ipsum
-	\item \finTA	
-
-\end{enumerate}
-
-
-%----------------------trayectoria Alternativa B-------------------%
-\begin{large}
-	\textbf{Trayectoria alternativa B:}\\
-\end{large}	
-\textbf{Condición:} \textit{Se escribe la condición}
-
-\begin{enumerate}[{B-}1.]
-
-	\item \actor lorem ipsum
-	\item \sistema lorem ipsum
-	\item \finTA	
-
-\end{enumerate}
 
 
 %================================Puntos de extención=============================%
 
 
-\begin{large}
-	\textbf{Puntos de extensión}\\
-\end{large}	
-
-%--------------------Puntos de extención 1------------------------%
-\textbf{Causa de la extensión:} Lorem ipsum\\
-\textbf{Región de la trayectorioa:} Lorem ipsum\\
-\textbf{Extiende a :} Lorem ipsum\\\\
-
-%--------------------Puntos de extención 2------------------------%
-\textbf{Causa de la extensión:} Lorem ipsum\\
-\textbf{Región de la trayectorioa:} Lorem ipsum\\
-\textbf{Extiende a :} Lorem ipsum\\
 

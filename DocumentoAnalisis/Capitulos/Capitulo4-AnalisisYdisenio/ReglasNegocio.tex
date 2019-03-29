@@ -213,20 +213,18 @@ En esta sección se describen las reglas de negocio implementadas en el trabajo 
 
 \begin{itemize}
   \item \textbf{Tipo:} Cálculo.
-  \item \textbf{Descripción:} Se muestra la forma correcta de realizar el cáculo para obtener la profundidad de búsqueda dependiendo del número de noticias a recolectar y la cantidad de hiperbínculos de la página.\\
+  \item \textbf{Descripción:} Se muestra la forma correcta de realizar el cáculo para obtener la profundidad de búsqueda asociada al número de noticias por recolectar, y la cantidad de hiperbínculos que cáda página contiene.\\
  
   $Sea$\\
 
-  $\Lambda(\psi,\mu)=\frac{\psi(\psi\mu-1)}{\psi-1}$\\\\
+  $\Lambda(\mu,\psi)=\log_{\psi}{(\mu(\psi-1)+\psi)}-1$\\
+
   $donde$\\
   $\psi:Numero\ de\ URL\ por\ pagina$\\
-  $\mu:Profundidad\ de\ busqueda$\\
-  $\Lambda:Numero\ de\ noticias\ recolectadas$\\
+  $\mu:Numero\ de\ noticias\ recolectadas$\\
+  $\Lambda:Profundidad\ de\ busqueda$\\
 
-  $Corolario$\\ 
- El cálculo de la profundidad deacuerdo a $\psi$ y a un $\Lambda$ deseado se realiza de la siguiente forma:\\
 
-  $\mu=\log_{\psi}{(\Lambda(\psi-1)+\psi)}-1$\\
 
   \item \textbf{Ejemplo:} 
   \item \textbf{Referenciado por:} \Tref{CU3}{CU3 Recolectar noticias}\\

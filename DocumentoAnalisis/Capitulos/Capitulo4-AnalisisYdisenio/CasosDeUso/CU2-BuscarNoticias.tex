@@ -44,6 +44,10 @@ Permite al actor realizar una busqueda de noticias correspondiente a la sección
 	&$\bullet$ \textbf{Link al artículo}\\
 	&$\bullet$ \textbf{Fecha de difusión}\\
 	&$\bullet$ \textbf{Resumen}\\
+	&$\bullet$ \Tref{MSG3}{MSG3 Faltan campos obligatorios}\\
+	&$\bullet$ \Tref{MSG4}{MSG4 Formato de fecha inválido}\\
+	&$\bullet$ \Tref{MSG5}{MSG5 Periodo no válido}\\
+	&$\bullet$ \Tref{MSG6}{MSG6 Lítimes fuera de rango}\\
 	\hline
 
 %-----------------------Precondiciones-------------------------------%
@@ -75,10 +79,6 @@ Permite al actor realizar una busqueda de noticias correspondiente a la sección
 	&\ \ torios se muestra el mensaje \Tref{MSG3}{MSG3 Faltan campos obliga-}\\
 	&\ \ \Tref{MSG3}{torios} y continua en el paso \ref{CU2:FechaI} de la trayectoria alternativa\\
 	&\ \  A\\
-%------Error 2----------%
-	&$\bullet$\TError{CU2}{Dos} Cuando el usario ha ingresado una fecha no válido\\
-	&\ \ se muestra el mensaje \Tref{MSG4}{MSG4 Formato de fecha inválido}\\
-	&\ \ y continua en el paso  \ref{CU2:FechaI} de la trayectoria alternativa A\\
 	\hline
 \end{tabular}\\\\
 
@@ -91,7 +91,10 @@ Permite al actor realizar una busqueda de noticias correspondiente a la sección
 	\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{CU2 Buscar noticias} }\\
 	\hline
 
-
+%------Error 2----------%
+	&$\bullet$\TError{CU2}{Dos} Cuando el usario ha ingresado una fecha no válido\\
+	&\ \ se muestra el mensaje \Tref{MSG4}{MSG4 Formato de fecha inválido}\\
+	&\ \ y continua en el paso  \ref{CU2:FechaI} de la trayectoria alternativa A\\
 %------Error 3----------%
 	\textbf{Errores:}&$\bullet$\TError{CU2}{Tres} Cuando existe incongruencias en los periodos de la\\
 	&\ \ fehca se muesntra el mensaje \Tref{MSG5}{MSG5 Periodo no válido} y\\
@@ -99,7 +102,7 @@ Permite al actor realizar una busqueda de noticias correspondiente a la sección
 %-----Error 4----------%
 	&$\bullet$\TError{CU3}{Cuatro} Cuando el usario ha introducido una intervalo\\
 	&\ \ de tiempo fuera de los límites se muesta el mensaje \\
-	&\ \ \Tref{MSG6}{MSG6 Litimes fuera de rango} y continua en el paso \ref{CU2:FechaI} de\\
+	&\ \ \Tref{MSG6}{MSG6 Lítimes fuera de rango} y continua en el paso \ref{CU2:FechaI} de\\
 	&\ \ la trayectoria alternativa A\\
 	\hline 
 %-------------------------Autor--------------------------------------%
