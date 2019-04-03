@@ -3,25 +3,22 @@
 
 \section{Introducción}
 
-A continuación, se mostrarán distintos trabajos nacionales e internacionales, así como herramientas las cuales desempeñan un trabajo similar al propuesto por nosotros.
+A continuación, se mostrarán distintos trabajos nacionales e internacionales, así como herramientas las cuales desempeñan un trabajo similar al propuesto.
 
 \section{Trabajos nacionales}
 
 \begin{large}
-	 \textbf{Clasificación Automática de Textos de Desastres Naturales en México}\\
+	 \textbf{Buscar uno relacionado}\\
 \end{large}
 
-En este trabajo se propone clasificar noticias del ámbito \'Desastres Naturales\' utilizando estrategias de reducción de dimensionalidad conocidas como umbral en la frecuencia y ganancia en la información, los métodos de clasificación utilizados fueron el clasificador simple de Bayes y vecinos más cercanos.\\
-
-Se utilizaron 375 noticias del periódico "Reforma"como conjunto de entrenamiento, para posteriormente clasificarlas (relevantes e irrelevantes), de los cuales el 11.5 de noticias eran relevantes y el 88.5\% restante eran irrelevantes.Una vez obtenido el conjunto de noticias se procedió con un pre-procesamiento, el cual reduciía el tamaño de los documentos, eliminando las partes de los textos que no se consideraban relevantes; posteriormente se realizó el indexado, el cual los documentos son representdos por vectores de palabras en un espacio de dimensionalidad n en el cual se logró una reducción de dimensionalidad en donde finalemente se utilizarón técnicas de clasificación como el algoritmo simple de Bayes en el cual se obtuvo un resultado del 97\% de efectividad al clasifciar noticias de desastres naturales [4].\\
+Texto.\\
 
 \begin{large}
-	 \textbf{Clasificación de Texto Mediante Atributos Probabilísiticos de Concurrencia de Palabras}\\
+	 \textbf{News article classification of mexican newspapers}\\
 \end{large}
-	
-En este trabajo se propone clasificar artículos en dos categorías (relevantes y no relevantes), los cuales se encuentran almacenados en una base de datos llamada Regulon DB, la cual contiene más de 2,000 artículos clasificados manualmente relacionados a los genes de regulación de la bacteria Escherichia coli; con el objetivo de facilitar la búsqueda de información acerca de dicha bacteria.
-Proponen medir los atributos es decir las palabras de un documento, utilizando representaciones probabilísticas utilizadas en el entorno de análisis de información.
-Se utilizarón 1,823 documentos; en la etapa de clasificación se entrenaron a  los clasificadores Bayes simple y Bayes multinominal; obtiendo mejores resultados con el método Bayes Naive [5].
+
+Artículos en periódicos son dividos en secciones como, cultura, política y deportes para ayudar al lector a encontrar información de una forma fácil. Los editores de la prensa leen los artículos y deciden cual publicar y la sección a la cual pertenece. Este documento presenta métodos de aprendizaje automático supervisado, para clasificar automaticamente noticias en secciones. Para realizar esta tarea se han recolectado 4,027 artículos junto con su sección correspondiente de tres periódicos mexicanos duranta un periodo de 6 meses. Diferentes caracteristicas fueron extraidas y un conjunto de métodos de aprendizaje fueron probados. Los resultados obtenidos muestran una precisión de 80\% en la clasificación de los artículos en su correspondiente sección de los tres periódicos seleccionados.\\
+
 
 
 \section{Trabajos internacionales}
@@ -37,7 +34,7 @@ Los resultados mostraron que el clasificador presenta un 80\% cercanía respecto
 
 
 \begin{large}
-	 \textbf{Document Classification for Newspaper Articles}\\
+	 \textbf{Document classification for newspaper articles}\\
 \end{large}
 
 En este trabajo se enfocaron en clasificar articulos del MIT (Massachusetts Institute of Technology) de las siguientes categorías:
@@ -57,26 +54,26 @@ Se utilizarón un corpus 3000 artículos en total, siendo 500 artículos de cada
 \section{Herramientas disponibles}
 
 
-Entre las herramientas utilizadas para el procesamiento de lenguaje natural y aprendizaje automático se encuentran:\\
+Entre las herramientas de trabajo que son de utilidad para el procesamiento de lenguaje natural y aprendizaje automático se encuentran:\\
 
 \begin{large}
-	 \textbf{Cloud Natual Language}\\
+	 \textbf{Cloud natural language}\\
 \end{large}
 
-Google Cloud Natural Language [8] revela la estructura y el significado del texto con modelos potentes de aprendizaje automático previamente entrenados en una API de REST fácil de usar y con modelos personalizados se puede utilizar para extraer información sobre personas, lugares, eventos y muchos otros datos, que se mencionan en documentos de texto, artículos periodísticos o entradas de blog. También puedes utilizarla para comprender las opiniones sobre tus productos expresadas en los medios sociales o analizar la intención en las conversaciones de los clientes que se den en un centro de atención telefónica o una aplicación de mensajería.\\
+Google Cloud Natural Language [8] revela la estructura y el significado del texto con modelos potentes de aprendizaje automático previamente entrenados en una API de REST fácil de usar y con modelos personalizados se puede utilizar para extraer información sobre personas, lugares, eventos y muchos otros datos, que se mencionan en documentos de texto, artículos periodísticos o entradas de blog. También se puede utilizar para comprender las opiniones sobre los productos expresadas en los medios sociales o analizar la intención en las conversaciones de los clientes que se den en un centro de atención telefónica o una aplicación de mensajería.\\
 
 \begin{large}
-	 \textbf{GoogleBot}\\
+	 \textbf{Googlebot}\\
 \end{large}
 
-El crawler más famoso del mundo es Googlebot, el software diseñado por Google para indexar el contenido nuevo o actualizado de Internet.
-Googlebot [9] no sólo tiene la capacidad de rastrear e indexar los sitios web de internet, sino que además puede extraer información de ficheros como pueden ser PDF, XLS, DOC, etc.
+Es el crawler diseñado por Google para indexar el contenido nuevo o actualizado de Internet.
+Googlebot [9] no sólo tiene la capacidad de rastrear e indexar los sitios web de Internet, sino que además puede extraer información de ficheros como pueden ser PDF, XLS, DOC, etc.
 Una vez el contenido está indexado, el servidor lo clasifica y establece un orden de relevancia para las distintas búsquedas que pueda efectuar un usuario, es decir, lo posiciona.\\
 
 
 
 \begin{large}
-	 \textbf{Watson Natural Language Classifier}\\
+	 \textbf{Watson natural language classifier}\\
 \end{large}
 
 Watson NLC [10] aplica técnicas de computación cognitiva para analizar un texto y proporcionar la clase que mejor encaja entre un conjunto de clases predefinidas a partir de un texto corto.
