@@ -8,30 +8,47 @@ A continuación, se mostrarán distintos trabajos nacionales e internacionales, 
 \section{Trabajos nacionales}
 
 \begin{large}
-	 \textbf{Buscar uno relacionado}\\
+	 \textbf{Clasificación automática de textos de desastres naturales en México}\\
 \end{large}
 
-Texto.\\
+En este trabajo se propone clasificar noticias del ámbito desastres naturales utilizando estretegias de reducción de dimensionalidad conocidas como umbral en la frecuencia y ganancia en la información, los métodos de clasificación utilizados fueron el clasificador simple de Bayes y vecinos más cercanos.\\
+
+Se utilizaron 375 noticias del periódico Reforma como conjunto de entrenamiento, para posteriormente clasificarlas (relevantes e irrelevantes), de los cuales 11.5\% de noticias eran relevantes y el 88.5\% restante eran irrelevantes. Una vez obtenido el conjunto de noticias se procedió con un pre-procesamiento, el cual reducía el tamaño de los documentos, eliminando la parte de los textos que no se consideraban relevantes, posteriormente se realizó el indexado, el cual los documentos son representados por vectores de palabras en un espaso de dimensionalidad n, lo cual permite una reducción de dimensionalidad, finalmente se utilizaron técnicas de clasificación (Algoritmo simple de Bayes) con el cual se obtuvo un resultado de 97\% de efectividad al clasificar las noticias de desastres naturales\cite{cuatro}.\\
 
 \begin{large}
 	 \textbf{News article classification of mexican newspapers}\\
 \end{large}
 
-Artículos en periódicos son dividos en secciones como, cultura, política y deportes para ayudar al lector a encontrar información de una forma fácil. Los editores de la prensa leen los artículos y deciden cual publicar y la sección a la cual pertenece. Este documento presenta métodos de aprendizaje automático supervisado, para clasificar automaticamente noticias en secciones. Para realizar esta tarea se han recolectado 4,027 artículos junto con su sección correspondiente de tres periódicos mexicanos duranta un periodo de 6 meses. Diferentes caracteristicas fueron extraidas y un conjunto de métodos de aprendizaje fueron probados. Los resultados obtenidos muestran una precisión de 80\% en la clasificación de los artículos en su correspondiente sección de los tres periódicos seleccionados.\\
+En este trabajo se propone la clasificación de noticias utilizando métodos supervisados de Machine Learning para su clasificación
 
+Para realizar esta tarea se recolectaron 4,027 artículos junto con su sección correspondiente de tres periódicos mexicanos duranta un periodo de 6 meses. Diferentes caracteristicas fueron extraidas y un conjunto de métodos de aprendizaje fueron probados. Los resultados obtenidos muestran una precisión de 80\% en la clasificación de los artículos en su correspondiente sección de los tres periódicos seleccionados\cite{cinco}.\\
 
 
 \section{Trabajos internacionales}
 
 
 \begin{large}
-	 \textbf{Clasificación Automática de Textos Usando Redes de Palabras}\\
+	 \textbf{Clasificador de noticias usando autoencoders}\\
 \end{large}
 
-En este trabajo se propone un algoritmo para la clasificación automática de textos basado en una representación y clasificación distinta utilizada en los algoritmos de clasificación supervisada, utilizando redes de palabras.
-Se utilizaron 1000 mensajes de texto de la plataforma Twitter, en el idioma español y correspondiente a distintos contextos, para posteriormente clasificar el tipo de contenido de los mensajes (positivos, negativos y neutrales), se definió un grafo como aquella red de palabras co-cocurrentes construida a partir de un conjunto de textos clasificados; para su realización el primero de estos procesos es llevar distintas variantes de una misma palabra a su raíz, esto para reducir la variabilidad del lenguaje posteriormente se considera las palabras plurales (terminadas con ‘s’ o ‘es’). A estas se les elimina el sufijo para compararlas con su equivalente singular, realizando el cambio de manera automática.
-Los resultados mostraron que el clasificador presenta un 80\% cercanía respecto a la clasificación realizada por una persona; su nivel de desempeño fue mayor al obtenido con el algoritmo Naive Bayes [6].\\
+En este trabajo se propone la clasificación de noticias utilizando Deep Learning, las noticias se clasificaron en las siguientes categorias:
 
+\begin{itemize}
+	\item Deportes
+	\item Política
+	\item Espectáculos
+	\item Economía
+	\item Policía
+\end{itemize}
+El alcance que tiene es:
+\begin{itemize}
+	\item Local (Valpara iso)
+	\item Nacional (Chile)
+	\item Internacional (Resto del mundo)
+\end{itemize}
+El clasificador se constuyó utilizando una base de datos con 542 noticias etiquetadas con los criterios anteiores, las características se obtuvieron utilizando Autoencoders (AE) para entrenar una Red Neuronal Artificial (ANN).
+Los resultados obtenidos con 156 noticias fue una tasa de éxito del 92.3\% para la clasificación de la categoría y un 87.2\% para el clasificador de alcance.
+La tasa general de éxito, categoría y alcance fue de 83.75\% \cite{seis}.\\
 
 \begin{large}
 	 \textbf{Document classification for newspaper articles}\\
@@ -48,7 +65,7 @@ En este trabajo se enfocaron en clasificar articulos del MIT (Massachusetts Inst
 		\item World
 	\end{itemize}
 Para los cuales utilizarón el algoritmos de clasificación como el Naive Bayes ya que era uno de los clasificadores más simples y eficaces que otras técnicas de clasificación, de igual manera utilizarón la clasificación máxima de entropia el cual provee segmentación de texto, modelado de lenguaje.
-Se utilizarón un corpus 3000 artículos en total, siendo 500 artículos de cada sección mencionada, para el entrenamiento se utilizarón 120 artículos siendo 20 de cada sección y teniendo como resultado un 77\% de exactitud [7].
+Se utilizarón un corpus 3000 artículos en total, siendo 500 artículos de cada sección mencionada, para el entrenamiento se utilizarón 120 artículos siendo 20 de cada sección y teniendo como resultado un 77\% de exactitud\cite{siete}.
 
 
 \section{Herramientas disponibles}
@@ -57,17 +74,17 @@ Se utilizarón un corpus 3000 artículos en total, siendo 500 artículos de cada
 Entre las herramientas de trabajo que son de utilidad para el procesamiento de lenguaje natural y aprendizaje automático se encuentran:\\
 
 \begin{large}
-	 \textbf{Cloud natural language}\\
+	 \textbf{Cloud Natural Language}\\
 \end{large}
 
-Google Cloud Natural Language [8] revela la estructura y el significado del texto con modelos potentes de aprendizaje automático previamente entrenados en una API de REST fácil de usar y con modelos personalizados se puede utilizar para extraer información sobre personas, lugares, eventos y muchos otros datos, que se mencionan en documentos de texto, artículos periodísticos o entradas de blog. También se puede utilizar para comprender las opiniones sobre los productos expresadas en los medios sociales o analizar la intención en las conversaciones de los clientes que se den en un centro de atención telefónica o una aplicación de mensajería.\\
+Google Cloud Natural Language \cite{ocho} revela la estructura y el significado del texto con modelos potentes de aprendizaje automático previamente entrenados en una API de REST fácil de usar y con modelos personalizados se puede utilizar para extraer información sobre personas, lugares, eventos y muchos otros datos, que se mencionan en documentos de texto, artículos periodísticos o entradas de blog. También se puede utilizar para comprender las opiniones sobre los productos expresadas en los medios sociales o analizar la intención en las conversaciones de los clientes que se den en un centro de atención telefónica o una aplicación de mensajería.\\
 
 \begin{large}
 	 \textbf{Googlebot}\\
 \end{large}
 
 Es el crawler diseñado por Google para indexar el contenido nuevo o actualizado de Internet.
-Googlebot [9] no sólo tiene la capacidad de rastrear e indexar los sitios web de Internet, sino que además puede extraer información de ficheros como pueden ser PDF, XLS, DOC, etc.
+Googlebot\cite{nueve} no sólo tiene la capacidad de rastrear e indexar los sitios web de Internet, sino que además puede extraer información de ficheros como pueden ser PDF, XLS, DOC, etc.
 Una vez el contenido está indexado, el servidor lo clasifica y establece un orden de relevancia para las distintas búsquedas que pueda efectuar un usuario, es decir, lo posiciona.\\
 
 
@@ -76,7 +93,7 @@ Una vez el contenido está indexado, el servidor lo clasifica y establece un ord
 	 \textbf{Watson natural language classifier}\\
 \end{large}
 
-Watson NLC [10] aplica técnicas de computación cognitiva para analizar un texto y proporcionar la clase que mejor encaja entre un conjunto de clases predefinidas a partir de un texto corto.
+Watson NLC \cite{diez} aplica técnicas de computación cognitiva para analizar un texto y proporcionar la clase que mejor encaja entre un conjunto de clases predefinidas a partir de un texto corto.
 Al ser un clasificador, esta compuesto de ciertos pasos, en primera instancia se necesitan de clases las cuales son etiquetas que identificarán el texto analizado y será la salida proporcionada por el clasificador; posteriormente se debe tomar en cuenta que se necesita de una colección de textos, los cuales proporcionarán apoyo para que el clasificador logre identificar las clases ingresadas posteriormente teniendo todos estos datos se logra entrenar al clasificador, el cual proporcionará una salida dependiendo a los datos que fueron utilizados.
 
 
