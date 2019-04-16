@@ -6,7 +6,7 @@
 	\textbf{Resumen}\\
 \end{large}
 
-Brinda al usuario un punto de acceso para elegir una sección; Las clasificaciones son, \textbf{Ciencia y técnología}, \textbf{Política}, \textbf{Deportes},  y \textbf{Economía} en cada una se podrá consultar noticias, artículos y publicaciones dentro de un intervalo de tiempo específico; La fuente de información será un diccionario de los sitios web mas consultados y confiables en México. Cabe mencionar que el intervalo de tiempo por defecto es la fecha actual que se ha ingresa al portal.\\
+Brinda al usuario un punto de acceso para elegir una sección; Las clasificaciones son, \textbf{Ciencia y técnología}, \textbf{Política}, \textbf{Deportes}, \textbf{Economía} y  \textbf{Cultura} en cada una se podrá consultar noticias, artículos y publicaciones dentro de un intervalo de tiempo específico; La fuente de información será un diccionario de los sitios web mas consultados y confiables en México. Cabe destacar que el intervalo de tiempo por defecto es la fecha actual en la que se ha ingresa al portal.\\
 
 \begin{large}
 	\textbf{Descripción}\\
@@ -36,9 +36,7 @@ Brinda al usuario un punto de acceso para elegir una sección; Las clasificacion
 	\hline
 
 %-----------------------Salidas--------------------------------------%
-	\textbf{Salidas:} &$\bullet$ \textit{Fecha inicio}\\
-	&$\bullet$ \textit{Feha fin}\\
-	&$\bullet$ \Tref{MSG1}{MSG1 Catálago vacio}\\
+	\textbf{Salidas:} &$\bullet$ \Tref{MSG1}{MSG1 Catálago vacio}\\
 	\hline
 
 %-----------------------Precondiciones-------------------------------%
@@ -48,16 +46,15 @@ Brinda al usuario un punto de acceso para elegir una sección; Las clasificacion
 %-----------------------Postcondiciones------------------------------%
 
 %---------Post 1----------%
-	\textbf{Postcondiciones:} &$\bullet$ El usario tendrá la facultad de buscar noticias\\
+	\textbf{Postcondiciones:} &$\bullet$ El usario tendrá la facultad de consultar noticias\\
 	&\ \ de la sección elegida\\
 %---------Post 2----------%
-	&$\bullet$ El usario tendrá la facultad de establecer un \\
+	&$\bullet$ El usario tendrá la facultad de cambiar el \\
 	&\ \ intervalo de tiempo para buscar los artículos\\
 	\hline
 
 %-----------------------Reglas de negocio----------------------------%
-	\textbf{Reglas de negocio:} &$\bullet$ \RNref{RN2}{Lenguaje de direcciones web} \\
-	&$\bullet$ \RNref{RN7}{Perido preestablecido}\\
+	\textbf{Reglas de negocio:}& Ninguna.\\
 	\hline
 
 %---------------------------Errores----------------------------------%
@@ -69,8 +66,6 @@ Brinda al usuario un punto de acceso para elegir una sección; Las clasificacion
 %------Error 2----------%
 	&$\bullet$ \TError{CU1}{Dos} Cuando los sitios proporcionados no se\\
 	&\ \ \ encuentran redactados en lenguaje  español se\\
-	&\ \ muestra el mensaje \Tref{MSG2}{MSG2 Lenguaje de sitio}, fin\\
-	&\ \ del caso de uso\\
 	\hline
 
 %-------------------------Autor--------------------------------------%
@@ -89,32 +84,22 @@ Brinda al usuario un punto de acceso para elegir una sección; Las clasificacion
 
 \begin{enumerate}[1.]
 	
-	\item \actor Selecciona una opción de la pantalla \Tref{UI1}{UI1 Inicio}; \textbf{Política}, \textbf{Economía}, \textbf{Deportes} o \textbf{Ciencia}. 
+	\item \actor Selecciona una opción de la pantalla \Tref{UI1}{UI1 Inicio}; \textbf{Política}, \textbf{Economía}, \textbf{Deportes}, \textbf{Ciencia y tecnología} o \textbf{Cultura}. 
 	
 	\item \sistema Obtiene el catálogo \textbf{Direcciones web}.
 	
 	\item \sistema Verifica que el catálogo \textbf{Direcciones web} contenga información. \TEref{CU1}{Uno}
-	
-	\item \sistema Verifica que al menos un sitio cumpla con la regla de negocio \RNref{RN2}{Lenguaje de direcciones web}. \TEref{CU1}{Dos}
 
 	\item \sistema Obtiene la fecha actual.
 
-	\item \sistema \label{CU1:FechaI}Calcula el campo \textbf{Fecha incio} y \textbf{Fecha fin} deacuerdo a la regla de negocio \RNref{RN7}{Perido preestablecido}.
+	\item \sistema Incluye en caso de uso \Tref{CU2}{CU2 Buscar noticias}.
 
-	\item \label{CU1:Pantalla}\sistema Muestra deshabilitado y con fechas los campos \textbf{Fecha inicio} y \textbf{Fecha fin} con lo antes calculado, como se visualiza en la pantalla \Tref{UI2}{UI2 Sección política}.
+	\item \actor Consulta la información.
 	
 	\item \finCU	
 
 \end{enumerate}
 
-
-%================================Puntos de extención=============================%
-
-
-%--------------------Puntos de extención 1------------------------%
-\textbf{Causa de la extensión:} El actor desea consultar las noticias de una sección.\\
-\textbf{Región de la trayectorioa:} Paso \ref{CU1:Pantalla} de la trayectoria principal.\\
-\textbf{Extiende a :} \Tref{CU2}{CU2 Buscar noticia}.\\\\
 
 
 

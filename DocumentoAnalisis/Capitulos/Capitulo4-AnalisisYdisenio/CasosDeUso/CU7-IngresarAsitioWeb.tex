@@ -1,4 +1,4 @@
-\Tlabel{CU5}\Tsubsection{CU5 Ingrear a sitio web}
+\Tlabel{CU7}\Tsubsection{CU7 Ingrear a sitio web}
 
 
 %================================Intriodcucción==================================%
@@ -38,18 +38,18 @@ Permite al usuario acceder al portal web de las noticias mostradas.\\
 
 %-----------------------Salidas--------------------------------------%
 
-	\textbf{Salidas:} &$\bullet$ Sitio web de la URL seleccionada\\
-	&$\bullet$ \Tref{MSG8}{MSG8 Fallo al ingresar a sitio web}\\
+	\textbf{Salidas:} & Sitio web de la URL seleccionada\\
+	&$\bullet$ \Tref{MSG3}{MSG3 Fallo al ingresar a sitio web}\\
 	\hline
 
 %-----------------------Precondiciones-------------------------------%
 
-	\textbf{Precondición:} & Debe existir almenos una noticia mostrada\\
+	\textbf{Precondición:} & Debe existir al menos una noticia mostrada\\
 	& en el portal.\\
 	\hline
 %-----------------------Postcondiciones------------------------------%
 
-	\textbf{Postcondiciones:} & El usario tendra la facultad de visualizar la\\ 
+	\textbf{Postcondiciones:} & El usario tendrá la facultad de visualizar la\\ 
 	&noticia completa.\\
 	\hline
 %-----------------------Reglas de negocio----------------------------%
@@ -59,9 +59,9 @@ Permite al usuario acceder al portal web de las noticias mostradas.\\
 
 %---------------------------Errores----------------------------------%
 	\textbf{Errores:} &\TError{CU7}{Uno} Cuando no es posible ingresar al sitio\\
-	&\ web seleccionado, se muestra el mensaje \Tref{MSG8}{MSG8}\\
-	&\ \Tref{MSG8}{Fallo al ingresar a sitio web} en la pantalla\\
-	&\ \Tref{UI3}{UI3 Resultados de búsqueda}, fin del caso de uso.\\
+	&\ web seleccionado, se muestra el mensaje \Tref{MSG3}{MSG3}\\
+	&\ \Tref{MSG3}{Fallo al ingresar a sitio web} en la pantalla\\
+	&\ \Tref{UI2}{UI2 Sección política}, fin del caso de uso.\\
 	\hline
 %-------------------------Autor--------------------------------------%
 	\textbf{Autor:} & Carlos Andres Hernandez Gomez\\
@@ -80,7 +80,7 @@ Permite al usuario acceder al portal web de las noticias mostradas.\\
 \end{large}	
 
 \begin{enumerate}[1.]
-	\item \actor Solicita ver la noticia completa dando click en la \textbf{URL} de la publicación deseada, en la pantalla \Tref{UI3}{UI3 Resultados de búsqueda}.
+	\item \actor Solicita ver la noticia completa dando click en la \textbf{URL} de la publicación deseada, en la pantalla \Tref{UI2}{UI2 UI2 Sección política}.
 	\item \sistema Abre una ventana en el navegador y en ella se direcciona a la URL seleccionada. \TEref{CU7}{Uno}
 	\item \sistema Muestra la pantalla \Tref{UI4}{UI4 Página de sitio web}
 	\item \finCU	

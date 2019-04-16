@@ -6,17 +6,18 @@ En esta sección se describen las reglas de negocio implementadas en el trabajo 
 \begin{itemize}
   \item \textbf{Tipo:}  
   \item \textbf{Descripción:}  La notica debe tener almenos 180 palabras
-  \item \textbf{Ejemplo:}
-  \item \textbf{Refer:}
+%  \item \textbf{Ejemplo:}
+  \item \textbf{Refer:CU3 Recolectar noticias} 
 \end{itemize}
+
 %------------------RN2-----------------------%
 \DGline{RN2}{Lenguaje de noticias}
 
 \begin{itemize}
   \item \textbf{Tipo:}  
   \item \textbf{Descripción:} Las noticias deben estar redactadas en lenguaje español.
-  \item \textbf{Ejemplo:}
-  \item \textbf{Referenciado por:}  \\
+%  \item \textbf{Ejemplo:}
+  \item \textbf{Referenciado por: CU4 Clasificar noticias}  \\
 \end{itemize}
 %------------------RN3-----------------------%
 \DGline{RN3}{Diccionario de sistios}
@@ -37,8 +38,8 @@ En esta sección se describen las reglas de negocio implementadas en el trabajo 
     \item \textbf{El economista}: https:\/\/www.eleconomista.com.mx
 
   \end{itemize} 
-  \item \textbf{Ejemplo:}
-  \item \textbf{Referenciado por:}  \\
+%  \item \textbf{Ejemplo:}
+  \item \textbf{Referenciado por:CU3 Recolectar noticias}  \\
 \end{itemize}
 %------------------RN4-----------------------%
 \DGline{RN4}{Porcentaje de aceptación}
@@ -46,33 +47,24 @@ En esta sección se describen las reglas de negocio implementadas en el trabajo 
 \begin{itemize}
   \item \textbf{Tipo:}  
   \item \textbf{Descripción:} Solo se puede mostrar una noticia si cumple con un porcentaje de aceptación mayor a 60\%.
-  \item \textbf{Ejemplo:}
-  \item \textbf{Referenciado por:}  \\
+%  \item \textbf{Ejemplo:}
+  \item \textbf{Referenciado por: CU4 Clasificar noticias}  \\
 \end{itemize}
+
 
 
 %------------------RN5-----------------------%
-\DGline{RN5}{Campos obligatorios}
-
-\begin{itemize}
-  \item \textbf{Tipo:} Restricción.  
-  \item \textbf{Descripción:} Los campos marcados con \* no se deben omitir.
-  \item \textbf{Ejemplo:} 
-  \item \textbf{Referenciado por:}  \\
-\end{itemize}
-
-%------------------RN6-----------------------%
-\DGline{RN6}{Orden de publicación}
+\DGline{RN5}{Orden de publicación}
 
 \begin{itemize}
   \item \textbf{Tipo:} Descripción
   \item \textbf{Descripción:} Las noticias se muestrán de forma descendente deacuerdo a su fecha de difusión; Es decir la primera publicación en mostrarse es aquella que tiene la fecha y hora mas cercana a la del sistema.
-  \item \textbf{Ejemplo:} 
+%  \item \textbf{Ejemplo:} 
   \item \textbf{Referenciado por:} \Tref{CU2}{CU2 Buscar noticias} \\
 \end{itemize}
 
-%------------------RN7-----------------------%
-\DGline{RN7}{Profundidad de búsqueda}
+%------------------RN6----------------------%
+\DGline{RN6}{Profundidad de búsqueda}
 
 \begin{itemize}
   \item \textbf{Tipo:} Cálculo.
@@ -89,17 +81,16 @@ En esta sección se describen las reglas de negocio implementadas en el trabajo 
 
 
 
-  \item \textbf{Ejemplo:} 
-  \item \textbf{Referenciado por:} \Tref{CU3}{CU3 Recolectar noticias}\\
+%  \item \textbf{Ejemplo:} 
+  \item \textbf{Referenciado por: CU3 Recolectar noticias} \\
 \end{itemize}
 
-%------------------RN8-----------------------%
-\DGline{RN8}{Número de peticiones}
+%------------------RN7-----------------------%
+\DGline{RN7}{Número de peticiones}
 
 \begin{itemize}
   \item \textbf{Tipo:} Restricción
   \item \textbf{Descripción:} El número de peticiones realizadas a una página no debe exceder el permitido por el dominio.
-  \item \textbf{Ejemplo:} 
-  \item \textbf{Referenciado por:} \Tref{CU3}{CU3 Recolectar noticias} \\
+%  \item \textbf{Ejemplo:} 
+  \item \textbf{Referenciado por: CU3 Recolectar noticias} \\
 \end{itemize}
-
