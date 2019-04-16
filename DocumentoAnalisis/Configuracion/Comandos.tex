@@ -5,7 +5,7 @@
 \newcommand{\sistema}[0]{\includegraphics[scale=.3 ]{imagenes/system.png}  }%incluye la imagen del sistema
 \newcommand{\finCU}[0]{\textit{- - - - Fin del caso de uso.}\\}
 \newcommand{\finTA}[0]{\textit{- - - - Fin de la trayectoria.}\\}
-\newcommand{\Tsubsection}[1]{\textcolor{myBlueDark}{\subsection{#1}}}
+\newcommand{\Tsubsection}[1]{\textcolor{myDarkBlue}{\subsection{#1}}}
 
 %---------------------Titulo para los requisitos funcionales----------------%
 \newcommand{\Dline}[2]{{\setlength{\parindent}{0pt}\textbf{\textcolor{myBlue}{\large{#1} \large{#2}}}} \\\rule[3mm]{110mm}{0.3mm}\includegraphics[scale=.5]{imagenes/Documento.png}}%Linea de separadora 
@@ -34,3 +34,8 @@
 %---------------------------Trayectoria alternativa-----------------%
 \newcommand{\Talterna}[2]{\hypertarget{TA#1:#2}{ }\textbf{Trayectoria alternativa #2:}}
 \newcommand{\TAref}[2]{\hyperlink{TA#1:#2}{[Trayectoria #2]}}
+%-----------------------Titulo de los capítulos-----------------
+\newcommand{\TChapter}[2]{\begin{tcolorbox}[adjusted title=flush center,halign title=flush center,titlerule=3mm,title=\ ] \chapter{#1} \centering \includegraphics[scale=1]{imagenes/alfabetoG/#2.png}  \end{tcolorbox}}
+
+
+

@@ -1,8 +1,16 @@
 
 \documentclass{book}
+
 \input{Configuracion/Librerias}
 \input{Configuracion/Estilo}
 \input{Configuracion/Comandos}
+
+%----------------Incluimos la sección de bibliografía a la tabla de contenidos--------%
+
+\let\OLDthebibliography=\thebibliography
+\def\thebibliography#1{\OLDthebibliography{#1}%
+\addcontentsline{toc}{chapter}{\bibname}}
+
 
 
 \begin{document}
@@ -13,11 +21,17 @@
   %-------------------------------Capitulos----------%
 
   \input{Capitulos/Capitulo1-Introduccion}
+  \newpage
   \input{Capitulos/Capitulo2-EstadoDelArte}
+  \newpage
   \input{Capitulos/Capitulo3-MarcoTeorico}
+  \newpage
   \input{Capitulos/Capitulo4-AnalisisYdisenio/Capitulo4-AnalisisYdisenio}
-  %\input{Capitulos/Referencias}
+
   
   %-------------------------------Bibliografía----------%
-  \input{Configuracion/Bibliografia}
+  \bibliography{Capitulos/Referencia}
+  
+
+
 \end{document}
