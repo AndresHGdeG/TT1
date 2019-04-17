@@ -4,7 +4,7 @@ En esta sección se describen las reglas de negocio implementadas en el trabajo 
 %------------------RN1-----------------------%
 \DGline{RN1}{Número de palabras}
 \begin{itemize}
-  \item \textbf{Tipo:}  
+  \item \textbf{Tipo:} Dominio.  
   \item \textbf{Descripción:}  La notica debe tener almenos 180 palabras
 %  \item \textbf{Ejemplo:}
   \item \textbf{Refer:CU3 Recolectar noticias} 
@@ -14,7 +14,7 @@ En esta sección se describen las reglas de negocio implementadas en el trabajo 
 \DGline{RN2}{Lenguaje de noticias}
 
 \begin{itemize}
-  \item \textbf{Tipo:}  
+  \item \textbf{Tipo:} Dominop.  
   \item \textbf{Descripción:} Las noticias deben estar redactadas en lenguaje español.
 %  \item \textbf{Ejemplo:}
   \item \textbf{Referenciado por: CU4 Clasificar noticias}  \\
@@ -23,7 +23,7 @@ En esta sección se describen las reglas de negocio implementadas en el trabajo 
 \DGline{RN3}{Diccionario de sistios}
 
 \begin{itemize}
-  \item \textbf{Tipo:}  
+  \item \textbf{Tipo:} Dominio.
   \item \textbf{Descripción:} Solo se puede recolectar información de los siguientes sitios.\\
 
   \begin{itemize}
@@ -45,7 +45,7 @@ En esta sección se describen las reglas de negocio implementadas en el trabajo 
 \DGline{RN4}{Porcentaje de aceptación}
 
 \begin{itemize}
-  \item \textbf{Tipo:}  
+  \item \textbf{Tipo:}  Flujo.
   \item \textbf{Descripción:} Solo se puede mostrar una noticia si cumple con un porcentaje de aceptación mayor a 60\%.
 %  \item \textbf{Ejemplo:}
   \item \textbf{Referenciado por: CU4 Clasificar noticias}  \\
@@ -57,7 +57,7 @@ En esta sección se describen las reglas de negocio implementadas en el trabajo 
 \DGline{RN5}{Orden de publicación}
 
 \begin{itemize}
-  \item \textbf{Tipo:} Descripción
+  \item \textbf{Tipo:} Estructura.
   \item \textbf{Descripción:} Las noticias se muestrán de forma descendente deacuerdo a su fecha de difusión; Es decir la primera publicación en mostrarse es aquella que tiene la fecha y hora mas cercana a la del sistema.
 %  \item \textbf{Ejemplo:} 
   \item \textbf{Referenciado por:} \Tref{CU2}{CU2 Buscar noticias} \\
@@ -89,7 +89,7 @@ En esta sección se describen las reglas de negocio implementadas en el trabajo 
 \DGline{RN7}{Número de peticiones}
 
 \begin{itemize}
-  \item \textbf{Tipo:} Restricción
+  \item \textbf{Tipo:} Operación.
   \item \textbf{Descripción:} El número de peticiones realizadas a una página no debe exceder el permitido por el dominio.
 %  \item \textbf{Ejemplo:} 
   \item \textbf{Referenciado por: CU3 Recolectar noticias} \\
