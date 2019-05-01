@@ -1,0 +1,42 @@
+The ordering of words in a document provides a semantic meaning that cannot be
+inferred from a representation based on only the frequencies of words in that document.
+(Pg. 23)
+
+1. Text as a bag-of-words: This is the most commonly used representation for text mining.
+In this case, the ordering of the words is not used in the mining process. The set
+of words in a document is converted into a sparse multidimensional representation,
+which is leveraged for mining purposes. Therefore, the universe of words (or terms)
+corresponds to the dimensions (or features) in this representation. For many applications
+such as classification, topic-modeling, and recommender systems, this type of
+representation is sufficient. (Pg.23)
+
+2. Text as a set of sequences: In this case, the individual sentences in a document are
+extracted as strings or sequences. Therefore, the ordering of words matters in this
+representation, although the ordering is often localized within sentence or paragraph
+boundaries. A document is often treated as a set of independent and smaller units (e.g.,
+sentences or paragraphs). This approach is used by applications that require greater
+semantic interpretation of the document content. This area is closely related to that
+of language modeling and natural language processing. The latter is often treated as a
+distinct field in its own right.(Pg.24)
+
+
+It is important to be cognizant of the sparse and high-dimensional characteristics of text
+when treating it as a multidimensional data set. This is because the dimensionality of the
+data depends on the number of words which is typically large. Furthermore, most of the word
+frequencies (i.e., feature values) are zero because documents contain small subsets of the
+vocabulary. Therefore, multidimensional mining methods need to be cognizant of the sparse
+and high-dimensional nature of the text representation for best results (pg. 24)
+
+
+In fact, some models, such as the linear support vector machines
+discussed in Chap. 6, are inherently suited to sparse and high-dimensional data(Pg. 24)
+
+A data set corresponds to a collection of documents, which is also referred to as
+a corpus. The complete and distinct set of words used to define the corpus is also referred
+to as the lexicon.(pg. 24)
+
+
+text is a high-dimensional, sparse, and non-negative representation.(24)
+
+
+página 25, párrafo 1
