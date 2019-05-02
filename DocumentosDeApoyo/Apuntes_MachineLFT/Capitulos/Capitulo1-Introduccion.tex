@@ -1,6 +1,6 @@
-\chapter{Introduccion}
+\chapter{Introducción}
 
-Este documento presenta los apuntes realizados del libro \textit{Machine Learning for Text} con  ISBN 978-3-319-73531-3 (eBook, 2018) de Charu C. Aggarwal un distinguido investigador de IBM; El motivo de redactar este documento es aprender sobre el procesamiento del lenguaje natural para ser aplicado en el trabajo terminal (TT) \textbf{Recolector y clasificador de noticias} con número 2019-B013, de la \textbf{Escuela superior de cómputo} (ESCOM) del \textbf{Institúto politécnico nacional} (IPN).\\
+Este documento presenta los apuntes realizados del libro \textit{Machine Learning for Text} con  ISBN 978-3-319-73531-3 (eBook, 2018) de Charu C. Aggarwal un distinguido investigador de IBM; El motivo de redactar este documento es aprender sobre el procesamiento del lenguaje natural para ser aplicado en el trabajo terminal (TT) \textbf{Recolector y clasificador de noticias} con número 2019-B013, de la \textbf{Escuela superior de cómputo} (ESCOM) del \textbf{Instituto politécnico nacional} (IPN).\\
 
 \section{Machine learning for text}
 
@@ -12,12 +12,42 @@ La extracción de información útil con varios tipos de algoritmos estadístico
 
 	\item \textbf{Noticias electrónicas}: Existe un movimiento masivo para pasar las noticias impresas hacía la publicación electrónica, esto permite que sean almacenadas para su análisis y extracción de información sobre eventos y perspectivas importantes. Sitios como \textit{Google news} etiquen las noticias para hacer recomendaciones al lector basado en su anterior comportamiento o intereses específicos.
 
-	\item \textbf{\textit{Web and Web-enabled applications}}: La web contiene una gran cantidad de información en hipertexto, con links y otro tipo de recursos, la cual puede ser utilizada par el proceso de descubrimiento de nuevo conocimiento, al igual las \textit{Web-enabled applications}\footnote{\textbf{\textit{Web and Web-enabled applications}}: Aplicaciones de escritorio que son  accedidas remotamente des de un buscador como internet explorer.} permiten obtener información que puede ser analizada.
+	\item \textbf{\textit{Web and Web-enabled applications}}: La web contiene una gran cantidad de información en hipertexto, con links y otro tipo de recursos, la cual puede ser utilizada par el proceso de descubrimiento de nuevo conocimiento, al igual las \textit{Web-enabled applications}\footnote{\textbf{\textit{Web and Web-enabled applications}}: Aplicaciones de escritorio que son  accedidas remotamente des de un buscador como Internet explorer.} permiten obtener información que puede ser analizada.
 
+	\item \textbf{Redes sociales}: Las redes sociales son un campo que está proliferando, debido a su naturaleza donde cada usuario contribuye con sus propias publicaciones.
 
 \end{itemize}
 
 
+
+Algunas de las aplicaciones son las siguientes:
+
+\begin{itemize}
+
+	\item Etiquetar la web, permite al usuario encontrar paginas de interés
+
+	\item Los proveedores de correos, utilizan la información almacenada para mostrar publicidad de interés al usuario
+
+	\item Algunas páginas ordenan su contenido de acuerdo a su importancia
+
+	\item El análisis de las opiniones es un campo de importancia así como el análisis de sentimientos		
+
+\end{itemize}
+
+
+El orden se las palabras en un texto brindan un significado semántica el cual no puede ser inferido  solo con la frecuencia de las palabras. Sin embargo, se pueden hacer varias predicciones sin contemplar la semántica. Existen 2 tipos de representaciones que son populares en las aplicaciones de \textbf{text mining}:
+
+\begin{itemize}
+	
+	\item \textbf{\textit{Text as a bag-of-words}}: Es la representación mas común. No se contempla el orden de las palabras el proceso. El conjunto de palabras en el documento se convierten en \textit{Sparse multidimentional reprentation}, el cual corresponde a la dimensión en esta representación. Se utiliza para la clasificación, sistemas de recomendación.
+
+	\item \textbf{\textit{Text as a set of sequences}}: En esta representación se extraen sentencias, el orden de las palabras si importa. La unidad son sentencia o párrafos. Es utilizado en aplicaciones que necesitan un fuerte uzo de la semántica, esta área se acerca mucho al modelado de lenguaje y procesamiento del lenguaje natural
+
+\end{itemize}
+
+\section{Corpus}
+
+En el desarrollo de las aplicaciones se tiene un conjunto de datos los cuales forman el \textit{corpus}, el orden de los datos se coloca en $10^5$ es decir 100,000 datos o incluso $10^6$. En la mayoría de los datos toman el valor de 0, solo un pequeño conjunto toma un valor positivo.
 
 
 
