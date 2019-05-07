@@ -1,43 +1,95 @@
 
 \TChapter{Marco teórico}{gama}
 \ \\\\
-En esta sección se expondrán de manera detallada conceptos los cuales son esenciales para la elaboración de este trabajo.
+En esta sección se expondrán de manera detallada conceptos los cuales son esenciales para la elaboración 
+de este trabajo.
+
+%Recordar renombrar las citas
+\section{Inteligencia Artificial}
+La Inteligencia Artificial (IA) es un campo de investigación y desarrollo que tiene por objetivo resolver 
+problemas complejos para los cuales no se conocen soluciones algorítmicas exactas computables en la práctica, 
+ya sea por sus grandes dimensiones, su complejidad estructural o los niveles intrínsecos de incertidumbre de 
+los datos que manejan \cite{inteligenciaArtificial}.
+%http://www.mcc.unam.mx/IA.php
+\\
+Hoy en día la Inteligencia Artificial juega un papel muy importante en el desarrollo diversos campos de 
+investigación, así como en la industria, finanzas, educación, transporte y más.
+\\
+La tecnología ha avanzado día con día y eso implica que la Inteligencia Artificial también avanza, uno de 
+los objetivos primordiales de la Inteligencia Artificial es construir modelos computacionales capaces de 
+resolver las actividades que realiza el ser humano de una manera más eficiente y precisa.
 
 
-\section{Crawler}
-Un crawler \cite{once} es una herramienta la cual analiza sitios web, permitiendo recolectar las páginas web para así posteriormente extraer la información que contengan. Un crawler también conocido como como robot o spider, es un sistema para la descarga masiva de páginas web. Son uno de los componentes principales de los motores de búsqueda web, los sistemas que reúnen un conjunto de páginas web, las indexan y permiten a los usuarios realizar consultas contra el índice y encontrar las páginas web que coincidan con las consultas.
+\section{Machine Learning}
+Machine Learning es una rama de la Inteligencia Artificial la cual permite  desarrollar técnicas aprendizaje 
+automático por parte de las computadoras, los cuales tienen la capacidad de resolver problemas, predecir 
+continuamente los cambios que se puedan suscitar, gracias a los modelos de aprendizaje utilizados en ellos.
+\\
+Machine Learning utiliza una variedad de algoritmos que aprenden iterativamente de datos para mejorar, describir 
+datos y predecir resusltados. A medida en la cual los algoritmos de entrenamiento obtienen datos es posible obtener 
+modelos más precisos basados en esos datos. Un modelo de Machine Learning es una salida generada cuando se tiene 
+entrenado un algoritmo de aprendizaje automático. Después de entrenar el modelo con una entrada de datos, obtendremos 
+una salida. Por ejemplo, un algoritmo predictivo creará un modelo predictivo. Luego, cuando se le proporciona datos 
+al modelo predictivo, se obtendrá una predicción basada en los datos que entrenaron al modelo \cite{machineLearning}.
+%https://www.ibm.com/downloads/cas/GB8ZMQZ3
+
+\subsection{Aprendizaje supervisado}
+Los algoritmos de aprendizaje supervisado dependen de datos previamente etiquetados, es decir necesita de un entrenamiento para 
+que el algoritmo pueda comprender los datos y con ello determinar que etiqueta debe asignarse a los nuevos datos 
+en función del patron y asociando los patrones a los nuevos datos sin etiquetar. Después de ello, la maquina recibe 
+un nuevo conjunto de datos para que el algoritmo de aprendizaje supervisado analice los datos y produzca un resultado 
+correcto de los datos etiquetaods.
+
+\subsection{Aprendizaje no supervisado}
+Los algoritmos de aprendizaje no supervisado no dependen de datos previamente etiquetados, por lo cual los algoritmos 
+tienen la tarea de agrupar la información no clasificada según sus similitudes, patrones y diferencias sin ningún entrenamiento 
+previó de datos, por lo cual aprenden gracias a la cantidad de datos que le son ingresadas con características propias de un 
+objeto y con ello pueda determinar los resultados basados en los datos de entrada
+%https://towardsdatascience.com/supervised-machine-learning-classification-5e685fe18a6d
+
+\subsection{Clasificación}
+La clasificación es una técnica en la cual se organiza o se agrupa un conjunto de objetos los cuales poseen características 
+similares que los hacen distintos a los demás.
+
+\section{Algoritmos de clasificación}
+
+\subsection{Naive bayes}
+Es una aproximación probabilistica, las cuales hacen especualiciones sobre como deben ser generados 
+los datos. Generalmente utiliza aprendizaje superbisado sobre el conjuto de entrenamiento para estimar 
+sus parámetros. Con el conjunto de entrada se aplica el teorema de bayes.
+
+\subsection{Maquina de soporte vectorial}
+Las maquinas de soporte vectorial son sistemas de aprendizaje los cuales
+se basan en el uso de un espacio de funciones lineales, el cual se encuentra con
+mas dimensiones inducido por un kernel, en el que las hipotesis son las entradas
+para el algoritmo.
+El algoritmo induce separadores lineales ya sea en el espacio original de los
+ejemplos de entrada, si los datos no son separabales se busca un hiperplano en
+el que si lo sean, se hace de forna implicita con las funciones kernel.\\
+
+\subsection{Forest tree}
 
 
-\section{Sitios web}
-Un sitio web \cite{doce} es un conjunto de páginas web interconectadas y de acceso público que comparten un solo nombre de dominio. Los sitios web pueden ser creados y mantenidos por un individuo, grupo, empresa u organización para cumplir una variedad de propósitos. Todos estos sitios constituyen la World Wide Web. 
-
-\subsection{Página web}
-Una página web es un documento electrónico el cual forma parte de la WWW (\textit{World Wide Web}) generalmente construido en el lenguaje HTML (\textit{Hyper Text Markup Language}). Este documento puede contener enlaces que nos direcciona a otra página web. Para visualizar una página web es necesario de un browser o un navegador \cite{trece}. Dentro de las páginas web podemos encontrar un sinfin de sitios los cuales pueden ser de nuestro interés.
-
-\subsection{Blog}
-Un blog es una página web en la cual el usuario no necesita conocimientos específicos del medio electrónico ni del formato digital para poder aportar contenidos de forma inmediata, ágil y constante desde cualquier punto de conexión a Internet \cite{catorce}. En un blog el usuario puede compartir cualquier tipo de información que sea de su agrado, teniendo una mayor libertad de expresión lo cual permite que otras personas compartan y comenten su manera de expresarse.
-
-\subsection{Foro}
-Un foro es una herramienta de comunicación asíncrona. Los foros permiten la comunicación de los participantes desde cualquier lugar en el que  esté  disponible  una  conexión  a Internet  sin  que  éstos  tengan  que  estar dentro del sistema al mismo tiempo, de ahí su naturaleza asíncrona \cite{quince}. Brindando una mayor interacción entre distintos participantes y permitiendo conocer la opinión sobre un tema de distintas personas.
 
 
-\section{Lenguaje}
+\section{Procesamiento de lenguaje natural}
+El procesamiento de lenguaje natural es una disciplina de la Inteligencia Artificial que se ocupa de la 
+formulación e investigación de mecanismos computacionales para la comunicación entre personas y maquinas 
+mediante el uso de Lenguajes Naturales[16].
+
+\subsection{Lenguaje}
 El lenguaje es un medio de comunicación a traves de de un sistema de símbolos \cite{dieciseis}.
-La Real Academía Española define al lenguaje como la facultad del ser humano de expresarse y comunicarse con los demás a través del sonido articulado o de otros sistemas de signos.
+La Real Academía Española define al lenguaje como la facultad del ser humano de expresarse y 
+comunicarse con los demás a través del sonido articulado o de otros sistemas de signos.
 
-\subsection{Procesamiento de lenguaje natural}
-El procesamiento de lenguaje natural es una disciplina de la Inteligencia Artificial que se ocupa de la formulación e investigación de mecanismos computacionales para la comunicación entre personas y maquinas mediante el uso de Lenguajes Naturales[16].
 
 \subsection{Tokenización}
-
-
 Es la acción de separar el texto en sus unidades míninas(Palabras), se les
 asigna un código como el ascii o hexadecimal para ser reconocidas de fórma
 única, son almacenas para su postrior análisis y reconocimiento. Cabe mencionar que los
 signos de puntuación son eliminados.
 
 \subsection{Lematización}
-
 Es el proceso lingüstico que, dada una palabra flexionada se encuentra su
 lema. Una palabra flexionada es cuando esta en el plural, en femenino conjugada,
 diminutivo o en superlativo. El lema es la palabra que esta en singular para
@@ -59,25 +111,46 @@ Cabe mencionar que existen diversos grados de lemataizaicón
 Una opción para lematizar es Freeling, este es un lematizador hecho por la
 universidad de catalunia.
 
-\section[Representación del t.]{Representación del texto}
+\subsection[Representación del t.]{Representación del texto}
 Los métodos de aprendizaje automático, requieren que la información este
 representado en un formato que facilite su procesamiento. Un método utilzado
 es representar los datos en un vector de valores numéricos.
 
 \section{Corpus}
-Se le llama corpus a la recopilación de un conjunto de textos, de materiales escritos y/o hablados, agrupados bajo un conjunto de criterios mínimos, para realizar ciertos análisis lingüísticos.
+Se le llama corpus a la recopilación de un conjunto de textos, de materiales escritos y/o hablados, 
+agrupados bajo un conjunto de criterios mínimos, para realizar ciertos análisis lingüísticos.
 
-\section[Algoritmos de c.]{Algoritmos de clasificación}
+
+\section{Crawler}
+Un crawler \cite{once} es una herramienta la cual analiza sitios web, permitiendo recolectar 
+las páginas web para así posteriormente extraer la información que contengan. Un crawler también 
+conocido como como robot o spider, es un sistema para la descarga masiva de páginas web. Son uno de 
+los componentes principales de los motores de búsqueda web, los sistemas que reúnen un conjunto de 
+páginas web, las indexan y permiten a los usuarios realizar consultas contra el índice y encontrar las 
+páginas web que coincidan con las consultas.
 
 
-\subsection{Naive bayes}
-Es una aproximación probabilistica, las cuales hacen especualiciones sobre como deben ser generados los datos. Generalmente utiliza aprendizaje superbisado sobre el conjuto de entrenamiento para estimar sus parámetros. Con el conjunto de entrada se aplica el teorema de bayes.
+\section{Sitios web}
+Un sitio web \cite{doce} es un conjunto de páginas web interconectadas y de acceso público que comparten 
+un solo nombre de dominio. Los sitios web pueden ser creados y mantenidos por un individuo, grupo, empresa 
+u organización para cumplir una variedad de propósitos. Todos estos sitios constituyen la World Wide Web. 
 
-\subsection{Maquina de soporte vectorial}
-Las maquinas de soporte vectorial son sistemas de aprendizaje los cuales
-se basan en el uso de un espacio de funciones lineales, el cual se encuentra con
-mas dimenciones inducido por un kernel, en el que las hipotesis son las entradas
-para el algoritmo.
-El algoritmo induce separadores lineales ya sea en el espacio original de los
-ejemplos de entrada, si los datos no son separabales se busca un hiperplano en
-el que si lo sean, se hace de forna implicita con las funciones kernel.\\
+\subsection{Página web}
+Una página web es un documento electrónico el cual forma parte de la WWW (\textit{World Wide Web}) generalmente 
+construido en el lenguaje HTML (\textit{Hyper Text Markup Language}). Este documento puede contener enlaces que nos 
+direcciona a otra página web. Para visualizar una página web es necesario de un browser o un navegador \cite{trece}. 
+Dentro de las páginas web podemos encontrar un sinfin de sitios los cuales pueden ser de nuestro interés.
+
+\subsection{Blog}
+Un blog es una página web en la cual el usuario no necesita conocimientos específicos del medio electrónico ni del 
+formato digital para poder aportar contenidos de forma inmediata, ágil y constante desde cualquier punto de conexión 
+a Internet \cite{catorce}. En un blog el usuario puede compartir cualquier tipo de información que sea de su agrado, 
+teniendo una mayor libertad de expresión lo cual permite que otras personas compartan y comenten su manera de expresarse.
+
+\subsection{Foro}
+Un foro es una herramienta de comunicación asíncrona. Los foros permiten la comunicación de los participantes desde 
+cualquier lugar en el que  esté  disponible  una  conexión  a Internet  sin  que  éstos  tengan  que  estar dentro del 
+sistema al mismo tiempo, de ahí su naturaleza asíncrona \cite{quince}. Brindando una mayor interacción entre distintos 
+participantes y permitiendo conocer la opinión sobre un tema de distintas personas.
+
+
