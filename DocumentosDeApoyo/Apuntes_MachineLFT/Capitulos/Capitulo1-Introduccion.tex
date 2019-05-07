@@ -45,9 +45,49 @@ El orden se las palabras en un texto brindan un significado semántica el cual n
 
 \end{itemize}
 
-\section{Corpus}
+
+\section{Definiciones}
+
+\subsection{Corpus}
 
 En el desarrollo de las aplicaciones se tiene un conjunto de datos los cuales forman el \textit{corpus}, el orden de los datos se coloca en $10^5$ es decir 100,000 datos o incluso $10^6$. En la mayoría de los datos toman el valor de 0, solo un pequeño conjunto toma un valor positivo.
 
+\subsection{Learning algorithm}
+
+El término \textit{Learning algorithm} se utilizará para hacer referencia a los algoritmos que descubran patrones en el texto, o como se pueden usar los patrones para predecir valores específicos en los datos.
 
 
+\section[Pre-procesamiento]{Pre-procesamiento y computación similar}
+
+El Pre-procesamiento es necesario para convertir el formato no estructurado en un formato estructurado.
+A menudo el texto contiene información extraña como etiquetas, \textit{anchor text}\footnote{Es el texto mostrado en los enlaces o hipervínculos, \textbf{Texto de anclaje} en español.}, y otras características. En muchos casos las palabras son variaciones de otras (Sinónimos) por el tipo de redacción, el contexto, para eliminar redundancia. Algunas palabras simplemente tienen faltas de ortografía. El proceso de convertir una secuencia de caracteres en una secuencia de palabras(Tokens), es llamado \textbf{Tokenización}. Además por cada palabra repetida se crea un token, es decir al repetirse una palabra 3 veces, se crearán 3 tokens correspondientes. Alguno de los pasos mas comunes para el procesamiento de texto en bruto son los siguientes: 
+
+\begin{itemize}
+
+	\item \textbf{Extracción de texto}: En caso de recuperar información de la web, se tiene que limpiar el texto ya que contiene \textit{anchor text}, etiquetas.Se debe buscar los bloques que brinden información útil para el análisis, ya que algunos bloques contienen publicidad o información no relacionada. Para esto se tiene que realizar un \textbf{parseo}\footnote{Es la acción de analizar el texto de forma especializada} o técnicas de extracción especializadas.
+
+	\item \textbf{Remover stop-words}: \textbf{Stop words}, son pronombres, \textit{articles} y preposiciones que deben ser removidas para mejorar la compresión del texto.
+
+	\item  \textbf{Stemming, case-folding, punctuation}: Las palabras que derivan de la misma raíz como hundimiento, se hundió, se reducen a hundir. Una palabra puede tener diferentes significados dependiendo el contexto como la palabra \'Rosa\' puede hacer referencia a una flor o el nombre de una persona, por lo tanto se requiero la euristica del lenguaje específico para poder tomar una decisión en como debe ser interpretada. Los signos de puntuación como el guión medio deben ser tratados con mucho cuidado para realizar una buena tokenización.
+
+	\item \textbf{\textit{Frequency-based normalization}}: Palabras con poca frecuencia son mas discriminatorias que las de alta frecuencia. Por lo tanto se pondera la importancia de los documentos con base al calculo de la \textbf{frecuencia inversa del documento}(\textit{fid}) en la colección. Si $\psi_i$ es el número de documentos en el cual la palabra aparece, y $\psi$ es el número total de documentos, la \textit{fid} se calcula como $log(\frac{\psi}{\psi_i})$. La importancia de un documento se calcula multiplicando la \textbf{frecuencia de término} (\textit{ft}) en el documento por la \textit{fid}. Mientras la \textit{ft} brinda la cantidad de veces  que una palabra aparece en el documento la \textit{fid} especifica la importancia en la colección; Se define como \textbf{ft-fid} o \textit{tf-idf} (Por su sigla en ingles \textit{Term frequency – Inverse document frequency}). La figura \ref{fig:G1-ln} muestra como en proporción a la aparición baja de la palabra  en los documentos gana un valor superior (Es decir gana importancia); La figura \ref{fig:G2-x} muestra como una palabra gana importancia al tener una frecuencia alta en el documento.
+
+	\begin{figure}[h]
+	\centering
+	\includegraphics[scale=.2]{Imagenes/ln.png}	
+	\caption{Gráfica \textit{Inverese document frequency}}
+	\label{fig:G1-ln}
+	\end{figure}
+
+
+	\begin{figure}[h]
+	\centering
+	\includegraphics[scale=.2]{Imagenes/x_10.png}
+	\caption{Gráfica de \textit{Term frequency}}
+	\label{fig:G2-x}
+	\end{figure}	
+
+
+
+
+\end{itemize}
