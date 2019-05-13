@@ -4,23 +4,23 @@ En esta sección se describen las reglas de negocio implementadas en el trabajo 
 %------------------RN1-----------------------%
 \DGline{RN1}{Número de palabras}
 \begin{itemize}
-  \item \textbf{Tipo:} Dominio.  
-  \item \textbf{Descripción:}  La notica debe tener almenos 180 palabras
+  \item \textbf{Tipo:} Dominio. 
+  \item \textbf{Descripción:}  La notica debe tener al menos 180 palabras
 %  \item \textbf{Ejemplo:}
-  \item \textbf{Refer:CU3 Recolectar noticias} 
+  \item \textbf{Referenciado por: CU3 Recolectar noticias} 
 \end{itemize}
 
 %------------------RN2-----------------------%
 \DGline{RN2}{Lenguaje de noticias}
 
 \begin{itemize}
-  \item \textbf{Tipo:} Dominop.  
+  \item \textbf{Tipo:} Dominio.  
   \item \textbf{Descripción:} Las noticias deben estar redactadas en lenguaje español.
 %  \item \textbf{Ejemplo:}
   \item \textbf{Referenciado por: CU4 Clasificar noticias}  \\
 \end{itemize}
 %------------------RN3-----------------------%
-\DGline{RN3}{Diccionario de sistios}
+\DGline{RN3}{Diccionario de sitios}
 
 \begin{itemize}
   \item \textbf{Tipo:} Dominio.
@@ -28,25 +28,28 @@ En esta sección se describen las reglas de negocio implementadas en el trabajo 
 
   \begin{itemize}
 
-    \item \textbf{Excelsior}: https:\/\/www.excelsior.com.mx
-    \item \textbf{La jornada}: https:\/\/www.jornada.com.mx
-    \item \textbf{Uno noticias}: https:\/\/www.unotv.com
-    \item \textbf{El Universal}: https:\/\/www.eluniversal.com.mx
-    \item \textbf{Aristegui noticias}: https:\/\/aristeguinoticias.com
-    \item \textbf{Medio tiempo}: https:\/\/www.mediotiempo.com
-    \item \textbf{Milenio}: https:\/\/www.milenio.com 
-    \item \textbf{El economista}: https:\/\/www.eleconomista.com.mx
+    \item \textbf{El Universal}: https://www.eluniversal.com.mx/
+    \item \textbf{Azteca Noticias}: https://www.aztecanoticias.com.mx/
+    \item \textbf{Aristegui Noticias}: https://aristeguinoticias.com/
+    \item \textbf{Excelsior}: https://www.excelsior.com.mx/
+    \item \textbf{La Jornada}: https://www.jornada.com.mx/ultimas
+    \item \textbf{Milenio}: https://www.milenio.com/
+    \item \textbf{Yahoo}: https://es-us.noticias.yahoo.com/
+    \item \textbf{Sopitas}: https://www.sopitas.com/
+    \item \textbf{SDP Noticias}: https://www.sdpnoticias.com/
+    \item \textbf{Uno TV}: https://www.unotv.com/inicio/
 
   \end{itemize} 
 %  \item \textbf{Ejemplo:}
-  \item \textbf{Referenciado por:CU3 Recolectar noticias}  \\
+  \item \textbf{Referenciado por: CU3 Recolectar noticias}  \\
 \end{itemize}
 %------------------RN4-----------------------%
-\DGline{RN4}{Porcentaje de aceptación}
+\DGline{RN4}{Umbral de grado de petenencia}
 
 \begin{itemize}
   \item \textbf{Tipo:}  Flujo.
-  \item \textbf{Descripción:} Solo se puede mostrar una noticia si cumple con un porcentaje de aceptación mayor a 60\%.
+  \item \textbf{Descripción:} Solo se puede mostrar una noticia si su grado de pertenencia a una sección
+  es mayor o igual al umbral establecido.
 %  \item \textbf{Ejemplo:}
   \item \textbf{Referenciado por: CU4 Clasificar noticias}  \\
 \end{itemize}
@@ -58,39 +61,20 @@ En esta sección se describen las reglas de negocio implementadas en el trabajo 
 
 \begin{itemize}
   \item \textbf{Tipo:} Estructura.
-  \item \textbf{Descripción:} Las noticias se muestrán de forma descendente deacuerdo a su fecha de difusión; Es decir la primera publicación en mostrarse es aquella que tiene la fecha y hora mas cercana a la del sistema.
+  \item \textbf{Descripción:} Las noticias se muestrán de forma descendente de acuerdo al grado de pertenencia
+    a la sección.
 %  \item \textbf{Ejemplo:} 
   \item \textbf{Referenciado por:} \Tref{CU2}{CU2 Buscar noticias} \\
 \end{itemize}
 
 %------------------RN6----------------------%
-\DGline{RN6}{Profundidad de búsqueda}
+\DGline{RN6}{Número de noticias recolectadas}
 
 \begin{itemize}
-  \item \textbf{Tipo:} Cálculo.
-  \item \textbf{Descripción:} Se muestra la forma correcta de realizar el cáculo para obtener la profundidad de búsqueda asociada al número de noticias por recolectar, y la cantidad de hiperbínculos que cáda página contiene.\\
- 
-  $Sea$\\
+  \item \textbf{Tipo:} Dominio.
+  \item \textbf{Descripción:} De cada sitio establecido se recolectan las noticias que se encuentren en el periodo 
+    establecido (4 días)
 
-  $\Lambda(\mu,\psi)=\log_{\psi}{(\mu(\psi-1)+\psi)}-1$\\
-
-  $donde$\\
-  $\psi:Numero\ de\ URL\ por\ pagina$\\
-  $\mu:Numero\ de\ noticias\ recolectadas$\\
-  $\Lambda:Profundidad\ de\ busqueda$\\
-
-
-
-%  \item \textbf{Ejemplo:} 
-  \item \textbf{Referenciado por: CU3 Recolectar noticias} \\
-\end{itemize}
-
-%------------------RN7-----------------------%
-\DGline{RN7}{Número de peticiones}
-
-\begin{itemize}
-  \item \textbf{Tipo:} Operación.
-  \item \textbf{Descripción:} El número de peticiones realizadas a una página no debe exceder el permitido por el dominio.
 %  \item \textbf{Ejemplo:} 
   \item \textbf{Referenciado por: CU3 Recolectar noticias} \\
 \end{itemize}
