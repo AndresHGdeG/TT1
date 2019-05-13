@@ -134,32 +134,77 @@ objeto y con ello pueda determinar los resultados basados en los datos de entrad
 \section{Procesamiento de lenguaje natural}
 El procesamiento de lenguaje natural es una disciplina de la Inteligencia Artificial que se ocupa de la formulación e 
 investigación de mecanismos computacionales para la comunicación entre personas y maquinas mediante el uso de Lenguajes 
-Naturales[16].
+Naturales.
+
+El procesamiento del lenguaje natural incluye diferentes técnicas para interpretar el lenguaje humano, que van desde los métodos 
+estadísticos y del aprendizaje basado en máquina hasta los enfoques basados en reglas y algorítmicos. Necesitamos una amplia variedad 
+de métodos porque los datos basados en texto y en voz varían ampliamente, al igual que las aplicaciones prácticas. 
+
+Las tareas básicas de NLP incluyen la simbolización y el análisis sintáctico , lematización/derivación, etiquetado de la parte del 
+habla, detección del lenguaje e identificación de relaciones semánticas. Si alguna vez creó diagramas de enunciados en la primaria, 
+ya ha realizado estas tareas de forma manual antes. 
+
+En términos generales, las tareas NLP dividen el lenguaje en piezas elementales más cortas, intentan entender las relaciones entre 
+las piezas y exploran cómo funcionan las piezas juntas para crear significado \citep{CT11}.
+
+Estas tareas implícitas se utilizan a menudo en recursos NLP de más alto nivel, como:
+\begin{itemize}
+	\item Categorización de contenido. Un resumen del documento basado en la lingüística, 
+	incluyendo búsqueda e indización, alertas de contenido y detección de duplicación.
+	\item Descubrimiento y modelado de temas. Capture con precisión el significado y temas en colecciones de texto, y 
+	aplique analítica avanzada a texto, como optimización y pronósticos.
+	\item Extracción contextual. Extraiga automáticamente información estructurada de fuentes basadas en texto.
+	\item Análisis de sentimiento. Identificación del estado de ánimo u opiniones subjetivas en grandes cantidades de 
+	texto, incluyendo minería de sentimiento y opiniones promedio. 
+	\item Conversión de habla a texto y de texto a habla. Transformación de comandos de voz en texto escrito y viceversa. 
+	\item Sumarización de documentos. Generación automática de sinopsis de grandes cuerpos de texto.
+	\item Traducción basada en máquina. Traducción automática de texto o habla de un idioma a otro.
+\end{itemize}
 
 %\subsection{Lenguaje}
 %El lenguaje es un medio de comunicación a traves de de un sistema de símbolos \cite{dieciseis}.
 %La Real Academía Española define al lenguaje como la facultad del ser humano de expresarse y comunicarse con los demás 
 %a través del sonido articulado o de otros sistemas de signos.
 
-
 \subsection{Tokenización}
-Es la acción de separar el texto en sus unidades míninas(Palabras), se les
-asigna un código como el ascii o hexadecimal para ser reconocidas de fórma
-única, son almacenas para su postrior análisis y reconocimiento. Cabe mencionar que los
-signos de puntuación son eliminados.
+Es el proceso que descompone los textos de una colección en sus unidades mínimas, las palabras
+o términos propiamente dichos. A tales elementos se les denomina tokens que conforman una lista de
+ítems que se utiliza para su análisis estadístico, ling{\"u}ístico, de almacenamiento y posteriormente de
+recuperación de información. Los tokens a su vez pueden ser identificados mediante una codificación
+ASCII o en su defecto hexadecimal, con el objeto de facilitar la identificación uno a uno cada caracter
+que compone la palabra. De hecho, este proceso permite la identificación de cadenas de caracteres de
+forma unívoca, de cara a posteriores tratamientos de depuración, eliminación de signos de puntiación
+o la reducción morfológica \citep{CT12}.
+
+Ejemplo  (\ref{tabla:sencilla}): Hoy es un gran día para salir.
+
+\begin{table}[htbp]
+	\begin{center}
+	\begin{tabular}{|lrrccccc|}
+		\hline
+		ID & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\ 
+		Token & Hoy & es & un & gran & día & para & salir \\ \hline
+		\hline
+	\end{tabular}
+	\caption{Ejemplo de tokenización}
+	\label{tabla:sencilla}
+	\end{center}
+	
+\end{table}
+
 
 \subsection{Lematización}
 Es el proceso lingüstico que, dada una palabra flexionada se encuentra su
 lema. Una palabra flexionada es cuando esta en el plural, en femenino conjugada,
 diminutivo o en superlativo. El lema es la palabra que esta en singular para
-sustantivo, singular masculino para adjetivo e infinitivo para un verbo. Ejemplo:
+sustantivo, singular masculino para adjetivo e infinitivo para un verbo \citep{CT13}. Ejemplo:
 
 	\begin{itemize}
 		\item amigos, amiga, amiguitos-> Amigo
 		\item soy, son, es->Ser
 	\end{itemize}
 
-Cabe mencionar que existen diversos grados de lemataizaicón
+Cabe mencionar que existen diversos grados de lematización
 
 	\begin{itemize}
 		\item Mórfólogica: Es la anterior mente explicada
@@ -171,18 +216,18 @@ Una opción para lematizar es Freeling, este es un lematizador hecho por la
 universidad de catalunia.
 
 \section[Representación del t.]{Representación del texto}
-Los métodos de aprendizaje automático, requieren que la información este
-representado en un formato que facilite su procesamiento. Un método utilzado
-es representar los datos en un vector de valores numéricos.
+Los métodos de Machine Learning requieren que la información de la cual aprenderán esté representada en un
+formato que facilite su procesamiento. Generalmente esta representación es mediante vectores de valores numéricos. 
+Cuando se requiere utilizar estos métodos con información en forma de texto, dicha
+información debe ser transformada para generar una representación más adecuada. 
 
 \section{Corpus}
 Se le llama corpus a la recopilación de un conjunto de textos, de materiales escritos y/o hablados, 
 agrupados bajo un conjunto de criterios mínimos, para realizar ciertos análisis lingüísticos.
 
 
-
 \section{Crawler}
-Un crawler \cite{once} es una herramienta la cual analiza sitios web, permitiendo recolectar 
+Un crawler \citep{CT14} es una herramienta la cual analiza sitios web, permitiendo recolectar 
 las páginas web para así posteriormente extraer la información que contengan. Un crawler también 
 conocido como como robot o spider, es un sistema para la descarga masiva de páginas web. Son uno de 
 los componentes principales de los motores de búsqueda web, los sistemas que reúnen un conjunto de 
@@ -191,26 +236,26 @@ páginas web que coincidan con las consultas.
 
 
 \section{Sitios web}
-Un sitio web \cite{doce} es un conjunto de páginas web interconectadas y de acceso público que comparten 
+Un sitio web \citep{CT15} es un conjunto de páginas web interconectadas y de acceso público que comparten 
 un solo nombre de dominio. Los sitios web pueden ser creados y mantenidos por un individuo, grupo, empresa 
 u organización para cumplir una variedad de propósitos. Todos estos sitios constituyen la World Wide Web. 
 
 \subsection{Página web}
 Una página web es un documento electrónico el cual forma parte de la WWW (\textit{World Wide Web}) generalmente 
 construido en el lenguaje HTML (\textit{Hyper Text Markup Language}). Este documento puede contener enlaces que nos 
-direcciona a otra página web. Para visualizar una página web es necesario de un browser o un navegador \cite{trece}. 
+direcciona a otra página web. Para visualizar una página web es necesario de un browser o un navegador \citep{CT16}. 
 Dentro de las páginas web podemos encontrar un sinfin de sitios los cuales pueden ser de nuestro interés.
 
 \subsection{Blog}
 Un blog es una página web en la cual el usuario no necesita conocimientos específicos del medio electrónico ni del 
 formato digital para poder aportar contenidos de forma inmediata, ágil y constante desde cualquier punto de conexión 
-a Internet \cite{catorce}. En un blog el usuario puede compartir cualquier tipo de información que sea de su agrado, 
+a Internet \citep{CT17}. En un blog el usuario puede compartir cualquier tipo de información que sea de su agrado, 
 teniendo una mayor libertad de expresión lo cual permite que otras personas compartan y comenten su manera de expresarse.
 
 \subsection{Foro}
 Un foro es una herramienta de comunicación asíncrona. Los foros permiten la comunicación de los participantes desde 
 cualquier lugar en el que  esté  disponible  una  conexión  a Internet  sin  que  éstos  tengan  que  estar dentro del 
-sistema al mismo tiempo, de ahí su naturaleza asíncrona \cite{quince}. Brindando una mayor interacción entre distintos 
+sistema al mismo tiempo, de ahí su naturaleza asíncrona. Brindando una mayor interacción entre distintos 
 participantes y permitiendo conocer la opinión sobre un tema de distintas personas.
 
 

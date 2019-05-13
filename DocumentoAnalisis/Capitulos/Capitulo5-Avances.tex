@@ -1,0 +1,64 @@
+\TChapter{Avances}{epsilon}
+\ \\\\
+En esta sección se mostrarán los avances que hasta el día de hoy se tienen.
+
+\section{Herramientas utilizadas}
+Para el desarrollo de los avances para el presente trabajo se utilizó el lenguaje de programación Python, se utilizó Anaconda debido a que
+es una distribucion de Python que se utiliza para el análisis de datos, es decir con Anaconda tenemos un ambiente de trabajo para el análisis 
+de datos. Mientras que para el web- crawling se utilizó Scrapy, el cual es un framework que nos permite el web scraping para la extracción de 
+información de los sitios web.
+
+\section{Estudio previo}
+Una vez que se eligieron las herramientas que nos iban a proporcionar la información de las páginas web, se procedió con el estudió de los 
+sitios de los cuales se extraerían noticias para el entrenamiento.
+
+En primera instancia se eligiero 9 sitios web (\ref{tabla:sitios}):
+
+\begin{itemize}
+    \item 3 Sitios de foros de noticias: Aristegui Noticias, SDP Noticias y Sopitas.
+    \item 3 Sitios de diarios: El Universal, La Jornada y Excelsior.
+    \item 3 Sitios televisivos: TV Azteca, Televisa y Once Noticias.
+\end{itemize}
+
+
+\begin{table}[htbp]
+	\begin{center}
+	\begin{tabular}{|lrcccccccc|}
+		\hline
+		Sección  & El            & La           & Excelsior     & Aristegui             & SDP           & Sopitas   & Azteca            & Televisa      & Once  \\ 
+                 & Universa1     & Jornada      &               & Noticias              & Noticias      &           & Noticias          &               & Noticias      \\ \hline
+        Nacional & Nacional      & -            & Nacional      & México                & Nacional      & Noticias  & -                 & Nacional      & Nacional      \\ \hline
+        Internacional & Mundo    & Mundo        & Global        & Destacado/Mundo       & Internacional & -         & Internacional     & Internacional & Internacional \\ \hline
+        Ciudad   & Metrópoli     & Capital      & Comunidad     & -                     & CDMX          & -         & -                 & CDMX          & CDMX      \\ \hline
+        Estados  & Estados       & Estados      & Estados       & Sociedad/México       & Locales       & -         & Estados           & Estados       & Nacional   \\ \hline
+        Economía & Cartera       & Economía     & Dinero        & Economía              & Economía      & -         & Finanzas          & Economía      & Economía   \\ \hline
+        Deportes & Deportes      & Deportes     & Adrenalina    & Deportes              & Deportes      & Deportes  & -                 & Deportes      & Deportes   \\ \hline
+        Espectáculos & Espectáculos & Espectáculos & Función    & -                     & En el show    & Entretenimiento & -           & Espectáculos  & Deportes    \\ \hline
+        Cultura  & Cultura       & Cultura      & -             & -                     & -             & -         & -                 & Arte y cultura & Cultura   \\ \hline
+        Política & -             & Política     & Política      & Poderes               & -             & -         & Política          & Política      & -   \\ \hline
+        
+		\hline
+	\end{tabular}
+	\caption{Tabla de las secciones de los sitios web definidos}
+	\label{tabla:sitios}
+	\end{center}
+\end{table}
+
+Una vez que se analizarón las secciones con las que contaba cada sitio se procedió a homologar las secciones en las cuales la mayoría de los 
+sitios coincidian, por lo cual se quedarón definidas 5 secciones para clasificación de las noticias extraídas.
+
+\begin{itemize}
+    \item Política
+    \item Deportes
+    \item Ciencia y tecnología
+    \item Economía
+    \item Cultura
+\end{itemize}
+
+Posteriormente se procedio con la recolección de noticias. 
+La biblioteca utilizada es Scrapy la cual nos servirá para el Scrapeo.
+
+Una de las cosas que se debía investigar sobre cada sitio web fue su estructura XML, al saber la estructura del contenido de una página  
+nos permite realizar el Scrapeo de manera correcta y eso depende de cada sitio, ya que no todos los sitios cuentan con una página la cual tenga 
+las mismas secciones o el mismo orden.
+\\
