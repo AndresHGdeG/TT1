@@ -6,6 +6,10 @@ regard: considerar
 handle: manejar (asunto)
 aim-aimed:apuntar
 belong: pertenecer a
+arise: surgir
+allow:permitir(investigación)
+span:abarcar
+
 %------------sustantivos--------
 
 handling: Manejo, manipulación 
@@ -14,10 +18,24 @@ accuracy: precición, excactitud
 record: archivos
 batches:lote, montón
 epochs:época
+hierarchy; jerarquía
+keyword:palabra clave
+likehood: probabilidad
+threshols: umbral
+average: promedio
+deviation:desviación
+mean:media
+assumption: supocisión
 
 
 %------------Adjetivos----------
 overseas: ultra mar
+desired: deseado
+broad: ancho
+tied: atádo
+insted: en lugar
+unlike:diferente a 
+dayli: diario
 
 %-----------conjunción-------
 
@@ -25,9 +43,18 @@ overseas: ultra mar
 moreover: además
 otherwise: de otra manera
 porposes: Fines (objetivos de un trabajo)
+as such: como tal
+below:abajo
 
 since: ya que 
 
 %------------otro
 news records: registro de noticias
-
+entails: conlleva
+Dealing with news: Lidiando con noticias
+drill down: profundizar
+to aid: ayudar
+the above: lo anterior
+decided upon: decidir a partir de
+made up:arreglado
+allows:permite

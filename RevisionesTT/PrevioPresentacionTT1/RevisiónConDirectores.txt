@@ -1,0 +1,81 @@
+Agregar sección de avances
+	Fuentes de noticias que seleccionamos
+		Que secciones hay
+	Recolector
+
+Presentación
+	preparar un prototipo del recolector (tomar un video del recolector)
+		describir el proceso paso a paso
+		debe estar editado para la presentación 
+		presentar las pruebas en vivos a los sinodales
+
+Hacer los ensayos para la presentación 
+
+Fechas
+	12 domingo, entregar las correcciones sección de avances y sección de análisis
+	13 al 17 se muestran avances, recordarles del tt
+		apartar el día de la firma
+	15 recibimos las observaciones de los directores
+	19 enviar el documento bueno
+
+	20 y 21 recolectar firmas, hacerlo el 20
+		los directores nos firman antes que todos
+
+	21 hacer la presentación
+	24 viernes hacemos el ensallo de la presentación
+		hora por definir
+		el video debe estar terminada
+		buscar un salón con cañon
+		se practica el tiempo 
+	25 y 26 hacer correción de la presentación 
+	27 lunes, última presentación
+
+
+Análisis 
+	completar pantallas para crear la espera en la recolección y clasificación
+
+Universal: Si
+azteca notcias: Si
+ariztegui noticia: si pero con problemas
+excelsior: si 
+la jornada: si 
+milenio:
+
+blog
+SDP noticias: Si 
+Sopitas: si
+UnoTV: Si
+
+Al crear el script: 
+	si es en consola, mostrar mensaje cuando obtiene noticias, aquí esta el contenido, la fecha , las urls
+
+	ya selecciones los periodicos 
+	secciones
+
+
+análisis 
+
+MArcar en girs, en el el caption, poner diagrama de colores, gris no estan hechos 
+
+orden de noticias, con base en el umbral con el grado de pertenencia
+probabilidad de pertenencia a una clase
+
+	Estado del arte 
+
+	 naibayes
+	 regresión logistica
+	 random forest
+	 maquina de soporte vectorial 
+
+se usan estos 4 clasificadores
+
+Afinar 
+calsificador por periódico 
+clasificador por periódico 
+
+que método vamos a usar 
+
+nuevo corpus unifcado 
+
+	se tiene que estuiar e
+	preparar lámina 
