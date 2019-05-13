@@ -10,10 +10,9 @@ Brinda al usuario un punto de acceso para elegir una sección; Las clasificacion
 \textbf{Ciencia y técnología}, \textbf{Política}, \textbf{Deportes}, \textbf{Economía} y  
 \textbf{Cultura}, posteriormente se recolectan noticias de la web, tomando como punto de 
 partida los sitios establecidos previamente. Se crea un proceso de 
-trabajo independiente por cada sitio web, para simular un ambiente de extracción 
+recolección independiente por cada sitio web, para simular un ambiente de extracción 
 en paralelo; De cada sitio se recoletan las noticas publicadas; De cada artículo se obtiene 
-\textbf{Fecha de publicación}, \textbf{Título}, \textbf{Contenido}, \textbf{URL de la noticia}, 
-y de contar con ello el \textbf{Resumen}. Cabe destacar que 
+\textbf{Fecha de publicación}, \textbf{Título}, \textbf{Contenido}, \textbf{URL de la noticia}, y de contar con ello el \textbf{Resumen}. Cabe destacar que 
 las ligas contenidas en los sitios visitados son extraidas para su posterior análisis.\\
 
 \begin{large}
@@ -34,8 +33,8 @@ las ligas contenidas en los sitios visitados son extraidas para su posterior an�
 
 %-----------------------Propósito------------------------------------%
 
-	\textbf{Propósito:} & Brindar una herramienta de recolección del ciber\\
-	&espacio(Crawler). \\
+	\textbf{Propósito:} & Brindar una herramienta de recolección de noticias\\
+	& de Internet(Crawler). \\
 	\hline
 
 %----------------------Entradas--------------------------------------%
@@ -45,14 +44,7 @@ las ligas contenidas en los sitios visitados son extraidas para su posterior an�
 
 %-----------------------Salidas--------------------------------------%
 
-	\textbf{Salidas:} &$\bullet$ Noticias; De cada una se obtiene\\
-	&\ \ $\circ$ \textbf{Fecha de publicación}\\	
-	&\ \ $\circ$ \textbf{Título}\\	
-	&\ \ $\circ$ \textbf{Contenido}\\	
-	&\ \ $\circ$ \textbf{Resumen}\\	
-	&\ \ $\circ$ \textbf{URL de la noticia}\\	
-	&\ \ $\circ$ \textbf{Nombre de la página fuente}\\
-	&$\bullet$ \Tref{MSG7}{MSG7 Petición vacía}\\	
+	\textbf{Salidas:} &$\bullet$ \Tref{MSG7}{MSG7 Petición vacía}\\	
 	&$\bullet$ \Tref{MSG9}{MSG9 Fallo en la recolección}\\
 	\hline
 
@@ -63,29 +55,47 @@ las ligas contenidas en los sitios visitados son extraidas para su posterior an�
 	\hline
 %-----------------------Postcondiciones------------------------------%
 
-	\textbf{Postcondiciones:} &$\bullet$  Las noticias recolectadas serán filtradas\\
-	&\ \  por su fecha de difusión\\
-	&$\bullet$ Las noticias recolectadas serán clasificadas\\
+	\textbf{Postcondiciones:} &$\bullet$  El usuario tendrá la facultad\\
+	&\ \  de visualizar las noticias clasificadas\\
+	&$\bullet$ El usuario podrá cambiar el periodo de busqueda\\
 	\hline
 %-----------------------Reglas de negocio----------------------------%
 
-	\textbf{Reglas de negocio:} &$\bullet$ \RNref{RN11}{Sitios restringidos} \\
-	&$\bullet$ \RNref{RN13}{Profundidad de búsqueda} \\
-	&$\bullet$ \RNref{RN14}{Número de peticiones} \\
+	\textbf{Reglas de negocio:} &$\bullet$ \RNref{RN1}{Número de palabras}\\
+	&$\bullet$ \RNref{RN3}{Diccionario de sitios}\\
+	&$\bullet$ \RNref{RN5}{Orden de publicación}\\
+	&$\bullet$ \RNref{RN6}{Número de noticias recolectadas}\\
 	\hline
 
 %---------------------------Errores----------------------------------%
 
-%------Error 1----------%	
-	\textbf{Errores:}&$\bullet$ \TError{CU3}{Uno} Cuando no se ha encontrado noticias en \\
-	&\ \ el periodo establecido se muestra el mensaje \Tref{MSG7}{MSG7}\\
-	&\ \ \Tref{MSG7}{Petición vacía}, fin del caso de uso\\
+%------Error 1----------%
+	\textbf{Errores:} & $\bullet$ \TError{CU1}{Uno} Cuando no se ha recuperado \\
+	&\ \ ninguna \textbf{dirección web} se muestra el mensaje\\
+	&\ \  \Tref{MSG1}{MSG1 Catálago vacio}, fin del caso de uso\\
 
-%------Error 2----------%
+%------Error 2----------%	
+	&$\bullet$ \TError{CU1}{Dos} Cuando no se ha encontrado noticias en \\
+	&\ \ el día seleccionado se muestra el mensaje \Tref{MSG2}{MSG2}\\
+	&\ \ \Tref{MSG2}{Petición vacía}, fin del caso de uso\\
 
-	 &$\bullet$ \TError{CU3}{Dos} Cuando no se puede extraer información de\\
-	 &\ \  los sitios brindados, se muestra el mensaje \Tref{MSG9}{MSG9} \\
-	 &\ \ \Tref{MSG9}{Fallo en la recolección}, fin del caso de uso\\
+\hline
+\end{tabular}\\\\
+
+
+%=====================================Tabla 2====================================%
+
+\begin{tabular}{|l|l|}
+%-----------------------Ecanbezado-----------------------------------%
+	\hline
+	\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{\textbf{Caso de uso: }} }&
+	\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{CU3 Recolectar noticias} }\\
+	\hline
+
+%------Error 3----------%
+	 \textbf{Errores:}&$\bullet$ \TError{CU1}{Tres} Cuando no se puede extraer información de\\
+	 &\ \  los sitios brindados, se muestra el mensaje \Tref{MSG3}{MSG3} \\
+	 &\ \ \Tref{MSG3}{Fallo en la recolección}, fin del caso de uso\\
 	\hline
 %-------------------------Autor--------------------------------------%
 	\textbf{Autor:} & Carlos Andres Hernandez, Luis Daniel Meza\\
@@ -104,41 +114,67 @@ las ligas contenidas en los sitios visitados son extraidas para su posterior an�
 \end{large}	
 
 \begin{enumerate}[1.]
-	\item \actor Solicita realizar una búsqueda de noticias con el botón \textbf{Buscar} de la pantalla \Tref{UI2}{UI2 Sección política}.
-	\item \sistema Obtiene los vínculos de los sitios web registrados en el diccionario \textbf{URL's}.
-	\item \sistema 
+
+	
+	\item \actor Selecciona una opción de la pantalla \Tref{UI1}{UI1 Inicio}; \textbf{Política}, \textbf{Economía}, \textbf{Deportes}, \textbf{Ciencia y tecnología} o \textbf{Cultura}. 
+	
+	\item \sistema Obtiene las \textbf{Direcciones web}.
+	
+	\item \sistema Verifica que al menos se recupere una \textbf{Dirección web}. \TEref{CU1}{Uno}
+
+	\item \sistema Muestra la pantalla \Tref{UI2}{Pantalla UI2 Espera de proceso}. \TAref{CU1}{A}	
+
+	\item \sistema Verifica que no se haya recolectado noticias previamente. \TAref{CU1}{B}
+
+	\item \sistema Por cada URL recuperada se extraen las noticias con base en la regla de negocio \RNref{RN6}{Número de noticias recolectadas}. \TEref{CU1}{Tres}
+
+	\item \label{CU1:BuscarN}\sistema Incluye el caso de uso \Tref{CU2}{CU2 Clasificar noticias}.
+
+	\item \sistema Obtiene la fecha actual.
+
+	\item \sistema Obtiene de cada noticia clasificada en el paso \ref{CU2:ClasificarN} de la trayectoria principal el \textbf{Título}, \textbf{URL al artículo}, \textbf{Fecha de difusión} y de contar con ello el \textbf{Resumen}.
+
+	\item \sistema Ordena las noticias clasificadas deacuerdo a la regla de negocio \RNref{RN5}{Orden de publicación}.
+
+	\item \sistema \label{CU1:NoticiasR} Muestra la pantalla \Tref{UI3}{Pantalla UI3 Proceso concluido}.
+
 	\item \finCU	
+
 \end{enumerate}
+
 
 
 %-------------------------trayectoria Alternativa A-----------------%
-
 \begin{large}
-	\textbf{Trayectoria alternativa A:}\\
+	\Talterna{CU1}{A}\\
 \end{large}	
-\textbf{Condición:} \textit{Se escribe la condición}
+\textbf{Condición:} \textit{El usuario ha presionado el botón cancelar}
+
 \begin{enumerate}[{A-}1.]
 
-	\item \actor lorem ipsum
-	\item \sistema lorem ipsum
-	\item \finTA	
+	\item \actor Presiona el botón \textbf{Cancelar} de la pantalla \Tref{UI2}{Pantalla UI2 Espera de proceso}.
+
+	\item \sistema Muestra la pantalla \Tref{UI1}{UI1 Inicio}.
+
+	\item \finTA
 
 \end{enumerate}
 
 
-%----------------------trayectoria Alternativa B-------------------%
+%-------------------------trayectoria Alternativa B-----------------%
 \begin{large}
-	\textbf{Trayectoria alternativa B:}\\
+	\Talterna{CU1}{B}\\
 \end{large}	
-\textbf{Condición:} \textit{Se escribe la condición}
+\textbf{Condición:} \textit{Ya se han recolectado noticias}
 
 \begin{enumerate}[{B-}1.]
 
-	\item \actor lorem ipsum
-	\item \sistema lorem ipsum
-	\item \finTA	
+	\item \actor Continua en el paso \ref{CU1:NoticiasR} de la trayectoria principal.
+
+	\item \finTA
 
 \end{enumerate}
+
 
 
 %================================Puntos de extención=============================%
@@ -149,12 +185,8 @@ las ligas contenidas en los sitios visitados son extraidas para su posterior an�
 \end{large}	
 
 %--------------------Puntos de extención 1------------------------%
-\textbf{Causa de la extensión:} Lorem ipsum\\
-\textbf{Región de la trayectorioa:} Lorem ipsum\\
-\textbf{Extiende a :} Lorem ipsum\\\\
+\textbf{Causa de la extensión:} El usario desea consultar las noticias clasificadas.\\
+\textbf{Región de la trayectorioa:} Proviene del paso \ref{CU1:NoticiasR} de la trayectoria principal.\\
+\textbf{Extiende a :} \Tref{CU4}{CU4 Mostrar resultados}\\\\
 
-%--------------------Puntos de extención 2------------------------%
-\textbf{Causa de la extensión:} Lorem ipsum\\
-\textbf{Región de la trayectorioa:} Lorem ipsum\\
-\textbf{Extiende a :} Lorem ipsum\\
 
