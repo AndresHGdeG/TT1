@@ -7,7 +7,7 @@
 
 El uso de la información digital ha superado la producción de libros y publicaciones impresas, este fenómeno ha influenciado la producción de bibliotecas digitales, publicaciones electrónicas; Se ha incrementado el uso de las redes sociales, correos electrónicos, creando un gran repositorio de información útil, el cual puede ser analizado\citep{CD1}.\\
 
-Debido a la necesidad de procesar grandes volúmenes de datos recolectados de Internet, se han desarrollado diversas investigaciones entorno a esta tarea. A continuación se muestran distintos artículos nacionales e internacionales relacionados al campo de investigación (Clasificación de noticias), de igual forma se muestran herramientas web que desempeñan un trabajo similar al propuesto (Sitio web de noticias). Cabe destacar que el área de interés cuenta con un amplio desarrollo, no obstante solo se mencionan los trabajos más relevantes para este documento.
+Debido a la necesidad de procesar grandes volúmenes de datos recolectados de Internet, se han desarrollado diversas investigaciones entorno a esta tarea. A continuación se muestran distintos artículos nacionales e internacionales relacionados al campo de investigación (clasificación de noticias), de igual forma se muestran herramientas web que desempeñan un trabajo similar al propuesto (sitio web de noticias). Cabe destacar que el área de interés cuenta con un amplio desarrollo, no obstante solo se mencionan los trabajos más relevantes para este documento.
 
 %-------------------------------Trabajos nacionales-----------------------------------------%
 
@@ -20,26 +20,9 @@ Debido a la necesidad de procesar grandes volúmenes de datos recolectados de In
 \end{large}
 
 
-Este trabajo terminal de la escuela superio de cómputo \citep{CD2} clasifica mediante técnicas de aprendizaje automático, noticias de diarios de circulación nacional en las diferentes secciones en que en estos se dividen. Se recolectaron 4,027 artículos de tres diarios de circulación nacional: \textbf{El universal}, \textbf{La jornada} y \textbf{Excélsior}. 3,624 noticias fueron utilizadas para la etapa de entrenamiento y 407 para hacer las pruebas. Los algoritmos implementados fueron los siguientes: \\
+Este trabajo terminal de la Escuela Superior de Cómputo \citep{CD2} clasifican mediante técnicas de aprendizaje automático, noticias de diarios de circulación nacional en las diferentes secciones en que en estos se dividen. Se recolectaron 4,027 artículos de tres diarios de circulación nacional: \textbf{El universal}, \textbf{La jornada} y \textbf{Excélsior}. 3,624 noticias fueron utilizadas para la etapa de entrenamiento y 407 para hacer las pruebas.\\
 
-\textbf{Selección de características}
-
-\begin{itemize}
-	\item Frecuencia
-	\item Binarización
-	\item TF-IDF
-\end{itemize}
-
-\textbf{Clasificación}
-
-\begin{itemize}
-	\item Árboles de decisión
-	\item Máquinas de soporte vectorial
-	\item Naive Bayes Multinomial
-	\item Regresión logística
-\end{itemize}
-
-El trabajo utiliza  pre-procesamiento de información con la técnica tokenización y lematización (Ver \Tref{CP1}{Capítulo 3}). El mejor resultado en las prubas se dio en la combinación del algoritmo \textbf{TF-IDF} para extraer las características y \textbf{Máquinas de soporte vectorial} para la clasificación de artículos, se obtuvo un 79.81\% de exactitud, \textit{i.e} 8 de cada 10 noticias son clasificadas correctamente.\\
+El trabajo utiliza  pre-procesamiento de información con la técnica tokenización y lematización (ver \Tref{CP1}{Capítulo 3}). El mejor resultado en las pruebas se dio en la combinación del algoritmo \textbf{TF-IDF} para extraer las características y \textbf{Máquinas de soporte vectorial} para la clasificación de artículos, se obtuvo un 79.81\% de exactitud, \textit{i.e} 8 de cada 10 noticias son clasificadas correctamente.\\
 
 
 %----------------------------------TN2-------------------------------%
@@ -52,17 +35,8 @@ En este trabajo se propone clasificar noticias en el ámbito \textbf{desastres n
 
 Se utilizaron 375 noticias del periódico Reforma como conjunto de entrenamiento, se clasificaron en artículos relevantes e irrelevantes, de los cuales 11.5\% de noticias eran relevantes y el 88.5\% restante eran irrelevantes. Una vez obtenido el conjunto de noticias se procedió con un pre-procesamiento, el cual reduce el tamaño de los documentos, eliminando la parte de los textos que no brindan información útil, posteriormente se realizó un indexado: Los documentos son representados por vectores de palabras en un espacio de dimensión n, para realizar una reducción de dimencionalidad. Finalmente se utilizaron técnicas de clasificación (Algoritmo simple de Bayes) con el cual se obtuvo un resultado de 97\% de efectividad en la clasificación de noticias.\\
 
+
 %----------------------------------TN3-------------------------------%
-
-\begin{large}
-	 \textbf{News article classification of mexican newspapers}\\
-\end{large}
-
-En este trabajo se propone clasificar noticias utilizando métodos supervisados de aprendizaje automático (Mejor conocido como \textit{Machine learning} en lenguaje ingles) para su clasificación\citep{CD10}.
-
-Para realizar esta tarea se recolectaron 4,027 artículos junto con su sección correspondiente de tres periódicos mexicanos duranta un periodo de 6 meses. Diferentes características fueron extraídas y un conjunto de métodos de aprendizaje fueron probados. Los resultados obtenidos muestran una exactitud de 80\% en la clasificación de los artículos en su correspondiente sección de los tres periódicos seleccionados.\\
-
-%----------------------------------TN4-------------------------------%
 
 \begin{large}
 	 \textbf{Usando aprendizaje automático para extraer información de noticias de desastres naturales}\\
@@ -80,7 +54,7 @@ Este trabajo describe un sistema basado en métodos de Aprendizaje automático q
 Los resultados experimentales en una colección de noticias en Español muestran la eficacia del sistema propuesto tanto para detectar documentos relevantes sobre desastres naturales (alcanzando una medida-F de 98\%), así como para extraer hechos relevantes para ser insertados en una base de datos dada (alcanzando una medida-F de 76\%).
 
 %------------------------------Trabajos internacionales--------------------------------------%
-\newpage
+
 \section[Trabajos i.]{Trabajos internacionales}
 
 %----------------------------------TI1-------------------------------%
@@ -88,7 +62,7 @@ Los resultados experimentales en una colección de noticias en Español muestran
 	 \textbf{Clasificador de noticias usando autoencoders}\\
 \end{large}
 
-En este trabajo se propone la clasificación de noticias utilizando \textit{Deep Learning} \citep{CD3}, las noticias se clasificaron en las siguientes categorias:
+En este trabajo se propone la clasificación de noticias utilizando \textit{Deep Learning} \citep{CD3}, las noticias se clasificaron en las siguientes categorías:
 
 \begin{itemize}
 	\item Deportes
@@ -99,12 +73,12 @@ En este trabajo se propone la clasificación de noticias utilizando \textit{Deep
 \end{itemize}
 El alcance que tiene es:
 \begin{itemize}
-	\item Local (Valpara iso)
+	\item Local (Valparaíso)
 	\item Nacional (Chile)
-	\item Internacional (Resto del mundo)
+	\item Internacional (resto del mundo)
 \end{itemize}
 
-El clasificador se constuyó utilizando una base de datos con 542 noticias etiquetadas con los criterios anteiores, las características se obtuvieron utilizando Autoencoders (AE) para entrenar una Red Neuronal Artificial (ANN).
+El clasificador se construyó utilizando una base de datos con 542 noticias etiquetadas con los criterios anteriores, las características se obtuvieron utilizando Autoencoders (AE) para entrenar una Red Neuronal Artificial (ANN).
 Los resultados obtenidos con 156 noticias fue una tasa de éxito del 92.3\% para la clasificación de la categoría y un 87.2\% para el clasificador de alcance.
 La tasa general de éxito, categoría y alcance fue de 83.75\%.\\
 
@@ -113,76 +87,9 @@ La tasa general de éxito, categoría y alcance fue de 83.75\%.\\
 	 \textbf{Document classification for newspaper articles}\\
 \end{large}
 
-El trabajo clasifica artículos de la universidad \textit{Massachusetts Institute of Technology} \citep{CD4} en las categorías: \textit{Arts}, \textit{Features}, \textit{News}, \textit{Opinion}, \textit{Sports}, \textit{World}. Los algoritmos implementados para la extracción de características y clasificación son los siguientes:\\
-
-\textbf{Selección de características}
-
-\begin{itemize}
-	\item \textit{Multi-Variate Bernoulli Featureset}
-	\item \textit{Multinomial Featureset}
-	\item \textit{Normalized Multinomial Featureset}
-\end{itemize}
-
-\textbf{Clasificación}
-
-\begin{itemize}
-	\item \textit{Naive Bayes Classification}
-	\item \textit{Maximum Entropy Classification}
-\end{itemize}
-
-Para la etapa de entrenamiento se ocupó un total de 480 artículos por sección, y para realizar las pruebas 120 noticias. Los resultados relevantes se muestran en la siguiente tabla:\\
-
-\begin{tabular}{|l|l|l|}
-\hline
-
-\multicolumn{1}{| >{\columncolor{black}}c|}{ \textcolor{myWhite}{\textbf{Selección de características}}}&\multicolumn{1}{| >{\columncolor{black}}c|}{ \textcolor{myWhite}{\textbf{Clasificador}}}&\multicolumn{1}{| >{\columncolor{black}}c|}{ \textcolor{myWhite}{\textbf{Exactitud}}}\\
-
-\hline
-Multi-Variate Bernoulli Featureset&Naive bayes&0.7667\\
-\hline
-Multi-Variate Bernoulli Featureset&Maximun entropy&0.7233\\
-\hline
-\end{tabular}
-\ \\\\
-
-El mejor resultado se obtiene utilizando \textit{Multi-Variate Bernoulli Featureset} como algoritmo de extracción de características y \textit{Naive Bayes Classification} como algoritmo clasificador ya que, obtiene  un 77\% de exactitud.\\
+El trabajo clasifica artículos de la universidad \textit{Massachusetts Institute of Technology} \citep{CD4} en las categorías: \textit{Arts}, \textit{Features}, \textit{News}, \textit{Opinion}, \textit{Sports}, \textit{World}. Para la etapa de entrenamiento se ocupó un total de 480 artículos por sección, y para realizar las pruebas 120 noticias. El mejor resultado se obtiene utilizando \textit{Multi-Variate Bernoulli Featureset} como algoritmo de extracción de características y \textit{Naive Bayes Classification} como algoritmo clasificador ya que, obtiene  un 77\% de exactitud.\\
 
 %----------------------------------TI3-------------------------------%
-\begin{large}
-	 \textbf{Categorization of web news documents using word2vec and deep learning}\\
-\end{large}
-
-El trabajo desarrolla un algoritmo utilizando \textit{Word2Vec} como entrada a una red neuronal profunda \citep{CD5}, para clasificar noticias en 6 categorías:
-
-\begin{itemize}
- 
- 	\item \textit{Entertainment} 
- 	\item \textit{Sports}
- 	\item \textit{The economy}
- 	\item \textit{It, science}
- 	\item \textit{Domestic} 
- 	\item \textit{Overseas}
-
-\end{itemize}
-
- En el análisis se ha utilizado textos redactados en lenguaje japones obtenidos de sitios web como Yahoo. Se ha utilizado 600 noticias para el entrenamiento de la red y 200 para realizar pruebas. La \textbf{Tabla 1} muestra el resultado obtenido, además se ha probado el algoritmo \textit{Naive bayes} para tener un punto de comparación con base al tiempo y exactitud de clasificación.\\
-
-\begin{tabular}{|l|l|l|l|l|}
-\hline
-
-\multicolumn{5}{| >{\columncolor{black}}c|}{ \textcolor{myWhite}{\textbf{Tabla 1}}}\\
-\hline
-Algoritmo&Tiempo 1[s]&Tiempo 2[s]& Tiempo 3[s]&Exactitud[\%] \\
-\hline
-Propuesto & 1353.34& 1390.63& 1367.92 & 78\\ 
-\hline
-Naive bayes&4.97& 5.10& 4.97&68\\
-
-\hline
-\end{tabular}
-\ \\\\\\
-Los resultados arrojados muestran que el método propuesto obtiene una mayor exactitud de clasificación con un 78\%, 10 puntos porcentuales superior a \textit{Naive bayes} con 68\%, sin embargo este último ocupa solo 5 segundos para completar el proceso superando por mucho la propuesta del artículo el cual ocupa 1350 segundos.\cite{C2:T.Inter:Word2v}\\
-
 
 %----------------------------------TI4-------------------------------%
 
@@ -191,7 +98,8 @@ Los resultados arrojados muestran que el método propuesto obtiene una mayor exa
 \end{large}
 
 
-Este trabajo presenta algoritmos para la clasificación de noticias en categorías (Como política, deportes, tecnología) y temas (Sección de deportes: tenis, fútbol, golf), además se especializa en descubrir y clasificar temas emergentes en Internet \citep{CD6}. Se ocupa un método pare extraer palabras claves en cualquier idioma propuesto por Bracewell \cite{C2:T.Inter:Bracewell} que tenga herramientas de análisis morfológico. Se definieron 8 secciones posibles a las que puede ser clasificado el artículo proporcionado, las cuales son: 
+Este trabajo desarrolla un algoritmo de aprendizaje supervisado (ver \Tref{CP1}{Capítulo 3}) para la clasificación de noticias en categorías (como política, deportes, tecnología) y temas (sección de deportes: tenis, fútbol, golf) en diferentes lenguajes, además se especializa en descubrir y clasificar temas emergentes en Internet \citep{CD6}. Se ocupa un método pare extraer palabras claves en cualquier idioma propuesto por Bracewell \citep{CD5}, el cual obtiene palabras de muy alta calidad de un solo documento. Se definieron 8 secciones posibles a las que puede ser clasificado el artículo proporcionado, los cuales son:
+
 \begin{itemize}
 
 	\item \textit{Business} 
@@ -205,28 +113,21 @@ Este trabajo presenta algoritmos para la clasificación de noticias en categorí
 
 \end{itemize}
 
-Para el desarrollo del método se ocuparon 1,000 artículos descargados de sitios como Yahoo, se recolectaron noticias redactadas en lenguaje inglés y japones. 800 se ocuparon en el entrenamiento y 200 para realizar pruebas. Los algoritmos probados fueron : \textbf{Naive bayes}, \textbf{Árboles de decisión}, \textbf{Máxima entropia} y el propuesto por este trabajo. La tabla 2 muestra los resultados obtenidos contemplando la precisión, exhaustividad y la media-F : \\
 
-\begin{tabular}{|l|l|l|l|}
-\hline
 
-\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{\textbf{Algoritmo}}}&\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{\textbf{Exhaustividad}}}&\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{\textbf{Precisión}}}&\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{\textbf{Media-F}}}\\
-\hline
+Con ejemplos positivos el método entrena un clasificador para cada categoría.
+El proceso de clasificación consta de 4 pasos:
 
-Naive bayes&54.3\%& 69.3\%&55.2\%\\
-\hline
-Árboles de decisión&60.2\%&60.3\%&57.2\%\\
-\hline
-Máxima entropia&15.3\%&14.8\%&12.1\%\\
-\hline
-Propuesta&63.4\%&68.6\%&65.9\%\\
+\begin{enumerate}
+	\item Las palabras claves son extraídas del documento dado.
+	\item la probabilidad de pertenencia a cada categoría es calculado.
+	\item Se crea un umbral de pertenecía dinámico.
+	\item Finalmente se asigna el artículo a una categoría.
+\end{enumerate}
 
-\hline
+Para desarrollo del método se implementó en lengua ingles y japones, se ocuparon 1,000 artículos descargados de sitios como Yahoo, de cada idioma. 800 se ocuparon en el entrenamiento y 200 para realizar pruebas. \\
 
-\end{tabular}
-\ \\\\\\
-Los algoritmos presentados en este documento se basaron en una extracción de palabras clave
-que es capaz de manejar múltiples idiomas y no requiere una colección de documentos o estadísticas del corpus.\\
+Para contar con un punto de comparación se clasifico con algoritmos  ya probados: \text{Naive bayes}, \text{Árboles de decisión}, \text{Máxima entropia} y el propuesto por el artículo. El mejor resultado fue dado por  el método propuesto obteniendo 63.4\% en exhaustividad, 68.6\% en precisión y 65.9\% en la media-F.\\ 
 
 
 %----------------------------------TI5-------------------------------%
@@ -238,39 +139,28 @@ que es capaz de manejar múltiples idiomas y no requiere una colección de docum
 
 El artículo clasifica noticias ocupando el algoritmo clásico \textit{Naive Bayes} \citep{CD7}. El método propuesto consiste en 3 tareas importantes: Pre-procesamiento el cual consiste en la siguiente serie de pasos: 
  
+\begin{enumerate}
+
+	\item \textit{Case folding}: Proceso para convertir todas letras en minúsculas.
+	\item \textit{Parsing}: Es el proceso de convertir oraciones en palabras.
+	\item \textit{Stopwords elimination}: Es el proceso de eliminar palabras que se repiten con mucha frecuencia y no es información útil (Una definición mas amplia se da en el capítulo 3).
+	\item \textit{Stemming}: Es un proceso de corte o eliminación de afijos en una palabra. Las variantes de los afijos son prefijos, sufijos, in-fijos y con-fijos (la combinación de prefijos y sufijos).
+
+\end{enumerate}	
+
+La segunda tarea es la etapa de entrenamiento del algoritmo y por último la clasificación de artículos. Cabe destacar que el método \textbf{Frecuencia de término} (Frecuencia de aparición de una palabra en un documento dado) es utilizado en la etapa de aprendizaje. Las secciones definidas en el trabajo son: 
+
 \begin{itemize}
 
-	\item \textit{Case folding}: Proceso para convertir todas letras en minúsculas
-	\item \textit{Parsing}: Es el proceso de convertir oraciones en palabras
-	\item \textit{Stopwords elimination}: Es el proceso de eliminar palabras que se repiten con mucha frecuencia y no es información útil (Una definición mas amplia se da en el capítulo 3)
-	\item \textit{Stemming}: Es un proceso de corte o eliminación de afijos en una palabra. Las variantes de los afijos son prefijos, sufijos, in-fijos y con-fijos (la combinación de prefijos y sufijos)
+	\item \textit{Economy}
+	\item \textit{Sport}
+	\item \textit{Tecnology}
+	\item \textit{Healt} 
+	\item \textit{Metropolitan}
 
-\end{itemize}	
+\end{itemize}
 
-La segunda tarea es la etapa de entrenamiento del algoritmo y por último la clasificación de artículos. Cabe destacar que el método \textbf{Frecuencia de término} (Frecuencia de aparición de una palabra en un documento dado) es utilizado en la etapa de aprendizaje. Las secciones definidas en el trabajo son: \textit{Economy}, \textit{Sport}, \textit{Tecnology}, \textit{Healt} y \textit{Metropolitan}. Para el proceso de aprendizaje se ocuparon 50 noticias por tópico, las cuales fueron recolectadas de los sitios web \textit{Kompas}\footnote{Sitio web Indu de noticias: https://www.kompas.com}, \textit{Republika}\footnote{Sitio ya no disponible: http://www.republika.com} y \textit{Suara pembaruan}\footnote{Sitio web Indu: https://sp.beritasatu.com}.Las pruebas fueron realizadas con 12 noticias por sección. Además para tener una métrica en la eficiencia del método se calculó la precisión, exhaustividad y la media-F. Los resultados se muestran en  la siguiente tabla (En la columna \textbf{Documentos} se coloca el número de noticias usadas para la prueba):\\
-
-
-\begin{tabular}{|l|l|l|l|}
-\hline
-
-\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{\textbf{Documentos}}}&\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{\textbf{Exhaustividad}}}&\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{\textbf{Precisión}}}&\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{\textbf{Media-F}}}\\
-\hline
-
-12&90\%&90\%&90\%\\
-\hline
-24&93.4\%&91.3\%&92.33\%\\
-\hline
-36&93.75\%&90.9\%&92.30\%\\
-\hline
-48&93.1\%&93.1\%&93.1\%\\
-\hline
-60&94.11\%&90.5\%&92.26\%\\
-
-\hline
-\end{tabular}
-\ \\\\\\
-Los resultados muestran que el método de \textbf{Naive bayes} es un clasificador con una exactitud alta en todos las categorías dadas.\\
-
+Para el proceso de aprendizaje se ocuparon 50 noticias por tópico, las cuales fueron recolectadas de los sitios web \textit{Kompas}\footnote{Sitio web Indu de noticias: https://www.kompas.com}, \textit{Republika}\footnote{Sitio ya no disponible: http://www.republika.com} y \textit{Suara pembaruan}\footnote{Sitio web Indu: https://sp.beritasatu.com}.Las pruebas fueron realizadas con 12 noticias por sección. Además para tener una métrica en la eficiencia del método se calculó la precisión, exhaustividad y la media-F. Los resultados muestran que el método de \text{Naive bayes} es un clasificador con una media-F de 92.26\%.\\ 
 
 %----------------------------------TI6-------------------------------%
 
@@ -279,56 +169,27 @@ Los resultados muestran que el método de \textbf{Naive bayes} es un clasificado
 	 \\
 \end{large}
 
-Este documento busca el mejor algoritmo de clasificación en lenguaje Indu, comparando la eficiencia de algoritmos de selección de características (Palabras clave) y de clasificación de noticias \citep{CD8}. Las secciones definidas por el artículo son las siguientes, \textit{Economy}, \textit{Health}, \textit{Sports}, \textit{Politic} y \textit{Tecnology}; El trabajo realiza pre-procesamiento de datos con  los métodos \textit{lemmatization} y \textit{Stopwords} para reducir el ruido en la información. Para la obtención de noticias se hace uzo de la técnica \textit{crawling}\footnote{Extracción de información en la web} en el sito \textit{ccnnindonesia}\footnote{Sitio web de noticias: wwww.ccnnindonesia.com}. Se obtuvieron 1,000 artículos para cada sección. 800 se usaron para la etapa de entrenamiento y 200 para realizar pruebas. Se muestra la lista de los algoritmos implementados:
+Este documento busca el mejor algoritmo de clasificación en lenguaje Indu, comparando la eficiencia de algoritmos de selección de características (Palabras clave) y de clasificación de noticias \citep{CD8}. Las secciones definidas por el artículo son las siguientes, \textit{Economy}, \textit{Health}, \textit{Sports}, \textit{Politic} y \textit{Tecnology}; El trabajo realiza pre-procesamiento de datos con  los métodos \textit{lemmatization} y \textit{Stopwords} para reducir el ruido en la información. Para la obtención de noticias se hace uzo de la técnica \textit{crawling}(ver ver \Tref{CP1}{Capítulo 3}) en el sito \textit{ccnnindonesia}\footnote{Sitio web de noticias: wwww.ccnnindonesia.com}. Se obtuvieron 1,000 artículos para cada sección. 800 se usaron para la etapa de entrenamiento y 200 para realizar pruebas. Se muestra la lista de los algoritmos implementados:
 
 \begin{itemize}
 	\item Selección de características
 	\begin{itemize}
-		\item \textit{Singular Value Decomposition}(SVD)
-		\item \textit{Term frequency-inverse document frequency}(TF-IDF)
+		\item \textit{Singular Value Decomposition}
+		\item \textit{Term frequency-inverse document frequency}
 	\end{itemize}
 
 	\item Clasificación
 	\begin{itemize}
-		\item \textit{Support vector machine}(SVM)
-		\item \textit{Naive bayes classifier}(NBC)
-		\item \textit{Gaussean naive bayes}(GNB)
-		\item \textit{Multinominal naive bayes}(MNB) 
-		\item \textit{Multivariate naive bayes}(MNB)
-		\item \textit{Bernulli naive bayes}(BNB)
+		\item \textit{Support vector machine}
+		\item \textit{Naive bayes classifier}
+		\item \textit{Gaussean naive bayes}
+		\item \textit{Multinominal naive bayes}
+		\item \textit{Multivariate naive bayes}
+		\item \textit{Bernulli naive bayes}
 	\end{itemize}
 \end{itemize}
 
-
-Los resultados obtenidos se muestran en la siguiente tabla:\\
-
-\begin{tabular}{|l|l|l|l|}
-\hline
-
-\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{\textbf{Combinación usada}}}&\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{\textbf{Precisión}}}&\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{\textbf{Exhaustividad}}}&\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{\textbf{Tiempo (Segundos)}}}\\
-\hline
-
-TFIDF + GNB&-&-&-\\
-\hline
-TFIDF + BNB&0.9822558&0.9820000&0.7015419\\
-\hline
-\textbf{TFIDF + MNB}&\textbf{0.9841519}&\textbf{0.9840000}&\textbf{0.7020838}\\
-\hline
-TFIDF + SVM&0.9794023&0.9790000&74.9765017\\
-\hline
-TFIDF + SVD + GNB&0.3591179&0.3460000&11.4571054\\
-\hline
-TFIDF + SVD + BNB&0.3925421&0.3050000&11.8058102\\
-\hline
-TFIDF + SVD + MNB&-&-&-\\
-\hline
-TFIDF + SVD + SVM&0.4360882&0.3910000&1.3520746\\
-\hline
-
-\end{tabular}
-\ \\\\
-
-La tabla muestra que el mejor resultado es en combinación de TF-IDF y  \textit{Multinominal naive bayes}(MNB) con la precisión y exhaustividad mas alta el cual está alrededor de 98.4\% con un tiempo de 0.702 segundos, seguido de TF-IDF y \textit{Bernulli naive bayes}(BNB)  con 98.2\% en precisión y exhaustividad con un tiempo de .701 segundos.
+ El mejor resultado es en combinación de \textit{Term frequency-inverse document frequency} y  \textit{Multinominal naive bayes} con la precisión y exhaustividad mas alta el cual está alrededor de 98.4\% con un tiempo de 0.702 segundos, seguido de \textit{Term frequency-inverse document frequency} y \textit{Bernulli naive bayes}(BNB)  con 98.2\% en precisión y exhaustividad con un tiempo de .701 segundos.
 
 
 %------------------------------Herramientas Disponibles-------------------------------------%
