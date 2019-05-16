@@ -7,11 +7,10 @@
 	\textbf{Resumen}\\
 \end{large}
 
-Permite al actor vizualizar las noticias correspondiente a la sección elegida,
-ya sea \textbf{Política}, \textbf{Deportes}, \textbf{Ciencia y técnología}, \textbf{Economía}
-o \textbf{Cultura}. La consulta se realiza en un periodo establecido; El sitio muestra 15 
-noticias ordenadas de forma descendente deacuerdo a la fecha de publicación, cada artículo 
-contiene el \textbf{Título} , la \textbf{Fecha de publicación}, \textbf{URL} el cual direcciona a la página fuente que ha proporcionado la noticias y de contar con ello  un
+Permite al actor visualizar las noticias correspondiente a la sección elegida,
+ya sea \textbf{Política}, \textbf{Deportes}, \textbf{Ciencia y tecnología}, \textbf{Economía}
+o \textbf{Cultura}. La consulta se realiza en un periodo establecido; el sitio muestra hasta 15
+ noticias, cada artículo contiene el \textbf{Título} , la \textbf{Fecha de publicación}, \textbf{URL} el cual direcciona a la página fuente que ha proporcionado la noticias y de contar con ello  un
 \textbf{Resumen de la información}.\\
 
 \begin{large}
@@ -27,38 +26,38 @@ contiene el \textbf{Título} , la \textbf{Fecha de publicación}, \textbf{URL} e
 %-----------------------Ecanbezado-----------------------------------%
 	\hline
 	\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{\textbf{Caso de uso: }} }&
-	\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{CU2 Buscar noticias} }\\
+	\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{CU4 Mostrar resultados} }\\
 	\hline
 %-----------------------Actor----------------------------------------%
-	\textbf{Actor:} & 	Usuario.	\\
+	\textbf{Actor:} & 	Usuario	\\
 	\hline
 %-----------------------Propósito------------------------------------%
-	\textbf{Propósito:} & Brindar una herramienta que permita consultar\\
-	&las noticias clasificadas\\
+	\textbf{Propósito:} & Brindar una herramienta que permita consultar las\\
+	&noticias clasificadas\\
 	\hline
 
 %----------------------Entradas--------------------------------------%
-	\textbf{Entradas:} &Ninguna.\\
+	\textbf{Entradas:} &Periodo de búsqueda: Se selecciona con el mouse \\
 	\hline
 
 %-----------------------Salidas--------------------------------------%
-	\textbf{Salidas:}&Noticias clasificadas; De cada una se muestra:\\
-	&$\bullet$ \textbf{Título}\\
-	&$\bullet$ \textbf{URL al artículo}\\
-	&$\bullet$ \textbf{Fecha de publicación}\\
-	&$\bullet$ \textbf{Resumen}\\
+	\textbf{Salidas:}&$\bullet$ \Tref{MSG2}{MSG2 Petición vacía}\\
+	&$\bullet$ Noticias clasificadas; de cada una se muestra:\\
+	&\ \ $\circ$ \textbf{Título}\\
+	&\ \ $\circ$ \textbf{URL al artículo}\\
+	&\ \ $\circ$ \textbf{Fecha de publicación}\\
+	&\ \ $\circ$ \textbf{Resumen}\\
 	\hline
 
 %-----------------------Precondiciones-------------------------------%
 
-	\textbf{Precondición:} & La clasificación de las noticias debe estar\\
-	&completa\\
+	\textbf{Precondición:} & La clasificación de las noticias debe estar completa\\
 	\hline
 
 %-----------------------Postcondiciones------------------------------%
 
 %---------Post 1----------%
-	\textbf{Postcondiciones:}& Ninguna. \\
+	\textbf{Postcondiciones:}& Ninguna\\
 	\hline
 
 %-----------------------Reglas de negocio----------------------------%
@@ -67,12 +66,11 @@ contiene el \textbf{Título} , la \textbf{Fecha de publicación}, \textbf{URL} e
 %---------------------------Errores----------------------------------%
 
 %------Error 1----------%
-	\textbf{Errores:} &Ninguno.\\
+	\textbf{Errores:} &\TError{CU4}{Uno} Cuando no se ha encontrado noticias en el\\
+	&\ \ día seleccionado se muestra el mensaje \Tref{MSG2}{MSG2}\\
+	&\ \ \Tref{MSG2}{Petición vacía}\\
 	\hline
-%-------------------------Autor--------------------------------------%
 
-	\textbf{Autor:} & Carlos Andres Hernandez Gomez \\
-	\hline
 \end{tabular}\\\\
 
 %============================Trayectorias========================================%
@@ -87,9 +85,12 @@ contiene el \textbf{Título} , la \textbf{Fecha de publicación}, \textbf{URL} e
 
 	\item \actor Presiona el botón 	\textbf{Aceptar} de la pantalla \Tref{UI3}{Pantalla UI3 Proceso concluido}. \TAref{CU1}{A}
 
-	\item \sistema \label{CU2:MostrarN}Muestra 15 noticias de las ordenadas previamente, deacuerdo a la regla de negocio \RNref{RN5}{Orden de publicación} las cuales cumplan con el filtro de sección y fecha,  como se visualiza en la pantalla \Tref{UI2}{UI2 Sección política} 
 
-	\item \actor \label{CU1:Consulta}Consulta la información.\TAref{CU2}{B}
+	\item \sistema Obtiene la fecha actual.
+
+	\item \sistema Muestra hasta 15 de acuerdo a la regla de negocio \RNref{RN5}{Orden de publicación} de la sección previamente elegida (filtro de sección) y del día actual (filtro de fecha), como se visualiza en la pantalla \Tref{UI4}{UI4 Resultados de consulta}.
+
+	\item \actor \label{CU4:Consulta}Consulta la información.\TAref{CU4}{B}
 
 	\item \finCU	
 \end{enumerate}
@@ -97,7 +98,7 @@ contiene el \textbf{Título} , la \textbf{Fecha de publicación}, \textbf{URL} e
 
 %-------------------------trayectoria Alternativa A-----------------%
 \begin{large}
-	\Talterna{CU2}{A}\\
+	\Talterna{CU4}{A}\\
 \end{large}	
 \textbf{Condición:} \textit{El usuario ha presionado el botón cancelar}
 
@@ -114,15 +115,36 @@ contiene el \textbf{Título} , la \textbf{Fecha de publicación}, \textbf{URL} e
 
 %-------------------------trayectoria Alternativa B-----------------%
 \begin{large}
-	\Talterna{CU2}{B}\\
+	\Talterna{CU4}{B}\\
 \end{large}	
 \textbf{Condición:} \textit{El usuario ha cambiado el periodo establecido}
 
 \begin{enumerate}[{B-}1.]
 
-	\item \actor Presiona un botón del menú \textbf{Cambio de periodo} de la pantalla \Tref{UI2}{UI2 Sección política}.
+	\item \actor \label{CU4:Dia}Presiona un botón del menú \textbf{Cambio de periodo} de la pantalla \Tref{UI4}{UI4 Resultados de consulta}.
 
-	\item \sistema Continua en el paso \ref{CU2:MostrarN} de la trayectoria principal con el periodo seleccionado.
+	\item \sistema Verifica que exista al menos 1 noticia en el periodo establecido. \TAref{CU4}{C}
+
+	\item \sistema Muestra hasta 15 noticias de las ordenadas previamente, de acuerdo a la regla de negocio \RNref{RN5}{Orden de publicación} de la sección previamente elegida (filtro de sección) y del día seleccionado en el paso \ref{CU4:Dia} (filtro de fecha), como se visualiza en la pantalla \Tref{UI5}{UI5 Cambio de periodo}.
+
+	\item \sistema Continua en el paso \ref{CU4:Consulta} de la trayectoria principal.
+
+	\item \finTA
+
+\end{enumerate}
+
+
+%-------------------------trayectoria Alternativa C-----------------%
+\begin{large}
+	\Talterna{CU4}{C}\\
+\end{large}	
+\textbf{Condición:} \textit{No se ha encontrado noticias en el día seleccionado \TEref{CU4}{Uno}}
+
+\begin{enumerate}[{C-}1.]
+
+	\item \sistema Muestra el mensaje \Tref{MSG2}{MSG2 Petición vacía}, en la pantalla \Tref{UI4}{UI4 Resultados de consulta}.
+
+	\item \sistema Continua en el paso \ref{CU4:Consulta} de la trayectoria principal.
 
 	\item \finTA
 

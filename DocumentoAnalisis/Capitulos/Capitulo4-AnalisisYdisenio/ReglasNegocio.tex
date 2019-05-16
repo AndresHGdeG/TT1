@@ -6,8 +6,7 @@ En esta sección se describen las reglas de negocio implementadas en el trabajo 
 %------------------RN1-----------------------%
 \DGline{RN1}{Número de palabras}
 \begin{itemize}
-  \item \textbf{Tipo:} Dominio. 
-  \item \textbf{Descripción:}  La notica debe tener al menos 180 palabras
+  \item \textbf{Descripción:}  La noticia debe tener al menos 180 palabras
 %  \item \textbf{Ejemplo:}
   \item \textbf{Referenciado por}: \Tref{CU1}{CU1 Recolectar noticias}
 \end{itemize}
@@ -16,16 +15,14 @@ En esta sección se describen las reglas de negocio implementadas en el trabajo 
 \DGline{RN2}{Lenguaje de noticias}
 
 \begin{itemize}
-  \item \textbf{Tipo:} Dominio.  
   \item \textbf{Descripción:} Las noticias deben estar redactadas en lenguaje español.
 %  \item \textbf{Ejemplo:}
   \item \textbf{Referenciado por: CU2 Clasificar noticias}  \\
 \end{itemize}
 %------------------RN3-----------------------%
-\DGline{RN3}{Diccionario de sitios}
+\DGline{RN3}{Listado de fuentes noticiosas}
 
 \begin{itemize}
-  \item \textbf{Tipo:} Dominio.
   \item \textbf{Descripción:} Solo se puede recolectar información de los siguientes sitios.\\
 
   \begin{itemize}
@@ -49,9 +46,7 @@ En esta sección se describen las reglas de negocio implementadas en el trabajo 
 \DGline{RN4}{Umbral de grado de pertenencia}
 
 \begin{itemize}
-  \item \textbf{Tipo:}  Flujo.
-  \item \textbf{Descripción:} Solo se puede mostrar una noticia si su grado de pertenencia a una sección
-  es mayor o igual al umbral establecido.
+  \item \textbf{Descripción:} Solo se puede mostrar una noticia si su grado de pertenencia a una sección es mayor o igual al umbral establecido.
 %  \item \textbf{Ejemplo:}
   \item \textbf{Referenciado por: CU2 Clasificar noticias}  \\
 \end{itemize}
@@ -60,21 +55,27 @@ En esta sección se describen las reglas de negocio implementadas en el trabajo 
 \DGline{RN5}{Orden de publicación}
 
 \begin{itemize}
-  \item \textbf{Tipo:} Estructura.
-  \item \textbf{Descripción:} Las noticias se muestrán de forma descendente de acuerdo al grado de pertenencia
+  \item \textbf{Descripción:} Las noticias se muestran de forma descendente de acuerdo al grado de pertenencia
     a la sección.
 %  \item \textbf{Ejemplo:} 
   \item \textbf{Referenciado por}: \Tref{CU1}{CU1 Recolectar noticias},\Tref{CU4}{CU4 Mostrar resultados} \\
 \end{itemize}
 
 %------------------RN6----------------------%
-\DGline{RN6}{Número de noticias recolectadas}
+\DGline{RN6}{Periodo de recolección}
 
 \begin{itemize}
-  \item \textbf{Tipo:} Dominio.
-  \item \textbf{Descripción:} De cada sitio establecido se recolectan todas las noticias que se encuentren en el periodo 
-    establecido (3 días), de cada noticia se extrae \textbf{Título}, \textbf{URL al artículo}, \textbf{Fecha de publicación} y de contar con ello el \textbf{Resumen}.
-
-%  \item \textbf{Ejemplo:} 
+  \item \textbf{Descripción:} De cada sitio establecido se recolectan las noticias que se encuentren en un periodo de 3 días anterior a la fecha actual.
   \item \textbf{Referenciado por}: \Tref{CU1}{CU1 Recolectar noticias} \\
 \end{itemize}
+
+%------------------RN7----------------------%
+\DGline{RN7}{Campos recolectados de noticia}
+
+\begin{itemize}
+  \item \textbf{Descripción:} De cada noticia se extrae \textbf{Título}, \textbf{URL al artículo}, \textbf{Fecha de publicación} y de contar con ello el \textbf{Resumen}.
+
+  \item \textbf{Referenciado por}: \Tref{CU1}{CU1 Recolectar noticias} \\
+\end{itemize}
+
+
