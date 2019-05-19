@@ -15,18 +15,17 @@ A continuación cada área sera desarrollada con los conceptos de interés para 
 \end{figure}
 
 %---------------------------------Conceptos-------------------------------------%
-%Recordar renombrar las citas
 
+%----------------------------------------Aprendizaje automático-------------------------------%
+%---------------------------------------------------------------------------------------------%
 
+\MTtitle{Aprendizaje automático}
 
 
 %------------------------------------Inteligencia Artificial-------------------------------%
 \section{Inteligencia Artificial}
 
-Son muchas las definiciones que se encuentran de la inteligencia artificial o IA, en sus inicios se propone como las  actividades asociadas al pensamiento humano, tareas como, toma de decisiones, resolución de problemas y aprendizaje \citep{CT19}.
-
-
-Con el paso de los años se ha acuñado una definición mas completa: `la Inteligencia Artificial es una ciencia orientada al diseño y construcción de máquinas que implementen tareas propias de humanos dotados de inteligencia'' \citep{CT1}.\\
+Son muchas las definiciones que se encuentran de la inteligencia artificial o IA, en sus inicios se propone como las  actividades asociadas al pensamiento humano, tareas como, toma de decisiones, resolución de problemas y aprendizaje \citep{CT19}. Con el paso de los años se ha acuñado una definición mas completa: ``la Inteligencia Artificial es una ciencia orientada al diseño y construcción de máquinas que implementen tareas propias de humanos dotados de inteligencia'' \citep{CT1}.\\
 
 
 Esta ciencia contribuye en el desarrollo de diversos campos de investigación como, Redes neuronales, Computación evolutiva, Algoritmos genéticos, Programación Genética, Teoría del caos. Además tiene un campo amplio de aplicaciones en la sociedad \citep{CT20}, a continuación se muestran algunos ejemplos:
@@ -47,65 +46,112 @@ Esta ciencia contribuye en el desarrollo de diversos campos de investigación co
 %------------------------------------Apredizje automático-------------------------------%
 \section{Aprendizaje Automático}
 
-EL Aprendizaje Automático es una rama de la Inteligencia Artificial, permite  desarrollar algoritmos que tienen la capacidad de predecir
-continuamente los cambios que se puedan suscitar en un problema específico\citep{CT2}.\\
+EL Aprendizaje Automático es una rama de la Inteligencia Artificial; permite desarrollar algoritmos que tienen la capacidad de extrapolar (\textit{i.e} predecir) los cambios que se acontecen en una tarea específica \citep{CT2}.\\
 
-EL campo utiliza una variedad de algoritmos que aprenden iterativamente de datos para mejorar, describir 
-datos y predecir resusltados. A medida en la cual los algoritmos de entrenamiento obtienen datos es posible obtener 
-modelos más precisos basados en esos datos. Un modelo de Aprendizaje Automático es una salida generada cuando se tiene 
-entrenado un algoritmo de Aprendizaje Automático. Después de entrenar el modelo con una entrada de datos, obtendremos 
-una salida. Por ejemplo, un algoritmo predictivo creará un modelo predictivo. Luego, cuando se le proporciona datos 
-al modelo predictivo, se obtendrá una predicción basada en los datos que entrenaron al modelo .
-\\
-%https://www.ibm.com/downloads/cas/GB8ZMQZ3
-%Aprendizaje Automático es un método de análisis de datos el cual permite automatizar la obtención de 
-%resultados a partir de una numerosa cantidad de datos. Es una disciplina de la Inteligencia 
-%Artificial la cual permite optimizar operaciones, realizar predicciones basadas en la información 
-%que se le proporcione.
-\\
-Algunas de las áreas en las cuales Aprendizaje Automático se ha visto involucrada es \citep{CT3}:
+EL campo utiliza una variedad de algoritmos que aprenden iterativamente de un conjunto de
+datos para describir y predecir resultados. A medida en la cual los algoritmos de 
+entrenamiento obtienen datos es posible obtener modelos más precisos. Existen cuatro clasificaciones en los métodos \citep{CT21}:
+
 \begin{itemize}
-	\item Servicios financieros: Las empresas pueden detectar insights en la información de sus clientes 
-	y sus operaciones, permitiendo de manera automatizada la recomendacion de productos financieros al usuario 
-	indicado y en el momento preciso.
-	\item Salud: En combinación con sensores o dispositivos en prendas de vestir (weareble devices) 
-	un sistema puede monitorear y valorar el estado de salud de una persona en tiempo real, y si detecta 
-	una irregularidad, tomar una acción en forma automática.
-	\item Ventas y mercadotecnia: A partir de compras previas por el usuario se pueden realizar 
-	realizar recomendaciones con alto potencial de éxito. Este conocimiento del cliente también ayuda a implementar 
-	campañas de marketing con gran nivel de precisión.
-	\item Gobierno:  El gobierno puede analizar su gigantesco cúmulo de datos, y detectar ágilmente áreas o
-	funciones cuya mejora debe ser prioritaria –de esta forma, los recursos	públicos se invierten en los ámbitos 
-	correctos, aquellos que realmente mejoran la vida de la ciudadanía y evitan procesos lentos y burocráticos.
-	\item Transporte: Las compañías analizan sus operaciones de negocio y rápidamente detectan rutas más
-	eficaces, lo que incrementa la rentabilidad de sus procesos (tiempos de entrega más cortos, con menor consumo 
-	de combustible, menor riesgo de desperfectos y menor desgaste de las unidades).
+
+	\item \textbf{Aprendizaje supervisado}: Se proporciona un conjunto de datos de entrenamiento con las respuestas correctas y, con base a este conjunto de 
+	entrenamiento, el algoritmo se generaliza para responder correctamente a todas 
+	las entradas posibles.
+
+	\item \textbf{Aprendizaje no supervisado}: No se proporcionan datos de entrenamiento, el algoritmo intenta identificar similitudes entre las entradas para clasificar en conjuntos. El enfoque estadístico del aprendizaje no 
+	supervisado se conoce como estimación de densidad.
+
+	\item \textbf{Aprendizaje reforzado}: Está en algún lugar entre el aprendizaje supervisado y no supervisado. Se indica al algoritmo cuando la respuesta es incorrecta, sin embargo no se informa
+	cómo corregirlo. Tiene que explorar y probar diferentes posibilidades hasta que resuelva 
+	cómo obtener la respuesta correcta.
+
+	\item \textbf{Aprendizaje evolutivo}: La evolución biológica puede verse como un proceso de aprendizaje: los organismos biológicos se adaptan para mejorar sus tasas de supervivencia 
+	y la posibilidad de tener descendientes en su entorno. Este comportamiento es modelado, 
+	usando un modelo física, el cual corresponde a una puntuación en la 
+	solución actual.
+
 \end{itemize}
 
+Cabe mencionar que el método implementado en este trabajo es el aprendizaje supervisado, mas a delante se da una explicación detalla.\\
+
+El aprendizaje automático se puede aplicar a una amplia gama de problemas comerciales, desde la detección de fraudes hasta la orientación al cliente y la recomendación de productos, al monitoreo industrial en tiempo real, el análisis de sentimientos y el diagnóstico médico. Puede asumir problemas que no pueden administrarse manualmente debido a la gran cantidad de datos que deben procesarse \citep{CT22}. Cuando se aplica a grandes conjuntos de datos, a veces puede encontrar relaciones tan sutiles que ninguna cantidad de escrutinio manual las descubriría nunca. Y cuando muchas de estas relaciones ``débiles'' se combinan, se convierten en predictores fuertes.
+
+
+%------------------------------------Apredizje automático para texto------------------------%
+
+\section[AI para texto]{Aprendizaje automático para texto}
+
+La extracción de información útil con varios tipos de algoritmos estadísticos es denominado \textbf{Extracción de datos}( \textit{Text mining} ), \textbf{Analítica de texto} (\textit{Text analytics}) o \textbf{Aprendizaje automático para texto} (\textit{Machine learning for text}) \citep{CD1}. En los últimos años este campo ha incrementado por el desarrollo de la web, redes sociales, correos electrónicos, bibliotecas virtuales. Algunos ejemplos para obtener información son:
+
+
+\begin{itemize}
+
+	\item \textbf{Bibliotecas digitales}: El uso de la información electrónica ha superado la producción de libros y publicaciones impresas, este fenómeno ha proliferado la producción de bibliotecas digitales, estas pueden ser almacenadas y ser usadas para extraer información útil.
+
+	\item \textbf{Noticias electrónicas}: Existe un movimiento masivo para pasar las noticias impresas hacía la publicación electrónica, esto permite que sean almacenadas para su análisis y extracción de información sobre eventos y perspectivas importantes. Sitios como \textit{Google news} etiquen las noticias para hacer recomendaciones al lector basado en su anterior comportamiento o intereses específicos.
+
+	\item \textbf{\textit{Web and Web-enabled applications}}: La web contiene una gran cantidad de información en hipertexto, con links y otro tipo de recursos, la cual puede ser utilizada par el proceso de descubrimiento de nuevo conocimiento, al igual las \textit{Web-enabled applications}\footnote{\textbf{\textit{Web and Web-enabled applications}}: Aplicaciones de escritorio que son  accedidas remotamente des de un buscador como Internet explorer.} permiten obtener información que puede ser analizada.
+
+	\item \textbf{Redes sociales}: Las redes sociales son un campo que está proliferando, debido a su naturaleza donde cada usuario contribuye con sus propias publicaciones.
+
+\end{itemize}
+
+
+Algunas de las aplicaciones son las siguientes:
+
+\begin{itemize}
+
+	\item Etiquetar la web, permite al usuario encontrar paginas de interés
+
+	\item Los proveedores de correos, utilizan la información almacenada para mostrar publicidad de interés al usuario
+
+	\item Algunas páginas ordenan su contenido de acuerdo a su importancia
+
+	\item El análisis de las opiniones es un campo de importancia así como el análisis de sentimientos		
+
+\end{itemize}
+
+
+
+El orden de las palabras en un texto brindan un significado semántica el cual no puede ser inferido  solo con la frecuencia de las palabras. Sin embargo, se pueden hacer varias predicciones sin contemplar la semántica. Existen 2 tipos de representaciones que son populares en las aplicaciones de \textbf{text mining}:
+
+\begin{itemize}
+	
+	\item \textbf{\textit{Text as a bag-of-words}}: Es la representación mas común. No se contempla el orden de las palabras el proceso. El conjunto de palabras en el documento se convierten en \textit{Sparse multidimentional reprentation}, el cual corresponde a la dimensión en esta representación. Se utiliza para la clasificación, sistemas de recomendación.
+
+	\item \textbf{\textit{Text as a set of sequences}}: En esta representación se extraen sentencias, el orden de las palabras si importa. La unidad son sentencia o párrafos. Es utilizado en aplicaciones que necesitan un fuerte uzo de la semántica, esta área se acerca mucho al modelado de lenguaje y procesamiento del lenguaje natural
+
+\end{itemize}
+
+%------------------------------------Pre-procesamiento------------------------%
+
+\section[Pre-procesamiento]{Pre-procesamiento}
+
+El Pre-procesamiento es necesario para convertir el formato no estructurado en un formato estructurado \citep{CD1}.
+A menudo el texto contiene información extraña como etiquetas, \textit{anchor text}\footnote{Es el texto mostrado en los enlaces o hipervínculos, \textbf{Texto de anclaje} en español.}, y otras características. En muchos casos las palabras son variaciones de otras (Sinónimos) por el tipo de redacción, el contexto, para eliminar redundancia. Algunas palabras simplemente tienen faltas de ortografía. El proceso de convertir una secuencia de caracteres en una secuencia de palabras(Tokens), es llamado \textbf{Tokenización}. Además por cada palabra repetida se crea un token, es decir al repetirse una palabra 3 veces, se crearán 3 tokens correspondientes. Alguno de los pasos mas comunes para el procesamiento de texto en bruto son los siguientes: 
+
+\begin{itemize}
+
+	\item \textbf{Extracción de texto}: En caso de recuperar información de la web, se tiene que limpiar el texto ya que contiene \textit{anchor text}, etiquetas.Se debe buscar los bloques que brinden información útil para el análisis, ya que algunos bloques contienen publicidad o información no relacionada. Para esto se tiene que realizar un \textbf{parseo}\footnote{Es la acción de analizar el texto de forma especializada} o técnicas de extracción especializadas.
+
+	\item \textbf{Remover stop-words}: \textbf{Stop words}, son pronombres, \textit{articles} y preposiciones que deben ser removidas para mejorar la compresión del texto.
+
+	\item  \textbf{Stemming, case-folding, punctuation}: Las palabras que derivan de la misma raíz como hundimiento, se hundió, se reducen a hundir. Una palabra puede tener diferentes significados dependiendo el contexto como la palabra \'Rosa\' puede hacer referencia a una flor o el nombre de una persona, por lo tanto se requiero la euristica del lenguaje específico para poder tomar una decisión en como debe ser interpretada. Los signos de puntuación como el guión medio deben ser tratados con mucho cuidado para realizar una buena tokenización.
+
+	\item \textbf{\textit{Frequency-based normalization}}: Palabras con poca frecuencia son mas discriminatorias que las de alta frecuencia. Por lo tanto se pondera la importancia de los documentos con base al calculo de la \textbf{frecuencia inversa del documento}(\textit{fid}) en la colección. Si $\psi_i$ es el número de documentos en el cual la palabra aparece, y $\psi$ es el número total de documentos, la \textit{fid} se calcula como $log(\frac{\psi}{\psi_i})$. La importancia de un documento se calcula multiplicando la \textbf{frecuencia de término} (\textit{ft}) en el documento por la \textit{fid}. Mientras la \textit{ft} brinda la cantidad de veces  que una palabra aparece en el documento la \textit{fid} especifica la importancia en la colección; Se define como \textbf{ft-fid} o \textit{tf-idf} (Por su sigla en ingles \textit{Term frequency – Inverse document frequency}).
+
+\end{itemize}
+
+
 \subsection{Aprendizaje supervisado}
+
 Los algoritmos de aprendizaje supervisado dependen de datos previamente etiquetados, es decir necesita de un entrenamiento para 
 que el algoritmo pueda comprender los datos y con ello determinar que etiqueta debe asignarse a los nuevos datos 
 en función del patron y asociando los patrones a los nuevos datos sin etiquetar. Después de ello, la maquina recibe 
 un nuevo conjunto de datos para que el algoritmo de aprendizaje supervisado analice los datos y produzca un resultado 
 correcto de los datos etiquetados \citep{CT4}.
 
-\subsubsection{Regresión líneal}
-La regresión es una técnica estadística utilizada para estudiar la relación entre dos variables, permite hallar el valor esperado de 
-una variable aleatoria a cuando b toma un valor específico. La aplicación de este método implica un supuesto de linealidad cuando 
-la demanda presenta un comportamiento creciente o decreciente, por tal razón, se hace indispensable que previo a la selección de 
-este método exista un análisis de regresión que determine la intensidad de las relaciones entre las variables que componen el modelo.
-\\
-El pronóstico de regresión lineal simple es un modelo óptimo para patrones de demanda con tendencia (creciente o decreciente), 
-es decir, patrones que presenten una relación de linealidad entre la demanda y el tiempo \citep{CT5}.
 
-La Figura \textbf{\ref{fig:RL}} muestra un ejemplo de los resultados obtenidos utilizando regresión líneal. 
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[scale=.6]{imagenes/Capitulo3/regresionLineal}
-  \caption{Regresión lineal con una variable dependiente y una variable independiente.}
-  \label{fig:RL}
-\end{figure}
 %https://cleverdata.io/conceptos-basicos-machine-learning/
 
 \subsubsection{Regresión logística}
@@ -251,6 +297,9 @@ información debe ser transformada para generar una representación más adecuad
 Se le llama corpus a la recopilación de un conjunto de textos, de materiales escritos y/o hablados, 
 agrupados bajo un conjunto de criterios mínimos, para realizar ciertos análisis lingüísticos.
 
+%-------------------Recolección de información de Internet------------------------------------%
+%---------------------------------------------------------------------------------------------%
+\MTtitle{Recolección de información de Internet}
 
 \section{Crawler}
 Un crawler \citep{CT14} es una herramienta la cual analiza sitios web, permitiendo recolectar 
@@ -259,6 +308,12 @@ conocido como como robot o spider, es un sistema para la descarga masiva de pág
 los componentes principales de los motores de búsqueda web, los sistemas que reúnen un conjunto de 
 páginas web, las indexan y permiten a los usuarios realizar consultas contra el índice y encontrar las 
 páginas web que coincidan con las consultas.
+
+
+
+%------------------------------------Aplicación web-------------------------------------------%
+%---------------------------------------------------------------------------------------------%
+\MTtitle{Aplicación web}
 
 
 \section{Sitios web}
