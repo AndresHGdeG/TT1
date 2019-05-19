@@ -169,16 +169,16 @@ Para el proceso de aprendizaje se ocuparon 50 noticias por tópico, las cuales f
 	 \\
 \end{large}
 
-Este documento busca el mejor algoritmo de clasificación en lenguaje Indu, comparando la eficiencia de algoritmos de selección de características (Palabras clave) y de clasificación de noticias \citep{CD8}. Las secciones definidas por el artículo son las siguientes, \textit{Economy}, \textit{Health}, \textit{Sports}, \textit{Politic} y \textit{Tecnology}; El trabajo realiza pre-procesamiento de datos con  los métodos \textit{lemmatization} y \textit{Stopwords} para reducir el ruido en la información. Para la obtención de noticias se hace uzo de la técnica \textit{crawling}(ver ver \Tref{CP1}{Capítulo 3}) en el sito \textit{ccnnindonesia}\footnote{Sitio web de noticias: wwww.ccnnindonesia.com}. Se obtuvieron 1,000 artículos para cada sección. 800 se usaron para la etapa de entrenamiento y 200 para realizar pruebas. Se muestra la lista de los algoritmos implementados:
+Este documento busca el mejor algoritmo de clasificación en lenguaje Indu, comparando la eficiencia de algoritmos de selección de características (Palabras clave) y de clasificación de noticias \citep{CD8}. Las secciones definidas por el artículo son las siguientes, \textit{Economy}, \textit{Health}, \textit{Sports}, \textit{Politic} y \textit{Tecnology}; El trabajo realiza pre-procesamiento de datos con  los métodos \textit{lemmatization} y \textit{Stopwords} para reducir el ruido en la información. Para la obtención de noticias se hace uso de la técnica \textit{crawling}(ver \Tref{CP1}{Capítulo 3}) en el sito \textit{ccnnindonesia}\footnote{Sitio web de noticias: wwww.ccnnindonesia.com}. Se obtuvieron 1,000 artículos para cada sección. 800 se usaron para la etapa de entrenamiento y 200 para realizar pruebas. Se muestra la lista de los algoritmos implementados:
 
 \begin{itemize}
-	\item Selección de características
+	\item Selección de características:
 	\begin{itemize}
 		\item \textit{Singular Value Decomposition}
 		\item \textit{Term frequency-inverse document frequency}
 	\end{itemize}
 
-	\item Clasificación
+	\item Clasificación:
 	\begin{itemize}
 		\item \textit{Support vector machine}
 		\item \textit{Naive bayes classifier}
