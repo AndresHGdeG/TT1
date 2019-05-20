@@ -120,9 +120,10 @@ Ejemplo  (\ref{tabla:sencilla}): Hoy es un gran día para salir.
 
 \begin{table}[htbp]
 	\begin{center}
-	\begin{tabular}{|lrrccccc|}
+	\begin{tabular}{|l|r|r|c|c|c|c|c|}
 		\hline
 		ID & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\ 
+		\hline
 		Token & Hoy & es & un & gran & día & para & salir \\ \hline
 		\hline
 	\end{tabular}
@@ -236,7 +237,13 @@ de cada clase que caen justo en la frontera de dichos márgenes.
 \subsubsection{Random forest}
 Random forest es una combinación de árboles de decisión, de modo que cada árbol depende de los valores de un vector 
 aleatorio muestreado independientemente y con la misma distribución para cada uno de estos. Es una modificación sustancial de bagging que construye una 
-larga colección de árboles no correlacionados y posteriormente los promedia \citep{CT9}.
+larga colección de árboles no correlacionados y posteriormente los promedia \citep{CT9}.\\
+
+
+Bootstrap aggregating (bagging) consiste en obtener muestras aleatorias con reemplazamiento de igual tamaño que el conjunto original\citep{CT24}. Partiendo del conjunto de entrenamiento X= (X1, X2, ...., Xn), mediante la extracción aleatoria con reemplazamiento con el mismo número de elementos que el conjunto original de n elementos, se obtienen B muestras bootstrap Xb= (X1b, X2b, ...., Xnb)
+11
+donde b=1, 2,.., B. En algunas de estas muestras se habrá eliminado o al menos reducido la presencia de observaciones ruidosas, por lo que el clasificador construido en ese conjunto presentará un mejor comportamiento que el clasificador construido en el conjunto original. Así pues Bagging puede ser útil para construir un mejor clasificador cuando el conjunto de entrenamiento presente observaciones ruidosas.
+
 
 %----------------------Procesamiento de lenguaje natural-------------------------------------%
 
@@ -251,4 +258,80 @@ estadísticos y del aprendizaje basado en máquina hasta los enfoques basados en
 de métodos porque los datos basados en texto y en voz varían ampliamente, al igual que las aplicaciones prácticas. 
 
 
+
+%------------------------------------
+
+
+\section[Matriz de confusión]{Métricas de evaluación de un modelo de aprendizaje automático}
+
+Una vez generando un modelo de clasificación, es importante medir el desempeño del mismo, con
+la intención de mejorar su eficiencia. Una de estas técnicas es la llamada matriz de confusión.\\
+
+\textbf{Matriz de confusión}\\
+La matriz de confusión es una representación de la información de los resultados obtenidos por un
+clasificador, dicha matriz suele ser de tamaño n x n, donde n es es el número de clases diferentes con
+las que se están trabajando \citep{CT23}.
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=.4]{imagenes/Capitulo3/MatrizC.png}
+	\caption{Matriz de confusión}
+	\label{Fig:mconfu}
+\end{figure}
+
+La Figura \ref{Fig:mconfu} muestra un ejemplo de matriz de confusión con dos clases, la cual ejemplifica de
+manera adecuada las diferentes entradas de la misma, entra las que se encuentran:
+
+
+\begin{itemize}
+
+	\item \textbf{VP}: Es la cantidad de positivos que fueron clasificados correctamente como positivos 
+	\item \textbf{FN}: Es la cantidad de positivos que fueron clasificados incorrectamente como negativos
+	\item \textbf{VN}: Es la cantidad de negativos que fueron clasificados correctamente como negativos
+	\item \textbf{FP}: Es la cantidad de negativos que fueron clasificados incorrectamente como positivos
+	
+\end{itemize}
+
+
+Podemos hacer más para analizar los resultados que solo medir la precisión. Si considera los posibles resultados de las clases, entonces pueden organizarse en un cuadro simple como este (donde un verdadero positivo es una observación correctamente colocada en la clase 1, mientras que un falso positivo es una observación incorrecta colocada en la clase 1, mientras que un negativo Los ejemplos (tanto verdaderos como falsos) son aquellos colocados en la clase 2):
+
+
+La diagonal principal en cualquier matriz de confusión n x n representa el número de predicciones
+correctas para cada una de las n secciones.\\
+
+Gracias a la matriz de confusión, es posible obtener ciertas métricas que nos ayudan a evaluar el modelo
+de aprendizaje. Entre las que se encuentran:\\
+
+
+\textbf{Exactitud}: es la proporción del número total de predicciones que son correctas respecto al total.
+Se determina utilizando la ecuación:
+
+\begin{equation}\label{eq:1}
+	Exactitud = \frac{VP+VN}{VP+VN+FN+FP}
+\end{equation}
+
+\textbf{Recall}: Es la proporción de predicciones positivas que fueron correctamente clasificadas. Se determina
+utilizando la ecuación:
+
+
+\begin{equation}\label{eq:2}
+	Recall = \frac{VP}{VP+FP}
+\end{equation}
+
+
+\textbf{Precisión}: Es la proporción de predicciones positivas que se clasificaron correctamente. Se determina
+con la siguiente ecuación:
+
+
+\begin{equation}\label{eq:3}
+	Precision = \frac{VP}{VP+FN}
+\end{equation}
+
+
+\textbf{F-Measure (F1)}: Se interpreta como la media armónica entre Precisión y Recall. Se determina
+con la siguiente ecuación:
+
+\begin{equation}\label{eq:3}
+	 F\-Measure = 2 \cdot \frac{precision \cdot recall}{precision+recall}
+\end{equation}
 
