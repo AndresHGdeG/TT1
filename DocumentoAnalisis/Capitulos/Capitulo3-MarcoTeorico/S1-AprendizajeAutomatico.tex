@@ -129,6 +129,16 @@ Cuando se recupera  información de la web, se tiene que limpiar el texto ya que
 
 	%\item  \textbf{Stemming, case-folding, punctuation}: Las palabras que derivan de la misma raíz como hundimiento, se hundió, se reducen a hundir. Una palabra puede tener diferentes significados dependiendo el contexto como la palabra \'Rosa\' puede hacer referencia a una flor o el nombre de una persona, por lo tanto se requiero la heurística del lenguaje específico para poder tomar una decisión en como debe ser interpretada. Los signos de puntuación como el guión medio deben ser tratados con mucho cuidado para realizar una buena tokenización.
 
+%---------------------------------------------Corpus-----------------------------------------%
+
+\subsection{Corpus}
+
+Se le llama corpus a la recopilación de un conjunto de textos, de materiales escritos y/o hablados, 
+agrupados bajo un conjunto de criterios mínimos, para realizar ciertos análisis lingüísticos.
+
+
+%-----------------------------------------Tokenización-------------------------------------%
+
 \subsection{Tokenización}
 
 Es el proceso que descompone los textos de una colección en sus unidades mínimas, las palabras
@@ -157,6 +167,7 @@ Ejemplo  (\ref{tabla:sencilla}): Hoy es un gran día para salir.
 	
 \end{table}
 
+%-----------------------------------------Lematización-------------------------------------%
 
 \subsection{Lematización}
 
@@ -181,6 +192,7 @@ Cabe mencionar que existen diversos grados de lematización
 Una opción para lematizar es \textit{Freeling} \citep{CT18}, este es un lematizador hecho por la
 universidad de catalunia.
 
+%------------------------------Frecuencia inversa del documento-------------------------------%
 
 \subsection{Frecuencia inversa del documento}
 
@@ -197,11 +209,6 @@ el algoritmo pueda comprender los datos y con ello determinar que etiqueta debe 
 en función del patron y asociando los patrones a los nuevos datos sin etiquetar. Después de ello, la maquina recibe 
 un nuevo conjunto de datos para que el algoritmo de aprendizaje supervisado analice los datos y produzca un resultado 
 correcto de los datos etiquetados \citep{CT4}.\\
-
-\textbf{Corpus}\\\\
-
-Se le llama corpus a la recopilación de un conjunto de textos, de materiales escritos y/o hablados, 
-agrupados bajo un conjunto de criterios mínimos, para realizar ciertos análisis lingüísticos.
 
 
 %------------------------------------Regresión logistica----------------------------------%
