@@ -23,6 +23,20 @@ Esta ciencia contribuye en el desarrollo de diversos campos de investigación co
 
 \end{itemize} 
 
+
+%----------------------Procesamiento de lenguaje natural-------------------------------------%
+
+\section[Procesamiento de lenguaje N]{Procesamiento de lenguaje natural}
+
+El procesamiento de lenguaje natural es una disciplina de la Inteligencia Artificial que se ocupa de la formulación e 
+investigación de mecanismos computacionales para la comunicación entre personas y maquinas mediante el uso de Lenguajes 
+Naturales.\\
+
+Este campo incluye diferentes técnicas para interpretar el lenguaje humano, que van desde los métodos 
+estadísticos y del aprendizaje basado en máquina hasta los enfoques basados en reglas y algorítmicos. Necesitamos una amplia variedad 
+de métodos porque los datos basados en texto y en voz varían ampliamente, al igual que las aplicaciones prácticas. 
+
+
 %------------------------------------Apredizje automático-------------------------------%
 \section{Aprendizaje Automático}
 
@@ -57,9 +71,12 @@ Cabe mencionar que el método implementado en este trabajo es el aprendizaje sup
 El aprendizaje automático se puede aplicar a una amplia gama de problemas comerciales, desde la detección de fraudes hasta la orientación al cliente y la recomendación de productos, al monitoreo industrial en tiempo real, el análisis de sentimientos y el diagnóstico médico. Puede asumir problemas que no pueden administrarse manualmente debido a la gran cantidad de datos que deben procesarse \citep{CT22}. Cuando se aplica a grandes conjuntos de datos, a veces puede encontrar relaciones tan sutiles que ninguna cantidad de escrutinio manual las descubriría nunca. Y cuando muchas de estas relaciones ``débiles'' se combinan, se convierten en predictores fuertes.
 
 
+
+
+
 %------------------------------------Apredizje automático para texto------------------------%
 
-\section[Aprendizaje automático]{Aprendizaje automático para texto}
+\section[AA Para texto]{Aprendizaje automático para texto}
 
 La extracción de información útil con varios tipos de algoritmos estadísticos es denominado \textbf{Extracción de datos} (\textit{text mining} ), \textbf{Analítica de texto} (\textit{text analytics}) o \textbf{Aprendizaje automático para texto} (\textit{Machine learning for text}) \citep{CD1}. En los últimos años este campo ha incrementado por el desarrollo de la web, redes sociales, correos electrónicos, bibliotecas virtuales. Algunas de las aplicaciones son las siguientes:
 
@@ -85,25 +102,32 @@ El orden de las palabras en un texto brindan un significado semántico el cual n
 
 \end{itemize}
 
+
+%----------------------------------Representación del texto--------------------------%
+\subsection[Representación del T]{Representación del texto}
+Los métodos de Aprendizaje Automático requieren que la información de la cual aprenderán esté representada en un
+formato que facilite su procesamiento. Generalmente esta representación es mediante vectores de valores numéricos. 
+Cuando se requiere utilizar estos métodos con información en forma de texto, dicha
+información debe ser transformada para generar una representación más adecuada. 
+
+
 %------------------------------------Pre-procesamiento------------------------%
 
-\section[Pre-procesamiento]{Pre-procesamiento}
+\subsection[Pre-procesamiento]{Pre-procesamiento}
 
 El Pre-procesamiento es necesario para convertir el formato no estructurado en un formato estructurado \citep{CD1}.
-A menudo el texto contiene información extraña como etiquetas, \textit{anchor text}\footnote{Es el texto mostrado en los enlaces o hipervínculos, \textbf{Texto de anclaje} en español.}, y otras características. En muchos casos las palabras son variaciones de otros (sinónimos) por el tipo de redacción, el contexto, para eliminar redundancia. Algunas palabras simplemente tienen faltas de ortografía. El proceso de convertir una secuencia de caracteres en una secuencia de palabras (tokens), es llamado ``Tokenización''. Alguno de los pasos mas comunes para el procesamiento de texto en bruto son los siguientes: 
+A menudo el texto contiene información extraña como etiquetas, \textit{anchor text}\footnote{Es el texto mostrado en los enlaces o hipervínculos, \textbf{Texto de anclaje} en español.}, y otras características. En muchos casos las palabras son variaciones de otros (sinónimos) por el tipo de redacción, el contexto, para eliminar redundancia. Algunas palabras simplemente tienen faltas de ortografía. El proceso de convertir una secuencia de caracteres en una secuencia de palabras (tokens), es llamado ``Tokenización''.
 
-\begin{itemize}
+%---------------------------------Extracción de texto-------------------------%
 
-	\item \textbf{Extracción de texto}: En caso de recuperar información de la web, se tiene que limpiar el texto ya que contiene etiquetas. Se debe buscar los bloques que brinden información útil para el análisis, ya que algunos bloques contienen publicidad o información no relacionada. Para esto se tiene que realizar un análisis para discriminar la información útil.
+\subsection{Extracción de texto}
 
-	\item \textbf{Remover stop-words}: Son pronombres y preposiciones que deben ser removidas para mejorar la compresión del texto.
+Cuando se recupera  información de la web, se tiene que limpiar el texto ya que contiene etiquetas definidas por el hipertexto. Se debe buscar los bloques que brinden información útil para el ambito de estudio, algunas secciones contienen publicidad o información no relacionada a los datos de interes. Para esto se tiene que realizar un análisis para discriminar la información útil \citep{CD1}.
 
-	\item  \textbf{Stemming, case-folding, punctuation}: Las palabras que derivan de la misma raíz como hundimiento, se hundió, se reducen a hundir. Una palabra puede tener diferentes significados dependiendo el contexto como la palabra \'Rosa\' puede hacer referencia a una flor o el nombre de una persona, por lo tanto se requiero la heurística del lenguaje específico para poder tomar una decisión en como debe ser interpretada. Los signos de puntuación como el guión medio deben ser tratados con mucho cuidado para realizar una buena tokenización.
 
-	\item \textbf{frecuencia inversa del documento}: Palabras con poca frecuencia son mas discriminatorias que las de alta frecuencia. Por lo tanto se pondera la importancia de los documentos con base al calculo de la \textbf{frecuencia inversa del documento}(\textit{fid}) en la colección. Si $\psi_i$ es el número de documentos en el cual la palabra aparece, y $\psi$ es el número total de documentos, la \textit{fid} se calcula como $log(\frac{\psi}{\psi_i})$. La importancia de un documento se calcula multiplicando la \textbf{frecuencia de término} (\textit{ft}) en el documento por la \textit{fid}. Mientras la \textit{ft} brinda la cantidad de veces  que una palabra aparece en el documento la \textit{fid} especifica la importancia en la colección; Se define como \textbf{ft-fid} o \textit{tf-idf} (Por su sigla en ingles \textit{Term frequency – Inverse document frequency}) es la multiplicación de $ft$ por $idf$.
+	%\item \textbf{Remover stop-words}: Son pronombres y preposiciones que deben ser removidas para mejorar la compresión del texto.
 
-\end{itemize}
-
+	%\item  \textbf{Stemming, case-folding, punctuation}: Las palabras que derivan de la misma raíz como hundimiento, se hundió, se reducen a hundir. Una palabra puede tener diferentes significados dependiendo el contexto como la palabra \'Rosa\' puede hacer referencia a una flor o el nombre de una persona, por lo tanto se requiero la heurística del lenguaje específico para poder tomar una decisión en como debe ser interpretada. Los signos de puntuación como el guión medio deben ser tratados con mucho cuidado para realizar una buena tokenización.
 
 \subsection{Tokenización}
 
@@ -158,33 +182,31 @@ Una opción para lematizar es Freeling \citep{CT18}, este es un lematizador hech
 universidad de catalunia.
 
 
+\subsection{Frecuencia inversa del documento}
 
-\section[Representación del t.]{Representación del texto}
-Los métodos de Aprendizaje Automático requieren que la información de la cual aprenderán esté representada en un
-formato que facilite su procesamiento. Generalmente esta representación es mediante vectores de valores numéricos. 
-Cuando se requiere utilizar estos métodos con información en forma de texto, dicha
-información debe ser transformada para generar una representación más adecuada. 
-
-\section{Corpus}
-
-Se le llama corpus a la recopilación de un conjunto de textos, de materiales escritos y/o hablados, 
-agrupados bajo un conjunto de criterios mínimos, para realizar ciertos análisis lingüísticos.
+Las palabras con poca frecuencia son mas discriminatorias que las de alta frecuencia. Por lo tanto se pondera la importancia de los documentos con base al calculo de la \textbf{frecuencia inversa del documento}(\textit{fid}) en la colección. Si $\psi_i$ es el número de documentos en el cual la palabra aparece, y $\psi$ es el número total de documentos, la \textit{fid} se calcula como $log(\frac{\psi}{\psi_i})$. La importancia de un documento se calcula multiplicando la \textbf{frecuencia de término} (\textit{ft}) en el documento por la \textit{fid}. Mientras la \textit{ft} brinda la cantidad de veces  que una palabra aparece en el documento la \textit{fid} especifica la importancia en la colección; Se define como \textbf{ft-fid} o \textit{tf-idf} (Por su sigla en ingles \textit{Term frequency – Inverse document frequency}) es la multiplicación de $ft$ por $idf$ \citep{CD1}.
 
 
 
 %------------------------------------Aprendizaje Supervisado----------------------------------%
 
-\subsection{Aprendizaje supervisado}
+\section{Aprendizaje supervisado}
 
-Los algoritmos de aprendizaje supervisado dependen de datos previamente etiquetados, es decir necesita de un entrenamiento para 
-que el algoritmo pueda comprender los datos y con ello determinar que etiqueta debe asignarse a los nuevos datos 
+Los algoritmos de aprendizaje supervisado dependen de datos previamente etiquetado, es decir se necesita un corpus de datos, para llevar acabo el entrenamiento, así 
+el algoritmo pueda comprender los datos y con ello determinar que etiqueta debe asignarse a los nuevos datos 
 en función del patron y asociando los patrones a los nuevos datos sin etiquetar. Después de ello, la maquina recibe 
 un nuevo conjunto de datos para que el algoritmo de aprendizaje supervisado analice los datos y produzca un resultado 
-correcto de los datos etiquetados \citep{CT4}.
+correcto de los datos etiquetados \citep{CT4}.\\
+
+\textbf{Corpus}\\\\
+
+Se le llama corpus a la recopilación de un conjunto de textos, de materiales escritos y/o hablados, 
+agrupados bajo un conjunto de criterios mínimos, para realizar ciertos análisis lingüísticos.
+
 
 %------------------------------------Regresión logistica----------------------------------%
 
-\subsubsection{Regresión logística}
+\subsection{Regresión logística}
 
 La regresión logística es una técnica estadística multivariante que nos permite estimar la relación existente entre una variable dependiente 
 no métrica (donde la variable es binaria o también conocida como dicotómica, es decir, solo va a dar como resultado dos alternativas posibles) 
@@ -198,7 +220,7 @@ aplicación incluyen modelo logístico, modelo logit, y clasificador de máxima 
 
 %------------------------------------Naive bayes----------------------------------------%
 
-\subsubsection{Naive bayes}
+\subsection{Naive bayes}
 
 Naive Bayes es un conjunto de algoritmos de aprendizaje supervisado que se basan en la aplicación del teorema de Bayes con "Naive" 
 (ingenuo) la cual es la supuesta de independencia condicional entre cada par de características dado el valor de la variable de clase. 
@@ -214,7 +236,7 @@ que su rendimiento empeora cuando las características extraídas se correlacion
 
 %----------------------------Maquina de soporte vectorial-------------------------------------%
 
-\subsubsection{Maquina de soporte vectorial}
+\subsection{Maquina de soporte vectorial}
 
 Las máquinas de soporte vectorial son sistemas de aprendizaje los
 cuales se basan en el uso de un espacio de funciones lineales en un espacio de mayor dimensión inducido
@@ -234,7 +256,8 @@ cada clase para, de esta forma, conseguir lo que se denomina un margen máximo a
 Además, a la hora de definir el hiperplano, sólo se consideran los ejemplos de entrenamiento
 de cada clase que caen justo en la frontera de dichos márgenes. 
 
-\subsubsection{Random forest}
+\subsection{Random forest}
+
 Random forest es una combinación de árboles de decisión, de modo que cada árbol depende de los valores de un vector 
 aleatorio muestreado independientemente y con la misma distribución para cada uno de estos. Es una modificación sustancial de bagging que construye una 
 larga colección de árboles no correlacionados y posteriormente los promedia \citep{CT9}.\\
@@ -245,30 +268,19 @@ Bootstrap aggregating (bagging) consiste en obtener muestras aleatorias con reem
 donde b=1, 2,.., B. En algunas de estas muestras se habrá eliminado o al menos reducido la presencia de observaciones ruidosas, por lo que el clasificador construido en ese conjunto presentará un mejor comportamiento que el clasificador construido en el conjunto original. Así pues Bagging puede ser útil para construir un mejor clasificador cuando el conjunto de entrenamiento presente observaciones ruidosas.
 
 
-%----------------------Procesamiento de lenguaje natural-------------------------------------%
-
-\section[PLN]{Procesamiento de lenguaje natural}
-
-El procesamiento de lenguaje natural es una disciplina de la Inteligencia Artificial que se ocupa de la formulación e 
-investigación de mecanismos computacionales para la comunicación entre personas y maquinas mediante el uso de Lenguajes 
-Naturales.\\
-
-Este campo incluye diferentes técnicas para interpretar el lenguaje humano, que van desde los métodos 
-estadísticos y del aprendizaje basado en máquina hasta los enfoques basados en reglas y algorítmicos. Necesitamos una amplia variedad 
-de métodos porque los datos basados en texto y en voz varían ampliamente, al igual que las aplicaciones prácticas. 
-
 
 
 %------------------------------------
 
 
-\section[Matriz de confusión]{Métricas de evaluación de un modelo de aprendizaje automático}
+\section[Métricas de evaluación]{Métricas de evaluación de un modelo de aprendizaje automático}
 
 Una vez generando un modelo de clasificación, es importante medir el desempeño del mismo, con
 la intención de mejorar su eficiencia. Una de estas técnicas es la llamada matriz de confusión.\\
 
 \textbf{Matriz de confusión}\\
-La matriz de confusión es una representación de la información de los resultados obtenidos por un
+
+Una matriz de confusión es una representación de la información de los resultados obtenidos por un
 clasificador, dicha matriz suele ser de tamaño n x n, donde n es es el número de clases diferentes con
 las que se están trabajando \citep{CT23}.
 
@@ -285,16 +297,12 @@ manera adecuada las diferentes entradas de la misma, entra las que se encuentran
 
 \begin{itemize}
 
-	\item \textbf{VP}: Es la cantidad de positivos que fueron clasificados correctamente como positivos 
-	\item \textbf{FN}: Es la cantidad de positivos que fueron clasificados incorrectamente como negativos
-	\item \textbf{VN}: Es la cantidad de negativos que fueron clasificados correctamente como negativos
-	\item \textbf{FP}: Es la cantidad de negativos que fueron clasificados incorrectamente como positivos
+	\item \textbf{VP}: Es la cantidad de datos positivos que fueron clasificados correctamente como positivos 
+	\item \textbf{FN}: Es la cantidad de datos positivos que fueron clasificados incorrectamente como negativos
+	\item \textbf{VN}: Es la cantidad de datos negativos que fueron clasificados correctamente como negativos
+	\item \textbf{FP}: Es la cantidad de datos negativos que fueron clasificados incorrectamente como positivos
 	
 \end{itemize}
-
-
-Podemos hacer más para analizar los resultados que solo medir la precisión. Si considera los posibles resultados de las clases, entonces pueden organizarse en un cuadro simple como este (donde un verdadero positivo es una observación correctamente colocada en la clase 1, mientras que un falso positivo es una observación incorrecta colocada en la clase 1, mientras que un negativo Los ejemplos (tanto verdaderos como falsos) son aquellos colocados en la clase 2):
-
 
 La diagonal principal en cualquier matriz de confusión n x n representa el número de predicciones
 correctas para cada una de las n secciones.\\
@@ -332,6 +340,6 @@ con la siguiente ecuación:
 con la siguiente ecuación:
 
 \begin{equation}\label{eq:3}
-	 F\-Measure = 2 \cdot \frac{precision \cdot recall}{precision+recall}
+	 F-Measure = 2 \cdot \frac{precision \cdot recall}{precision+recall}
 \end{equation}
 
