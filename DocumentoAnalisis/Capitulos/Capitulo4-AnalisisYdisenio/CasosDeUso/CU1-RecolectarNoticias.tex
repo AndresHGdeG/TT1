@@ -6,14 +6,7 @@
 	\textbf{Resumen}\\
 \end{large}
 
-Brinda al usuario un punto de acceso para elegir una sección; las clasificaciones son, 
-\textbf{Ciencia y tecnología}, \textbf{Política}, \textbf{Deportes}, \textbf{Economía} y  
-\textbf{Cultura}, posteriormente se recolectan noticias de la web, tomando como punto de 
-partida los sitios establecidos previamente. Se crea un proceso de 
-recolección independiente por cada sitio web, para simular un ambiente de extracción 
-en paralelo; de cada sitio se recolectan las noticias publicadas; de cada artículo se obtiene 
-\textbf{Fecha de publicación}, \textbf{Título}, \textbf{Contenido}, \textbf{URL de la noticia}, y de contar con ello el \textbf{Resumen}. Cabe destacar que 
-las ligas contenidas en los sitios visitados son extraídas para su posterior análisis.\\
+Brinda al usuario un punto de acceso para elegir una sección; las clasificaciones son, \textbf{Ciencia y tecnología}, \textbf{Política}, \textbf{Deportes}, \textbf{Economía} y  \textbf{Cultura}, posteriormente se recolectan noticias de la web, tomando como punto de partida los sitios establecidos previamente. Se crea un proceso de recolección independiente por cada sitio web, para simular un ambiente de extracción en paralelo; de cada sitio se recolectan las noticias publicadas; de cada artículo se obtiene \textbf{Fecha de publicación}, \textbf{Título}, \textbf{Contenido}, \textbf{URL de la noticia}, y de contar con ello el \textbf{Resumen}. Cabe destacar que las ligas contenidas en los sitios visitados son extraídas para su posterior análisis.\\
 
 \begin{large}
 	\textbf{Descripción}\\
@@ -21,11 +14,12 @@ las ligas contenidas en los sitios visitados son extraídas para su posterior an
 
 %=====================================Tabla 1====================================%
 
+
 \begin{tabular}{|l|l|}
 %-----------------------Ecanbezado-----------------------------------%
 	\hline
 	\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{\textbf{Caso de uso: }} }&
-	\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{CU3 Recolectar noticias} }\\
+	\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{CU1 Recolectar noticias} }\\
 	\hline
 %-----------------------Actor----------------------------------------%
 	\textbf{Actor:} & 	Usuario\\
@@ -59,7 +53,8 @@ las ligas contenidas en los sitios visitados son extraídas para su posterior an
 	&\ \  de visualizar las noticias clasificadas\\
 	&$\bullet$ El usuario podrá cambiar el periodo de búsqueda\\
 	\hline
-%-----------------------Reglas de negocio----------------------------%
+
+	%-----------------------Reglas de negocio----------------------------%
 
 	\textbf{Reglas de negocio:} &$\bullet$ \RNref{RN1}{Número de palabras}\\
 	&$\bullet$ \RNref{RN3}{Listado de fuentes noticiosas}\\
@@ -74,15 +69,29 @@ las ligas contenidas en los sitios visitados son extraídas para su posterior an
 	\textbf{Errores:} & $\bullet$ \TError{CU1}{Uno} Cuando no se ha recuperado \\
 	&\ \ ninguna \textbf{dirección web} se muestra el mensaje\\
 	&\ \  \Tref{MSG1}{MSG1 Catálogo vació}\\
+	\hline
+
+\end{tabular}
 
 
+%=====================================Tabla 2====================================%
+\begin{table}[H]
+
+\begin{tabular}{|l|l|}
+%-----------------------Ecanbezado-----------------------------------%
+	\hline
+	\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{\textbf{Caso de uso: }} }&
+	\multicolumn{1}{| >{\columncolor{black}}l|}{ \textcolor{myWhite}{CU1 Recolectar noticias} }\\
+	\hline
 %------Error 3----------%
-	 &$\bullet$ \TError{CU1}{Dos} Cuando no se puede extraer información de\\
+	 \textbf{Errores:}&$\bullet$ \TError{CU1}{Dos} Cuando no se puede extraer información de\\
 	 &\ \  los sitios brindados, se muestra el mensaje \Tref{MSG3}{MSG3} \\
 	 &\ \ \Tref{MSG3}{Fallo en la recolección}\\
 	\hline
-\end{tabular}\\\\
 
+\end{tabular}\\\\
+%\caption{ Tabla de descripción de CU1 }
+\end{table}
 
 
 %============================Trayectorias========================================%
