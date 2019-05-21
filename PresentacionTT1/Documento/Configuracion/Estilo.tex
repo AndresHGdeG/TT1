@@ -1,0 +1,40 @@
+%-----------Eliminamos la identación de los párrafos-------%
+\setlength{\parindent}{0pt}
+
+
+%-------- Se define las lineas del pie y encabezado de de página
+\fancypagestyle{plain}{
+
+
+
+  %-------------Imagen de pie de página pares---------%
+
+    \fancyfoot[LE]{\begin{picture}(0,0) \put(-170,-80){ \includegraphics[scale=0.7]{Imagenes/Foot-blue.png}}\end{picture}}
+
+  %-------------Imagen de pie de página impares---------%
+    \fancyfoot[LO]{\begin{picture}(0,0) \put(-125,-80){ \includegraphics[scale=0.7]{Imagenes/Foot-blue.png}}\end{picture}}
+	
+  \renewcommand{\headrulewidth}{0.5pt}
+  \renewcommand{\footrulewidth}{0.5pt}	
+}
+
+\pagestyle{plain}% aplicamos el estilo para todas las páginas
+
+
+%------------------Definimos los colores a usar----------------%
+\definecolor{myBlue}{HTML}{166995}
+\definecolor{myDarkBlue}{HTML}{0D547B}
+\definecolor{myGinda}{HTML}{921010}
+\definecolor{myBlueRef}{HTML}{0277bd}
+\definecolor{myBlueChapter}{HTML}{004784}
+
+
+%---------Definimos el color de cada vínculo en el documento como links, urls, citas, etc.
+\hypersetup{
+    colorlinks=true,
+    linkcolor=myDarkBlue,
+    filecolor=magenta,      
+    urlcolor=myBlue,
+    citecolor=myBlueRef,
+    pdftitle={Sharelatex Example}
+}
