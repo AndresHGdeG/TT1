@@ -6,6 +6,14 @@
 \title{Reporte de presentación para TT1}
 \author{Carlos Hernandez y Daniel Meza}
 
+
+%----------------Incluimos la sección de bibliografía a la tabla de contenidos--------%
+
+\let\OLDthebibliography=\thebibliography
+\def\thebibliography#1{\OLDthebibliography{#1}%
+\addcontentsline{toc}{chapter}{\bibname}}
+
+
 \begin{document}
 \maketitle
 
