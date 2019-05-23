@@ -27,21 +27,48 @@
 
 
 %---------------------------------------Problemática-------------------------------------------%
+\section{Introducción}
+
+Importancia de las noticias
+
+
+
 \section{Problemática}
 
 \begin{enumerate}
 	
-	\item Etiquetar datos cuesta tiempo dinero y esfuerzo
+
+	\item Clasificación de noticias
+	\begin{itemize}
+		\item Sitios web de noticias con secciones variadas (Sinonimos para los tópicos)
+		\item Sitios web sin secciones definidas
+	\end{itemize}
 	
+	\item  Métodos de recopilación de la información en Internet \footnote{No mencionar si se puede o no extraer informaciòn de un sitio a menos que nos preguntens}
+
+	\begin{itemize}
+		\item Manual (Tiempo, dinero y esfuerzo)
+		\item Crawler (Depende de las etiquetas definidas)
+
+	\end{itemize}
+
+% Poli genereba gaceta de noticias y tenia equipo el cual hacía la clasificación 
+ 
+
 \end{enumerate}
 
 %----------------------------------Objetivo general-------------------------------------------%
 \section{Objetivo general}
 
-  Crear un recolector de noticias, el cual permita recopilar información de diferentes fuentes como diarios, sitios de noticias, foros y mediante el 
-  análisis automático de su contenido muestre aquellas noticias que satisfagan los filtros establecidos por el usuario.
+  Crear un recolector de noticias (UTILIZANDO UN CRAWLER), el cual permita extrawe información de diferentes fuentes de Internet, mediante la cración de un crawler(web scraping y web creawling), para su posterior clasificación mediante análisis automático del conteniddo, para mostrar aquellas noticias que satisfagan los filtros establecidos por el usuario.
 
+  \begin{itemize}
+	\item Crear un recoleclector de noticias
+	\item Clasificar noticias
+	\item Mostrar resultados
+	\end{itemize}
 
+%Comentarle a los sinodales que se tenia definidos foros, blogs etc
 %---------------------------------------Objetivo Específico------------------------------------%
 
 \section{Objetivos Específicos}
@@ -49,17 +76,51 @@
 \begin{itemize}
 
   \item Desarrollar un recolector de noticias, el cual permita obtener información de diferentes fuentes como diarios, sitios de noticias, blogs y foros
+
   \item Analizar de forma automática el contenido de las noticias para satisfacer los filtros establecidos por el usuario
+
   \item Mostrar las noticias que cumplieron con los filtros establecidos, así como su enlace (URL) para redirigirlos a la página de la noticia
+
   \item Afinar el clasificador de noticias realizado en el trabajo terminal 2017-A02 para utilizarlo en el contexto de esta propuesta (filtro de sección) 
 
 \end{itemize}
 %--------------------------------------Justificación------------------------------------------%
 \section{Justificación}
 
-
 Según el díario El Economista \citep{SU1} el sitio web Animal Político\footnote{www.animalpolitico.com}
 ocupa el lugar número cuatro en el ranking de medios nativos digitales, clasifica sus noticias de una manera poco habitual para los lectores como la sección
 \textbf{El sabueso}, \textbf{El plumaje}, \textbf{Hablemos de . . . }, entre otras, lo que hace complicado obtener los artículos con los métodos tradicionales 
 de recopilación que, se basan sólo en las etiquetas que identifican cada sección y no el contenido de las noticias.
+
+
+\section{Dudas de presentación}
+ 
+\begin{itemize}
+
+	\item 1 Costo del algoritmo
+	\item 2 Tiempo de extracción
+	\item 3 9 páginas cuanto tiempo extraemos
+	\item 4 Número de palabras
+
+
+
+	\item Para el corpus 
+	\item 	1,000 por sección
+	\item 		800 Para el enetrenamiento
+	\item 		200 Para probar el resultado
+
+	\item NO sobreentrenar a un algoritmo
+
+	\item Considerar Yahoo
+
+
+
+	\item crawler
+	\item web scraping
+	\item web crawling
+
+	\item (Medir número de peticiones por noticia)
+	\item (Tiempo ocupado para extrer noticias)
+
+\end{itemize}
 
