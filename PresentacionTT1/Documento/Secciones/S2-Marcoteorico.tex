@@ -1,11 +1,67 @@
-\chapter{Marcoteórico}
+\chapter{Marco teórico}
+Mostrar el diagrama de los pilares del marco teórico
+
 
 %-----------------------------------Inteligencia artificial------------------------------------%
 \section{Inteligencia artificial}
+    Son muchas las definiciones que se encuentran de la inteligencia artificial o
+    IA, en sus inicios se propone como las actividades asociadas al pensamiento
+    humano, tareas como, toma de decisiones, resolución de problemas y aprendizaje \citep{SD1}    
+
+%-----------------------------------Aprendizaje automático------------------------------------%
+\section{Aprendizaje automático}
+    El Aprendizaje Automático es una rama de la Inteligencia Artificial; permite desarrollar 
+    algoritmos que tienen la capacidad de predecir los cambios que se acontecen en una tarea específica \citep{SD2}.\\
+    \begin{itemize}
+        \item \textbf{Aprendizaje supervisado}
+        Se proporciona un conjunto de datos de
+        entrenamiento con las respuestas correctas y, con base a este conjunto
+        de entrenamiento, el algoritmo se generaliza para responder correctamente 
+        a todas las entradas posibles.
+        %-HACER ENFÁSIS EN QUE NOSOTROS REALIZAREMOS APRENDIZAJE SUPERVISADO
+        %Analisis de patrones con un con base en un conjunto de datos previamente definido
+        \item \textbf{Aprendizaje no supervisado}
+        No se proporcionan datos de entrenamiento, el algoritmo intenta identificar 
+        similitudes entre las entradas para clasificar en conjuntos.    
+        %Reconocimiento de patrones
+    \end{itemize}
+
+%-----------------------------------Aprendizaje automático------------------------------------%
+\section{Preprocesamiento}
+    El Pre-procesamiento es necesario para convertir el formato no estructurado en un formato estructurado \citep{SD1}.
+    A menudo el texto contiene información extraña como etiquetas, \textit{anchor text}\footnote{Es el texto mostrado en 
+    los enlaces o hipervínculos, \textbf{Texto de anclaje} en español.}, y otras características. En muchos casos las palabras 
+    son variaciones de otros (sinónimos) por el tipo de redacción, el contexto, para eliminar redundancia. Algunas palabras simplemente 
+    tienen faltas de ortografía. El proceso de convertir una secuencia de caracteres en una secuencia de palabras (tokens), es llamado ``Tokenización''.
+
+\subsection{Texto como bolsa de palabras}
+    Es la representación mas común. No se contempla el orden de las palabras el proceso. El conjunto de palabras en el documento se convierten en 
+    \textit{Sparse multidimentional reprentation}, el cual corresponde a la dimensión en esta representación. Se utiliza para la clasificación, 
+    sistemas de recomendación.
 
 %-----------------------------------Algoritmos------------------------------------%
 \section{Algoritmos}
 
+%Realizar una tabla comparativa con los 4 algoritmos 
+
+
+\subsection{Matriz de confusión}
+    Una matriz de confusión es una representación de la información de los resul-
+    tados obtenidos por un clasificador, dicha matriz suele ser de tamaño n x n,
+    donde n es es el número de clases diferentes con las que se están trabajando
+    (Visa et al., 2011).
+
+    %Nos permite medir que tan bueno es un algoritmo
+
 
 %----------------------------------Recoleccion de noticias---------------------------------%
 \section{Recoleccion de noticias}
+
+\subsection{Web Scraping}
+    La recopilación de datos de Internet es una técnica que se realiza de manera
+    manual, sin embargo el Web Scraping es el conjunto de técnicas utilizadas
+    para obtener de manera automática información de un sitio web.
+
+    %Etapas del web crawling
+
+\subsection{Crawler}
